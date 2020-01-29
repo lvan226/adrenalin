@@ -10,7 +10,8 @@ html {
 body {
   font-family: $font-family;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.2;
+  color: #000;
 }
 img {
   max-width: 100%;
@@ -38,7 +39,47 @@ ul {
 .wrapper {
   overflow: hidden;
 }
-
+.overlay {
+  position: fixed;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity .7s;
+  width: 0;
+  &_active {
+    width: 100%;
+    opacity: .7;
+  }
+}
+.ibg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section {
+  padding: 50px 0;
+}
+.title {
+  font-size: 48px;
+  color: $yellow;
+  font-weight: 700;
+  &_r {
+    text-align: right;
+  }
+  &_l {
+    text-align: left;
+  }
+}
+.title3 {
+  font-size: 36px;
+  color: $yellow;
+  font-weight: 500;
+}
 // <БЛОКИ> =============================================================================================================
 
 // <НАСТРОЙКИ СЕТКИ> =========================================================================================================

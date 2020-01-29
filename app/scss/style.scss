@@ -1,8 +1,5 @@
 // <> =============================================================================================================
-@import "vars";
-@import "libs";
-@import "fonts";
-@import "global";
+@import "include";
 // <> =============================================================================================================
 @import "blocks/header";
 
@@ -13,7 +10,72 @@
   
 }
 
-// <ГЛАВНЫЙ БЛОК> =============================================================================================================
+// </ГЛАВНЫЙ БЛОК> =============================================================================================================
+
+// <УСЛУГИ> =============================================================================================================
+.services {
+
+  // .services__title
+  &__title {
+    margin-bottom: 40px;
+  }
+  // .services__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  // .services__item
+  &__item {
+    height: 380px;
+    border-radius: 10px;
+    width: calc(50% - 10px);
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(360deg, #000000 0%, rgba(61, 61, 61, 0) 58.42%);
+      z-index: 2;
+    }
+    &-content {
+      position: absolute;
+      bottom: 40px;
+      left: 80px;
+      z-index: 3;
+    }
+    &-title {
+      position: relative;
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background-color: $yellow;
+        width: 100%;
+      }
+    }
+  }
+  // .services__more
+  &__more {
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+// </УСЛУГИ> =============================================================================================================
+
 
 @import "blocks/footer";
 @import "media";
