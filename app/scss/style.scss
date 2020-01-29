@@ -152,8 +152,8 @@
     width: calc(50% - 10px);
     display: table;
     img {
-      box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.4);
-      transform: rotate(-9deg);
+      // box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.4);
+      // transform: rotate(-9deg);
       display: table-cell;
       vertical-align: middle;
     }
@@ -173,7 +173,7 @@
   }
   // .bonus__btn
   &__btn {
-    
+    font-weight: 400;
   }
 }
 // </БОНУС> =============================================================================================================
@@ -223,5 +223,149 @@
 
 // </ФОТОГРАФИИ> =============================================================================================================
   
+
+// <ПЛОЩАДКИ> =============================================================================================================
+.platform {
+  // .platform__title
+  h3 {
+    color: $yellow;
+  }
+  &__title {
+    margin-bottom: 60px;
+  }
+  // .platform__list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .platform__item
+  &__item {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  // .platform__item-img
+  &__item-img {
+    height: 460px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, #3D3D3D 4.62%, rgba(61, 61, 61, 0) 100%);
+      z-index: 2;
+    }
+  }
+  // .platform__item-title
+  &__item-title {
+    position: absolute;
+    left: 60px;
+    bottom: 60px;
+    z-index: 3;
+  }
+  // .platform__item-info
+  &__item-info {
+    padding: 60px;
+    p {
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+  // .platform__link
+  &__link {
+    background-color: $yellow;
+    color: #fff;
+  }
+  // .platform__about
+  &__about {
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-90deg, #3D3D3D 42.19%, rgba(61, 61, 61, 0) 82.82%);
+      border-radius: 10px;
+      z-index: 2;
+    }
+  }
+  // .platform__about-content
+  &__about-content {
+    position: relative;
+    z-index: 3;
+    margin-left: auto;
+    max-width: 41%;
+    width: 100%;
+    margin-right: 60px;
+    p {
+      color: #fff;
+      line-height: 1.4;
+    }
+    .video__btn {
+      color: #fff;
+    }
+  }
+  // .platform__about-title
+  &__about-title {
+    margin-bottom: 40px;
+  }
+  }
+  .sect {
+  }
+  .container {
+  }
+  .title {
+  }
+  .title3 {
+  }
+  .btn {
+  }
+  .video {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+  // .video__click
+  &__click {
+    &-body {
+      background-color: $yellow;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+  // .video__btn
+  &__btn {
+    border: none;
+    background: transparent;
+  }
+  }
+// </ПЛОЩАДКИ> =============================================================================================================
+
+
 @import "blocks/footer";
 @import "media";
