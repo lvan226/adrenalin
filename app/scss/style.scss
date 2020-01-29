@@ -178,5 +178,50 @@
 }
 // </БОНУС> =============================================================================================================
 
+// <ФОТОГРАФИИ> =============================================================================================================
+.photo {
+  // .photo__titile
+  &__titile {
+    margin-bottom: 60px;
+  }
+  // .photo__slider
+  &__slider {
+    padding-bottom: 60px;
+    position: relative;
+  }
+  // .photo__item
+  &__item {
+    height: 270px;
+    width: 460px;
+    max-width: 460px;
+  }
+  .slick-slide {
+    width: 480px;
+    padding: 0 10px;
+  }
+  .slick-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 20px auto 0;
+    bottom: 0;
+    background-color: $yellow;
+    border: none;
+    border-radius: 106px;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    font-size: 0;
+  }
+  .slick-next {
+    transform: translateX(50px);
+  }
+  .slick-prev {
+    transform: translateX(-50px);
+  }
+}
+
+// </ФОТОГРАФИИ> =============================================================================================================
+  
 @import "blocks/footer";
 @import "media";

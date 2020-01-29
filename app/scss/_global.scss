@@ -98,4 +98,11 @@ $lg: 1199.98px;
   @media (max-width:$sm){max-width: 600px;padding:0 10px;}
   @media (max-width:$xs){max-width: 100%;padding:0 10px;}
 }
+.container-big{max-width:1450px;margin: 0 auto; padding: 0 15px; width: 100%;
+  @media (max-width: 1500px){max-width: 1290px;}
+	@media (max-width:$lg){max-width: 970px;}
+	@media (max-width:$md){max-width: 750px;}
+  @media (max-width:$sm){max-width: 600px;padding:0 10px;}
+  @media (max-width:$xs){max-width: 100%;padding:0 10px;}
+}
 // </НАСТРОЙКИ СЕТКИ> =========================================================================================================

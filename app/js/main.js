@@ -2,6 +2,15 @@ document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
 
+
+  // Слайдер фотографий
+  $('.slider-main').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true
+  });
+
   // Модальные окна
   function modalPopUp() {
     let overlay = document.getElementById('overlay');
