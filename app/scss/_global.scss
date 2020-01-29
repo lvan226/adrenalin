@@ -61,7 +61,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
 }
-.section {
+.sect {
   padding: 50px 0;
 }
 .title {
@@ -71,14 +71,16 @@ ul {
   &_r {
     text-align: right;
   }
-  &_l {
-    text-align: left;
-  }
 }
 .title3 {
   font-size: 36px;
-  color: $yellow;
   font-weight: 500;
+  strong {
+    color: $yellow;
+  }
+}
+.yellow {
+  color: $yellow;
 }
 // <БЛОКИ> =============================================================================================================
 

@@ -76,6 +76,68 @@
 }
 // </УСЛУГИ> =============================================================================================================
 
+// <О НАС> =============================================================================================================
+.about {
+  // .about__title
+  &__title {
+    margin-bottom: 60px;
+    max-width: 930px;
+  }
+  // .about__row
+  &__row {}
+  }
+  .about-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    &:nth-child(odd) {
+      .about-row__info {
+        order: 1;
+      }
+    }
+  // .about-row__info
+  &__info {
+    width: calc(50% - 10px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  // .about-row__info-title
+  &__info-title {
+    margin-bottom: 12px;
+  }
+  // .about-row__info-text
+  &__info-text {
+    max-width: 530px;
+    margin-top: auto;
+    margin-bottom: auto;
+    p {
+      line-height: 1.4;
+      margin-bottom: 22px;
+    }
+    a {
+      color: $blue;
+    }
+  }
+  // .about-row__info-img
+  &__info-img {
+    max-height: 320px;
+    overflow: hidden;
+    img {
+      display: block;
+    }
+  }
+  // .about-row__img
+  &__img {
+    width: calc(50% - 10px);
+    height: 720px;
+  }
+  }
+  
+
+// </О НАС> =============================================================================================================
+
 
 @import "blocks/footer";
 @import "media";
