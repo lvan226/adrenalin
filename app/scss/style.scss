@@ -333,16 +333,6 @@
     margin-bottom: 40px;
   }
   }
-  .sect {
-  }
-  .container {
-  }
-  .title {
-  }
-  .title3 {
-  }
-  .btn {
-  }
   .video {
     display: inline-flex;
     justify-content: space-between;
@@ -366,6 +356,70 @@
   }
 // </ПЛОЩАДКИ> =============================================================================================================
 
+// <СТОИМОСТЬ> =============================================================================================================
+.cost {
+  // .cost__title
+  &__title {
+    margin-bottom: 60px;
+  }
+  // .cost__list
+  &__list {
+    display: flex;
+    overflow: hidden;
+  }
+  // .cost__item
+  &__item {
+    margin-right: 20px;
+    background-color: $grey;
+    padding: 30px 25px 30px 30px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  // .cost__item-img
+  &__item-img {
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  // .cost__item-heading
+  &__item-heading {
+    font-size: 40px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+    color: $yellow;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 150px;
+      background-color: $yellow;
+    }
+  }
+  // .cost__item-text
+  &__item-text {
+    font-weight: 300;
+    line-height: 1.4;
+    color: #fff;
+    margin-top: auto;
+  }
+  }
+  .sect {
+  }
+  .container {
+  }
+  .title {
+  // .title_r
+  &_r {}
+  }
+  
+// </СТОИМОСТЬ> =============================================================================================================
 
 @import "blocks/footer";
 @import "media";
