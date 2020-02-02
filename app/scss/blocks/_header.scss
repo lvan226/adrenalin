@@ -95,6 +95,10 @@
   &__phone {
     margin-right: 30px;
     font-size: 20px;
+    transition: .3s;
+    &:hover {
+      color: $blue;
+    }
   }
   // .header__btn
   &__btn {
