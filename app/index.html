@@ -11,68 +11,107 @@
 
 <body>
   <div class="overlay" id="overlay"></div>
-  <!-- <h1>Шапка сайта</h1> -->
-
-  <!-- <ГЛАВНЫЙ БЛОК> -->
-  <section class="mainblock ibg" style="background-image: url(img/main/bg.jpg);">
-    <div class="container">
-      <div class="mainblock__inner">
-        <h2 class="mainblock__title title">Все популярные развлечения
-          Череповца в клубе Адреналин</h2>
-        <ul class="mainblock__list">
-          <li class="mainblock__list-item">
-            <img src="img/main/1.svg" alt="">
-            <span>Самая низкая цена в городе</span>
-          </li>
-          <li class="mainblock__list-item">
-            <img src="img/main/2.svg" alt="">
-            <span>Игра на безопасных и полностью оборудованных площадках</span>
-          </li>
-          <li class="mainblock__list-item">
-            <img src="img/main/3.svg" alt="">
-            <span>Бесплатная игра для именниника</span>
-          </li>
-        </ul>
-        <div class="mainblock__row">
-          <button class="mainblock__btn btn"> Рассчитать стоимость</button>
-          <div class="video">
-            <div class="video__click">
-              <div class="video__click-body"></div>
-            </div>
-            <button class="video__btn">Смотреть видео</button>
-          </div>
-        </div>
-        <!-- /.mainblock__row -->
-      </div>
-      <!-- /.mainblock__inner -->
-    </div>
-    <!-- /.container -->
-    <div class="mainblock__fact">
+  <div class="mainblock-wrapper ibg" style="background-image: url(img/main/bg.jpg);">
+    <!-- <Шапка сайта> -->
+    <header class="header fixed">
       <div class="container">
-        <div class="mainblock__fact-list">
-          <div class="mainblock__fact-item">
-            <span class="mainblock__fact-item__number">6549</span>
-            <p class="mainblock__fact-item__text">Довольных клиентов</p>
-          </div>
-          <div class="mainblock__fact-item">
-            <span class="mainblock__fact-item__number">3743</span>
-            <p class="mainblock__fact-item__text">Счастливых ребёнка</p>
-          </div>
-          <div class="mainblock__fact-item">
-            <span class="mainblock__fact-item__number">2000+</span>
-            <p class="mainblock__fact-item__text">Провели игр</p>
-          </div>
-          <div class="mainblock__fact-item">
-            <span class="mainblock__fact-item__number">3,5М+</span>
-            <p class="mainblock__fact-item__text">Потрачено боеприпасов</p>
+        <div class="header__inner">
+          <a href="" class="header__logo">
+            <img src="img/header/logo.png" alt="">
+          </a>
+          <ul class="header__menu">
+            <li class="header__list">
+              Услуги
+              <ul class="header__submenu">
+                <li><a href="#">День рождения</a></li>
+                <li><a href="#">Игра классов</a></li>
+                <li><a href="#">Корпоратив</a></li>
+                <li><a href="#">Выпускной</a></li>
+                <li><a href="#">Квесты</a></li>
+              </ul>
+            </li>
+            <li class="header__list">
+              Площадки для игр
+              <ul class="header__submenu">
+                <li><a href="#">г. Череповец, Лыжный стадион</a></li>
+                <li><a href="#">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
+                <li><a href="#">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div>
+            <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+            <button class="header__btn btn">Заказать звонок</button>
           </div>
         </div>
-        <!-- /.mainblock__fact-list -->
+        <!-- /.header__inner -->
       </div>
       <!-- /.container -->
-    </div>
-  </section>
-  <!-- </ГЛАВНЫЙ БЛОК> -->
+    </header>
+    <!-- </Шапка сайта> -->
+
+    <!-- <ГЛАВНЫЙ БЛОК> -->
+    <section class="mainblock">
+      <div class="container">
+        <div class="mainblock__inner">
+          <h2 class="mainblock__title title">Все популярные развлечения
+            Череповца в клубе Адреналин</h2>
+          <ul class="mainblock__list">
+            <li class="mainblock__list-item">
+              <img src="img/main/1.svg" alt="">
+              <span>Самая низкая цена в городе</span>
+            </li>
+            <li class="mainblock__list-item">
+              <img src="img/main/2.svg" alt="">
+              <span>Игра на безопасных и полностью оборудованных площадках</span>
+            </li>
+            <li class="mainblock__list-item">
+              <img src="img/main/3.svg" alt="">
+              <span>Бесплатная игра для именниника</span>
+            </li>
+          </ul>
+          <div class="mainblock__row">
+            <button class="mainblock__btn btn"> Рассчитать стоимость</button>
+            <div class="video">
+              <div class="video__click">
+                <div class="video__click-body"></div>
+              </div>
+              <button class="video__btn">Смотреть видео</button>
+            </div>
+          </div>
+          <!-- /.mainblock__row -->
+        </div>
+        <!-- /.mainblock__inner -->
+      </div>
+      <!-- /.container -->
+      <div class="mainblock__fact">
+        <div class="container">
+          <div class="mainblock__fact-list">
+            <div class="mainblock__fact-item">
+              <span class="mainblock__fact-item__number">6549</span>
+              <p class="mainblock__fact-item__text">Довольных клиентов</p>
+            </div>
+            <div class="mainblock__fact-item">
+              <span class="mainblock__fact-item__number">3743</span>
+              <p class="mainblock__fact-item__text">Счастливых ребёнка</p>
+            </div>
+            <div class="mainblock__fact-item">
+              <span class="mainblock__fact-item__number">2000+</span>
+              <p class="mainblock__fact-item__text">Провели игр</p>
+            </div>
+            <div class="mainblock__fact-item">
+              <span class="mainblock__fact-item__number">3,5М+</span>
+              <p class="mainblock__fact-item__text">Потрачено боеприпасов</p>
+            </div>
+          </div>
+          <!-- /.mainblock__fact-list -->
+        </div>
+        <!-- /.container -->
+      </div>
+    </section>
+    <!-- </ГЛАВНЫЙ БЛОК> -->
+  </div>
+  <!-- /.mainblock-wrapper -->
 
   <!-- <УСЛУГИ> -->
   <section class="services sect">

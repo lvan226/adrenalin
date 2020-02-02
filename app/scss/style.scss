@@ -5,10 +5,12 @@
 
 
 // <ГЛАВНЫЙ БЛОК> =============================================================================================================
-
+.mainblock-wrapper {
+  background-position: 12vw center;
+  position: relative;
+}
 .mainblock {
   padding: 250px 0px 0px;
-  background-position: 120px center;
   height: 100vh;
   min-height: 1024px;
   display: flex;
