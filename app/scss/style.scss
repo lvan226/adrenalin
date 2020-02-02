@@ -7,7 +7,90 @@
 // <ГЛАВНЫЙ БЛОК> =============================================================================================================
 
 .mainblock {
-  
+  padding: 250px 0px 0px;
+  background-position: 120px center;
+  height: 100vh;
+  min-height: 1024px;
+  display: flex;
+  flex-direction: column;
+  // height: 100vh;
+  // .mainblock__inner
+  &__inner {
+    max-width: 800px;
+  }
+  // .mainblock__title
+  &__title {
+    margin-bottom: 25px;
+    color: #000;
+  }
+  // .mainblock__list
+  &__list {}
+  // .mainblock__list-item
+  &__list-item {
+    margin-bottom: 25px;
+    img {
+      vertical-align: middle;
+      margin-right: 20px;
+      width: 40px;
+    }
+    span {
+      font-size: 24px;
+      line-height: 28px;
+      vertical-align: middle;
+    }
+  }
+  // .mainblock__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+  }
+  // .mainblock__btn
+  &__btn {
+    max-width: 300px;
+    width: 100%;
+    text-align: right;
+    padding-right: 25px;
+    min-height: 70px;
+    font-size: 18px;
+    background-color: $yellow;
+    color: #fff;
+    border-radius: 169px;
+    transition: .2s;
+    &:hover {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
+      transform: translate(3px, -3px);
+    }
+  }
+  // .mainblock__fact
+  &__fact {
+    background: linear-gradient(360deg, #FFFFFF 10.32%, rgba(255, 255, 255, 0) 100%);
+    margin-top: auto;
+  }
+    // .mainblock__fact-item
+    &__fact-list {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 120px;
+      padding-bottom: 200px;
+    }
+  // .mainblock__fact-item
+  &__fact-item {
+    text-align: center;
+  }
+  // .mainblock__fact-item__number
+  &__fact-item__number {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    color: $yellow;
+  }
+  // .mainblock__fact-item__text
+  &__fact-item__text {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 // </ГЛАВНЫЙ БЛОК> =============================================================================================================
@@ -33,7 +116,11 @@
     margin-top: 20px;
     position: relative;
     z-index: 1;
+    transition: .4s;
     overflow: hidden;
+    &:hover {
+      box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.4);
+    }
     &::after {
       content: "";
       position: absolute;
@@ -286,6 +373,75 @@
 }
 // </ФОТОГРАФИИ> =============================================================================================================
   
+// <КАК ПРОХОДИТ> ==================================================================================================
+.howit {
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 2;
+    opacity: .5;
+  }
+  // .howit__title
+  &__title {}
+  // .howit__inner
+  &__inner {
+    position: relative;
+    z-index: 3;
+    min-height: 800px;
+    background-size: contain;
+  }
+  // .howit__item
+  &__item {
+    position: absolute;
+    img {
+      vertical-align: middle;
+    }
+    &:nth-child(2) {
+      top: 39%;
+      left: 13.5%;
+    }
+    &:nth-child(3) {
+      top: 55%;
+      left: 23.5%;
+    }
+    &:nth-child(4) {
+      top: 39%;
+      left: 33.5%;
+    }
+    &:nth-child(5) {
+      top: 55%;
+      left: 63.5%;
+    }
+    &:nth-child(6) {
+      top: 39%;
+      left: 73.5%;
+    }
+    &:nth-child(7) {
+      top: 56%;
+      left: 84%;
+    }
+  }
+  // .howit__text
+  &__text {
+    color: $yellow;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 200px;
+  }
+}
+// </КАК ПРОХОДИТ> ==================================================================================================
 
 // <ПЛОЩАДКИ> =============================================================================================================
 .platform {
@@ -766,75 +922,5 @@
   }
   }
 // </ФОРМА ОБРАТНОЙ СВЯЗИ> ==================================================================================================
-
-// <КАК ПРОХОДИТ> ==================================================================================================
-.howit {
-  padding-top: 100px;
-  position: relative;
-  z-index: 1;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #000;
-    z-index: 2;
-    opacity: .5;
-  }
-  // .howit__title
-  &__title {}
-  // .howit__inner
-  &__inner {
-    position: relative;
-    z-index: 3;
-    min-height: 800px;
-    background-size: contain;
-  }
-  // .howit__item
-  &__item {
-    position: absolute;
-    img {
-      vertical-align: middle;
-    }
-    &:nth-child(2) {
-      top: 39%;
-      left: 13.5%;
-    }
-    &:nth-child(3) {
-      top: 55%;
-      left: 23.5%;
-    }
-    &:nth-child(4) {
-      top: 39%;
-      left: 33.5%;
-    }
-    &:nth-child(5) {
-      top: 55%;
-      left: 63.5%;
-    }
-    &:nth-child(6) {
-      top: 39%;
-      left: 73.5%;
-    }
-    &:nth-child(7) {
-      top: 56%;
-      left: 84%;
-    }
-  }
-  // .howit__text
-  &__text {
-    color: $yellow;
-    font-size: 18px;
-    line-height: 1.4;
-    font-weight: 700;
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 200px;
-  }
-}
-// </КАК ПРОХОДИТ> ==================================================================================================
 @import "blocks/footer";
 @import "media";
