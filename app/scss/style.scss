@@ -707,5 +707,63 @@
   
 // </ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ> ==================================================================================================
 
+// <ФОРМА ОБРАТНОЙ СВЯЗИ> ==================================================================================================
+.mainform {
+  padding-bottom: 100px;
+  // .mainform__title
+  &__title {
+    margin-bottom: 60px;
+  }
+  // .mainform__row
+  &__row {
+    display: flex;
+  }
+  // .mainform__line
+  &__line {
+    position: relative;
+    margin-right: 20px;
+    max-width: 300px;
+    width: 100%;
+  }
+  // .mainform__label
+  &__label {
+    position: absolute;
+    left: 25px;
+    top: 8px;
+    font-size: 18px;
+    font-weight: 100;
+}
+  // .mainform__field
+  &__field {
+    border: none;
+    border-bottom: 2px solid #3d3d3d;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 25px;
+    display: block;
+    width: 100%;
+    outline: none;
+    transition: .5s;
+    &:active,
+    &:focus {
+      border-bottom: 2px solid $yellow;
+    }
+  }
+  // .mainform__btn
+  &__btn {
+    max-width: 180px;
+    width: 100%;
+  }
+  // .mainform__alert
+  &__alert {
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 1.4;
+    a {
+      border-bottom: 1px solid #000;
+    }
+  }
+  }
+// </ФОРМА ОБРАТНОЙ СВЯЗИ> ==================================================================================================
 @import "blocks/footer";
 @import "media";

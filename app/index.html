@@ -498,9 +498,20 @@
     <div class="container">
       <h2 class="mainform__title title">Есть вопросы? Хотите заказать игру?
         Оставьте заявку и мы вам перезвоним.</h2>
-        <form action="mailer.php">
-          
+        <form action="mailer.php" method="POST">
+          <div class="mainform__row">
+            <div class="mainform__line">
+              <label class="mainform__label" for="name">Имя</label>
+              <input class="mainform__field" type="text" id="name" name="userName">
+            </div>
+            <div class="mainform__line">
+              <label class="mainform__label" for="phone">Телефон</label> 
+              <input class="mainform__field" type="text" id="phone" name="userPhone">
+            </div>
+            <button class="mainform__btn btn">Перезвоните мне</button>
+          </div>
         </form>
+        <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="">Оферты по использованию сайта </a> и согласен с <a href="">Политикой конфиденциальности</a></div>
     </div>
     <!-- /.container -->
   </section>
