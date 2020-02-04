@@ -2,7 +2,10 @@
   // .header__inner
   z-index: 100;
   padding-top: 50px;
-  padding-right: 190px;
+  padding-right: 280px;
+  @media (max-width: 1300px) {
+    padding-right: 140px;
+  }
   &.fixed {
     position: absolute;
     top: 0;
@@ -17,6 +20,13 @@
   &.main {
     padding-right: 0;
     padding-bottom: 20px;
+    color: #fff;
+    .header__btn {
+      border: 1px solid #F6C30D;
+      color: #fff;
+    }
+  }
+  &.white {
     color: #fff;
     .header__btn {
       border: 1px solid #F6C30D;

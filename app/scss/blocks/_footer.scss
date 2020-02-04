@@ -39,10 +39,32 @@
   // .footer__list-social
   &__list-social {
     margin-top: 10px;
-    img {
-      max-width: 20px;
-      margin-right: 20px;
+    a {
       vertical-align: middle;
+      // margin-right: 20px;
+      width: 30px;
+      &:hover {
+        span {
+          background-image: url(../img/icons/vk2.png);
+        }
+      }
+    }
+    span {
+      max-width: 20px;
+      width: 100%;
+      min-height: 11px;
+      margin-right: 20px;
+      display: inline-block;
+      background-image: url(../img/icons/vk.svg);
+      transition: .5s;
+    }
+    a +a:hover span {
+      background-image: url(../img/icons/Inst2.png);
+    }
+    a + a span {
+      background-image: url(../img/icons/Inst.svg);
+      height: 16px;
+      width: 16px;
     }
   }
   // .footer__info
