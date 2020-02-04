@@ -2,16 +2,18 @@
 @import "include";
 // <> =============================================================================================================
 @import "blocks/header";
-
+@import "blocks/platform";
 
 // <ГЛАВНЫЙ БЛОК> =============================================================================================================
 .mainblock-wrapper {
-  background-position: 12vw center;
+  background-position: 200px 27px;
   position: relative;
+  @media (max-width: 1300px) {
+    background-position: -50px 27px;
+  }
 }
 .mainblock {
-  padding: 250px 0px 0px;
-  height: 100vh;
+  padding: 300px 0px 0px;
   min-height: 1024px;
   display: flex;
   flex-direction: column;
@@ -194,7 +196,7 @@
 .about {
   // .about__title
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     max-width: 930px;
   }
   // .about__row
@@ -227,6 +229,7 @@
     margin-top: auto;
     margin-bottom: auto;
     p {
+      max-width: 510px;
       line-height: 1.4;
       margin-bottom: 22px;
     }
@@ -381,8 +384,10 @@
 // <КАК ПРОХОДИТ> ==================================================================================================
 .howit {
   padding-top: 100px;
+  margin-top: 50px;
   position: relative;
   z-index: 1;
+  margin-bottom: 50px;
   // &::after {
   //   content: "";
   //   position: absolute;
@@ -582,10 +587,10 @@
         border-radius: 50%;
         cursor: pointer;
         background: $yellow url(../img/icons/play.svg);
-        background-position: center;
+        background-position: 16.5px center;
         background-repeat: no-repeat;
         box-shadow: 0 0 0 rgba($yellow, 1);
-        animation: pulse 3s infinite;
+        animation: pulse 2s infinite;
       }
     }
   // .video__btn
@@ -875,11 +880,23 @@
 // </ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ> ==================================================================================================
 
 // <ФОРМА ОБРАТНОЙ СВЯЗИ> ==================================================================================================
+.mainform__field:invalid + label{
+  top: 8px;
+}
+.mainfom__field:valid + label {
+  color: $yellow;
+}
+.mainform__field:focus + label,
+.mainform__label.active {
+  top: -15px;
+  color: $yellow;
+  font-weight: 400;
+}
 .mainform {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   // .mainform__title
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 75px;
   }
   // .mainform__row
   &__row {
@@ -896,9 +913,16 @@
   &__label {
     position: absolute;
     left: 25px;
-    top: 8px;
+    top: -15px;
     font-size: 18px;
     font-weight: 100;
+    transition: .3s;
+    z-index: 1;
+    // &.active {
+    //   font-weight: 400;
+    //   color: $yellow;
+    //   top: -15px;
+    // }
 }
   // .mainform__field
   &__field {
@@ -911,6 +935,9 @@
     width: 100%;
     outline: none;
     transition: .5s;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
     &:active,
     &:focus {
       border-bottom: 2px solid $yellow;
@@ -937,5 +964,6 @@
   }
   }
 // </ФОРМА ОБРАТНОЙ СВЯЗИ> ==================================================================================================
+
 @import "blocks/footer";
 @import "media";

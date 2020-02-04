@@ -1,12 +1,18 @@
 .header {
   // .header__inner
   z-index: 100;
+  padding-top: 50px;
+  padding-right: 190px;
   &.fixed {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     // background-color: #fff;
+  }
+  &.relative {
+    padding-right: 0;
+    padding-bottom: 20px;
   }
   &__inner {
     display: flex;

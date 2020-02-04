@@ -62,7 +62,7 @@
               <span>Самая низкая цена в городе</span>
             </li>
             <li class="mainblock__list-item">
-              <img src="img/main/2.svg" alt="">
+              <img src="img/main/2.png" alt="">
               <span>Игра на безопасных и полностью оборудованных площадках</span>
             </li>
             <li class="mainblock__list-item">
@@ -88,19 +88,19 @@
         <div class="container">
           <div class="mainblock__fact-list">
             <div class="mainblock__fact-item">
-              <span class="mainblock__fact-item__number">6549</span>
+              <span class="mainblock__fact-item__number"><span id="animNumber1" class="number-anim"></span></span>
               <p class="mainblock__fact-item__text">Довольных клиентов</p>
             </div>
             <div class="mainblock__fact-item">
-              <span class="mainblock__fact-item__number">3743</span>
+              <span class="mainblock__fact-item__number"><span id="animNumber2" class="number-anim"></span></span>
               <p class="mainblock__fact-item__text">Счастливых ребёнка</p>
             </div>
             <div class="mainblock__fact-item">
-              <span class="mainblock__fact-item__number">2000+</span>
+              <span class="mainblock__fact-item__number"><span id="animNumber3" class="number-anim"></span>+</span>
               <p class="mainblock__fact-item__text">Провели игр</p>
             </div>
             <div class="mainblock__fact-item">
-              <span class="mainblock__fact-item__number">3,5М+</span>
+              <span class="mainblock__fact-item__number"><span id="animNumber4" class="number-anim"></span>М+</span>
               <p class="mainblock__fact-item__text">Потрачено боеприпасов</p>
             </div>
           </div>
@@ -164,7 +164,7 @@
             <h3 class="about-row__info-title title3"><strong>Площадки</strong> рядом с вами</h3>
             <p>
               Две больших тёплых крытых площадки за ТЦ «Рассвет» по адресу ул. Гоголя 56 площадью 1000 м² и 2000 м² для
-              игры в лазертаг и пейнтболл. <a href="#">Схема здания</a>.
+              игры в лазертаг и пейнтболл. <a href="#">Схема проезда</a>.
             </p>
             <p>
               Одна площадка на лыжном cтадионе в Зашекснинском районе.
@@ -223,7 +223,7 @@
       <div class="about__row about-row">
         <div class="about-row__info">
           <div class="about-row__info-text">
-            <h3 class="about-row__info-title title3"><strong>Можно отдохнуть и покушать</strong></h3>
+            <h3 class="about-row__info-title title3"><strong>Можно отдохнуть</strong> и покушать</h3>
             <p>
               Большая, удобная и комфортная зона отдыха. Шаговая доступность от раздевалок до игровых площадок и зон
               отдыха. Бесплатно предоставляем комнату отдыха, беседки, мангал, шампура.
@@ -644,12 +644,12 @@
       <form action="mailer.php" method="POST">
         <div class="mainform__row">
           <div class="mainform__line">
+            <input required class="mainform__field" type="text" id="name" name="userName">
             <label class="mainform__label" for="name">Имя</label>
-            <input class="mainform__field" type="text" id="name" name="userName">
           </div>
           <div class="mainform__line">
+            <input required class="mainform__field" type="text" id="phone" name="userPhone">
             <label class="mainform__label" for="phone">Телефон</label>
-            <input class="mainform__field" type="text" id="phone" name="userPhone">
           </div>
           <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
         </div>
@@ -693,7 +693,7 @@
           </ul>
           <div class="footer__list-social">
             <a href="#"><img src="img/icons/vk.svg" alt=""></a>
-            <a href="#"><img src="img/icons/inst.svg" alt=""></a>
+            <a href="#"><img src="img/icons/Inst.svg" alt=""></a>
           </div>
         </div>
         <!-- /.footer__column -->

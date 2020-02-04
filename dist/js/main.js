@@ -11,6 +11,29 @@ function ready() {
     variableWidth: true
   });
 
+  // Анимация чисел JavaScript
+  function timer(field, second, num, numhow) {
+		var _Seconds = $(field).text(),
+			int;
+		_Seconds = 0;
+		int = setInterval(function () { // запускаем интервал
+			if (_Seconds < num) {
+				if (_Seconds == num - 1) {
+					
+				}
+				_Seconds += numhow; // прибавляем 1
+				$(field).text(_Seconds); // выводим получившееся значение в блок
+			} else {
+				clearInterval(int); // очищаем интервал, чтобы он не продолжал работу при _Seconds = 0
+			}
+		}, second);
+  }
+  timer('#animNumber1', 8, 6549, 10);
+  timer('#animNumber2', 9, 3743, 6);
+  timer('#animNumber3', 30, 2000, 10);
+  timer('#animNumber4', 800, 4, 1);
+
+
   // Модальные окна
   function modalPopUp() {
     let overlay = document.getElementById('overlay');
@@ -71,3 +94,4 @@ function submitHandler(e) {
     
   request.send(dataPost);
 }
+
