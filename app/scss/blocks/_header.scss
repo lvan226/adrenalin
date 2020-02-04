@@ -14,6 +14,15 @@
     padding-right: 0;
     padding-bottom: 20px;
   }
+  &.main {
+    padding-right: 0;
+    padding-bottom: 20px;
+    color: #fff;
+    .header__btn {
+      border: 1px solid #F6C30D;
+      color: #fff;
+    }
+  }
   &__inner {
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,97 @@
+// <ГЛАВНЫЙ БЛОК ДЕНЬ РОЖДЕНИЯ> =================================================================================================
+.birthday {
+  padding-top: 370px;
+  padding-bottom: 85px;
+  margin-bottom: 50px;
+  &__inner {
+    max-width: 790px;
+  }
+  // .birthday__title  
+  &__title {
+    font-size: 80px;
+    color: $yellow;
+    margin-bottom: 60px
+  }
+  // .birthday__list
+  &__list {
+    color: #fff;
+    font-size: 36px;
+    line-height: 1.4;
+    font-weight: 500;
+    li {
+      margin-bottom: 25px;
+    }
+  }
+  // .birthday__btn
+  &__btn {
+    margin-top: 40px;
+    background-color: $yellow;
+    width: 255px;
+    min-height: 60px;
+  }
+}
+// </ГЛАВНЫЙ БЛОК ДЕНЬ РОЖДЕНИЯ> =================================================================================================
+
+// <ЛАЗЕРТАГ, КВЕСТЫ, ПЕЙНТБОЛ> =================================================================================================
+.blockinfo {
+  // .blockinfo__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .blockinfo__info
+  &__info {
+    width: 100%;
+    max-width: 720px;
+  }
+  // .blockinfo__title
+  &__title {
+    margin-bottom: 10px;
+  }
+  // .blockinfo__text
+  &__text {
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-size: 18px;
+  }
+  // .blockinfo__btn
+  &__btn {
+    margin-top: 10px;
+    background-color: $yellow;
+  }
+  // .blockinfo__video
+  &__video {
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 460px;
+    border-radius: 10px;
+    overflow: hidden;
+    .video {
+      transform: translateX(40%);
+    }
+  }
+  }
+  .sect {
+  }
+  .container {
+  }
+  .title {
+  }
+  .btn {
+  }
+  .btn-12 {
+  }
+  .video {
+  // .video__click
+  &__click {}
+  // .video__click-body
+  &__click-body {}
+  // .video__btn
+  &__btn {}
+  }
+// </ЛАЗЕРТАГ, КВЕСТЫ, ПЕЙНТБОЛ> =================================================================================================

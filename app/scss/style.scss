@@ -3,6 +3,8 @@
 // <> =============================================================================================================
 @import "blocks/header";
 @import "blocks/platform";
+@import "blocks/birthday";
+@import "blocks/company";
 
 // <ГЛАВНЫЙ БЛОК> =============================================================================================================
 .mainblock-wrapper {
@@ -269,7 +271,7 @@
   }
   // .bonus__img
   &__img {
-    width: calc(50% - 10px);
+    width: calc(43% - 10px);
     display: table;
     img {
       // box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.4);
@@ -280,7 +282,7 @@
   }
   // .bonus__info
   &__info {
-    width: calc(50% - 10px);
+    width: calc(57% - 10px);
   }
   // .bonus__title
   &__title {
@@ -333,6 +335,7 @@
     width: 80px;
     height: 40px;
     font-size: 0;
+    outline: none;
   }
   .slick-next {
     transform: translateX(50px);
@@ -475,8 +478,9 @@
     transition: .4s;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
     &:hover {
-      box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
+     
     }
   }
   // .platform__item-img
@@ -531,6 +535,7 @@
     height: 460px;
     display: flex;
     align-items: center;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
     &::after {
       content: "";
       position: absolute;
@@ -650,7 +655,8 @@
   // .cost__item-img
   &__item-img {
     text-align: center;
-    margin-bottom: 75px;
+    margin-bottom: 60px;
+    margin-top: 65px;
     max-height: 120px;
     height: 100%;
   }
@@ -897,6 +903,8 @@
   // .mainform__title
   &__title {
     margin-bottom: 75px;
+    max-width: 700px;
+    font-weight: 700;
   }
   // .mainform__row
   &__row {

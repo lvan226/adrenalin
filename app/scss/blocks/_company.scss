@@ -1,0 +1,169 @@
+// <ГЛАВНЫЙ БЛОК 2> =============================================================================================================
+.heroblock {
+  margin-bottom: 50px;
+  padding-top: 270px;
+  min-height: 845px;
+  // .heroblock__inner
+  &__inner {
+    color: #fff;
+  }
+  // .heroblock__title
+  &__title {
+    font-size: 64px;
+    color: $yellow;
+    margin-bottom: 30px;
+  }
+  // .heroblock__list
+  &__list {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 500;
+    li {
+      margin-bottom: 25px;
+    }
+    margin-bottom: 40px;
+  }
+  // .heroblock__btn
+  &__btn {
+    max-width: 320px;
+    width: 100%;
+    padding: 0px 25px;
+    background-color: $yellow;
+    min-height: 61px;
+    font-size: 18px;
+  }
+  }
+// </ГЛАВНЫЙ БЛОК 2> =============================================================================================================
+
+// <ТАБЫ> =============================================================================================================
+.blocktab {
+  // .blocktab__inner
+  &__inner {}
+  // .blocktab__title
+  &__title {
+    color: $yellow;
+    margin-bottom: 10px;
+  }
+  // .blocktab__text
+  &__text {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 50px;
+    p {
+      margin-bottom: 25px;
+    }
+  }
+  // .blocktab__btn
+  &__btn {
+    background-color: $yellow;
+    width: 100%;
+    max-width: 370px;
+    min-width: 64px;
+    font-size: 18px;
+    position: relative;
+  }
+  }
+  .sect {
+  }
+  .container {
+  }
+  .tab-title {
+    display: flex;
+    margin-bottom: 40px;
+    .tab-title__item.current {
+      border-color: $yellow;
+      .tab-title__item-icon {
+        color: #fff;
+        background-color: $yellow;
+      }
+      &__text {
+
+      }
+    }
+  // .tab-title__item
+  &__item {
+    margin-right: 10px;
+    min-width: 250px;
+    max-width: 270px;
+    padding-left: 30px;
+    height: 65px;
+    font-size: 24px;
+    border: 1px solid transparent;
+    border-radius: 56px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+    &-icon {
+      border-radius: 50%;
+      border: 1px solid $yellow;
+      width: 34px;
+      height: 34px;
+      display: inline-block;
+      text-align: center;
+      line-height: 34px;
+      margin-right: 25px;
+      vertical-align: middle;
+      transition: .3s;
+    }
+    &-text {
+      vertical-align: middle;
+      font-weight: 500;
+    }
+  }
+  }
+  .tab-content {
+    border-radius: 10px;
+    // overflow: hidden;
+    background-color: #000;
+    position: relative;
+    height: 660px;
+      // .tab-content__item
+  &__item {
+    position: relative;
+    height: 0;
+    z-index: 1;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 1s;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    &.current {
+      transition: opacity 1.5s;
+      // transition-delay: .2s;
+      opacity: 1;
+      height: 100%;
+      padding: 60px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #3D3D3D 22.58%, rgba(61, 61, 61, 0) 100%);
+      z-index: 2;
+    }
+    &-inner {
+      position: relative;
+      z-index: 3;
+      max-width: 540px;
+    }
+  }
+  }
+  .ibg {
+  }
+  .title3 {
+  }
+  .yellow {
+  }
+  .btn {
+  }
+  .btn-12 {
+  }
+// </ТАБЫ> =============================================================================================================
