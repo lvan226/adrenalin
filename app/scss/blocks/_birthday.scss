@@ -1,8 +1,9 @@
 // <ГЛАВНЫЙ БЛОК ДЕНЬ РОЖДЕНИЯ> =================================================================================================
 .birthday {
-  padding-top: 370px;
+  padding-top: 186px;
   padding-bottom: 85px;
   margin-bottom: 50px;
+  min-height: 800px;
   &__inner {
     max-width: 790px;
   }
@@ -10,10 +11,11 @@
   &__title {
     font-size: 80px;
     color: $yellow;
-    margin-bottom: 60px
+    margin-bottom: 40px
   }
   // .birthday__list
   &__list {
+    margin-bottom: 40px;
     color: #fff;
     font-size: 36px;
     line-height: 1.4;
@@ -24,10 +26,11 @@
   }
   // .birthday__btn
   &__btn {
-    margin-top: 40px;
+    // margin-top: 40px;
     background-color: $yellow;
     width: 255px;
     min-height: 60px;
+    font-size: 18px;
   }
 }
 // </ГЛАВНЫЙ БЛОК ДЕНЬ РОЖДЕНИЯ> =================================================================================================
@@ -59,6 +62,9 @@
   &__btn {
     margin-top: 10px;
     background-color: $yellow;
+    &2 {
+      margin-left: 30px;
+    }
   }
   // .blockinfo__video
   &__video {

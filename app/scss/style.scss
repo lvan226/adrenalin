@@ -5,6 +5,7 @@
 @import "blocks/platform";
 @import "blocks/birthday";
 @import "blocks/company";
+@import "blocks/contract";
 
 // <ГЛАВНЫЙ БЛОК> =============================================================================================================
 .mainblock-wrapper {
@@ -12,13 +13,52 @@
   position: relative;
 }
 .mainblock {
-  padding: 280px 0px 0px;
+  padding: 200px 0px 0px;
   min-height: 1024px;
   display: flex;
   flex-direction: column;
   color: #fff;
   @media (max-width: 1300px) {
     min-height: 100vh;
+  }
+  .video {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    &:hover {
+      .video__btn {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+    // .video__click
+    &__click {
+      position: relative;
+      z-index: 3;
+      &-body {
+        width: 59px;
+        height: 59px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        background-position: 16.5px center;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 0 rgba($yellow, 1);
+        animation: pulse 2s infinite; 
+        background: $yellow;
+        z-index: 1;
+      }
+      &-play {
+        position: absolute;
+        left: 19.5px;
+        top: 19px;
+        width: 21px;
+        height: 21px;
+        z-index: 3;
+        cursor: pointer;
+      }
+    }
   }
   .video__btn {
     color: #fff;
@@ -931,7 +971,7 @@
     position: absolute;
     left: 25px;
     top: -15px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 100;
     transition: .3s;
     z-index: 1;
@@ -945,7 +985,7 @@
   &__field {
     border: none;
     border-bottom: 2px solid #3d3d3d;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     padding: 8px 25px;
     display: block;

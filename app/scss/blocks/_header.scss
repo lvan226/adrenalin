@@ -1,11 +1,9 @@
 .header {
   // .header__inner
   z-index: 100;
-  padding-top: 50px;
-  padding-right: 280px;
-  @media (max-width: 1300px) {
-    padding-right: 140px;
-  }
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 16px;
   &.fixed {
     position: absolute;
     top: 0;
@@ -15,7 +13,8 @@
   }
   &.relative {
     padding-right: 0;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+    color: #000;
   }
   &.main {
     padding-right: 0;
@@ -40,12 +39,20 @@
   }
   // .header__logo
   &__logo {
-    max-width: 260px;
+    max-width: 140px;
     width: 100%;
   }
   // .header__menu
   &__menu {
-    &>li {
+    .header__cost {
+      display: inline-block;
+      transition: .3s;
+      margin-left: 25px;
+      &:hover {
+        color: $blue;
+      }
+    }
+    &>li.header__list {
       display: inline-block;
       margin: 0 25px;
       padding-right: 15px;
@@ -71,7 +78,7 @@
         }
         .header__submenu {
           display: block;
-          padding: 8px 0;
+          padding: 4px 0;
           max-height: 150px;
           overflow: visible;
           border-width: 1px;
@@ -89,7 +96,7 @@
   &__submenu {
     padding: 0;
     position: absolute;
-    top: 100%;
+    top: 90%;
     left: 0;
     height: auto;
     max-height: 0;
