@@ -7,10 +7,190 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Adrenalin</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
 </head>
 
 <body>
   <div class="overlay" id="overlay"></div>
+  <div class="quiz popup" id="quiz">
+    <div class="quiz__cost">
+      <div class="quiz__cost-text">Ваша скидка</div>
+      <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text" value="300">₽</div>
+    </div>
+    <div class="quiz__close popup__close popup-close"></div>
+    <form class="quiz__content form-send" method="post" action="order-landing.php" id="quizForm">
+      <div class="quiz-item current" data-quiz="1">
+        <input id="" type="radio" checked class="dis-none">
+        <div class="quiz__title">
+          Ответьте на 6 вопросов
+          и&nbsp;получите скидку на игру,
+          а&nbsp;также индивидуальный расчёт стоимости игры.
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="2">
+        <div class="quiz__title">
+          Какой у вас повод для игры?
+        </div>
+        <div class="quiz-row">
+          <div class="quiz-row__info">
+            <div class="quiz__radio">
+              <input id="reason1" name="Тип мероприятия:" type="radio" value="День рождения">
+              <label for="reason1">День рождения</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason2" name="Тип мероприятия:" type="radio" value="Игра класса/выпускной">
+              <label for="reason2">Игра класса/выпускной</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason3" name="Тип мероприятия:" type="radio" value="Сборная игра">
+              <label for="reason3">Сборная игра</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason4" name="Тип мероприятия:" type="radio" value="Корпоратив">
+              <label for="reason4">Корпоратив</label>
+            </div>
+          </div>
+          <div class="quiz-row__img ibg" style="background-image: url(img/kwiz/item1.jpg);">
+
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="3">
+        <div class="quiz__title">
+          Сколько человек планируется?
+        </div>
+        <div class="quiz-row1">
+          <div class="quiz-row1__info">
+            <div class="quiz__radio">
+              <input id="howmuch1" name="Сколько человек?" type="radio" value="1">
+              <label for="howmuch1">1</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch2" name="Сколько человек?" type="radio" value="до 6">
+              <label for="howmuch2">до 6</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch3" name="Сколько человек?" type="radio" value="6-10">
+              <label for="howmuch3">6-10</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch4" name="Сколько человек?" type="radio" value="10-15">
+              <label for="howmuch4">10-15</label>
+            </div>
+            <div class="quiz__radio any">
+              <input id="howmuch5" name="Сколько человек?" type="radio" value="">
+
+              <label for="howmuch5">
+                <input class="quiz-form-text" id="change_input" name="" type="text" placeholder="Другое">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="4">
+        <div class="quiz__title">
+          Средний возраст участников?
+        </div>
+        <div class="quiz-row1 quiz-age">
+          <div class="quiz-row1__info">
+            <div class="quiz__radio">
+              <input id="age1" name="Средний возраст участников:" type="radio" value="до 6 лет">
+              <label for="age1">до 6 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age2" name="Средний возраст участников:" type="radio" value="9-11 лет">
+              <label for="age2">9-11 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age3" name="Средний возраст участников:" type="radio" value="15-18 лет">
+              <label for="age3">15-18 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age4" name="Средний возраст участников:" type="radio" value="6 -8 лет">
+              <label for="age4">6 -8 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age5" name="Средний возраст участников:" type="radio" value="12-14 лет">
+              <label for="age5">12-14 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age6" name="Средний возраст участников:" type="radio" value="18+ лет">
+              <label for="age6">18+ лет</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="5">
+        <div class="quiz__title">
+          Какую площадку выберете?
+        </div>
+        <div class="quiz-row2 quiz-platform">
+          <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform1" value="Лыжный cтадион в ЗШК">
+            <label for="platform1">
+              <img src="img/quiz/1.png" alt="">
+              <span>Лыжный cтадион в ЗШК</span>
+            </label>
+          </div>
+          <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform2" value="Гоголя, 56 (за ТЦ «Рассвет»)">
+            <label for="platform2">
+              <img src="img/quiz/2.png" alt="">
+              <span>Гоголя, 56 (за ТЦ «Рассвет»)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="6">
+        <div class="quiz__title">
+          Напишите дату и время игры
+        </div>
+        <div class="quiz-row3 quiz-time">
+          <div class="quiz__radio any">
+            <input id="data-time" type="radio">
+            <label for="data-time">
+              <input name="Дата проведения:" class="quiz-form-text" type="text" placeholder="Желаемые дата и время игры">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="7">
+        <div class="quiz__title">
+          Оставьте контакты и получите
+          расчёт стоимости и скидку
+          на&nbsp;игру
+        </div>
+        <div class="quiz-row4 quiz-contact">
+          <div class="quiz__radio any any2">
+            <input id="quizName" name="Имя пользователя:" class="quiz-form-text" type="text" required>
+            <label for="quizName">Имя</label>
+          </div>
+          <div class="quiz__radio any any2">
+            <input id="quizPhone" name="Телефон:" class="quiz-form-text" type="text" required>
+            <label for="quizPhone">Телефон</label>
+          </div>
+        </div>
+        <button type="submit" class="btn quiz-btn-send btn-12"><span>Далее</span></button>
+      </div>
+    </form>
+    <!-- /.quiz__content -->
+    <div class="quiz__info">
+      <div class="quiz__info-content">
+        <button class="quiz__info-prev btn"><span>Назад</span><span class="arr"></span></button>
+        <div class="quiz__info-question">Вопрос <span class="quiz__info-start"></span> из <span
+            class="quiz__info-end"></span></div>
+        <button class="quiz__info-next btn"><span>Далее</span><span class="arr"></span></button>
+      </div>
+      <div class="quiz__line">
+        <div class="quiz__line-complete"></div>
+      </div>
+    </div>
+    <!-- /.quiz__info -->
+  </div>
+  <!-- /.quiz -->
+
+
+
   <div class="mainblock-wrapper ibg" style="background-image: url(img/main/bg.jpg);">
     <!-- <Шапка сайта> -->
     <header class="header fixed white">
@@ -72,7 +252,7 @@
             </li>
           </ul>
           <div class="mainblock__row">
-            <button class="mainblock__btn btn">Рассчитать стоимость</button>
+            <button class="mainblock__btn btn popup-btn" data-popup="quiz">Рассчитать стоимость</button>
             <div class="video">
               <div class="video__click">
                 <div class="video__click-body"></div>
@@ -165,8 +345,8 @@
           <div class="about-row__info-text">
             <h3 class="about-row__info-title title3"><strong>Площадки</strong> рядом с вами</h3>
             <p>
-              Две больших тёплых крытых площадки за ТЦ «Рассвет» по адресу ул. Гоголя 56 площадью 1000 м² и 2000 м² для
-              игры в лазертаг и пейнтболл. <a href="#">Схема проезда</a>.
+              Две больших тёплых крытых площадки за ТЦ «Рассвет» по&nbsp;адресу ул. Гоголя 56 площадью 1000 м² и 2000 м²
+              для&nbsp;игры в&nbsp;лазертаг и пейнтболл. <a href="#">Схема проезда</a>.
             </p>
             <p>
               Одна площадка на лыжном cтадионе в Зашекснинском районе.
@@ -174,7 +354,7 @@
             </p>
             <p>
               Организация выездных игр. Организация масштабных игр
-              и турниров (до 100 игроков). Проведение открытых игр для всех желающих (не нужно собирать команду).
+              и турниров (до 100 игроков). Проведение открытых игр для&nbsp;всех желающих (не нужно собирать команду).
             </p>
           </div>
           <div class="about-row__info-img">
@@ -192,7 +372,7 @@
             <h3 class="about-row__info-title title3"><strong>Самые низкие</strong> цены в городе</h3>
             <p>
               Бесплатная игра для именника. Скидки для постоянных клиентов. Сборные игры от 250 рублей. Скидка 25% на
-              заказ пиццы.
+              заказ&nbsp;пиццы.
             </p>
           </div>
           <div class="about-row__info-img">
@@ -227,7 +407,8 @@
           <div class="about-row__info-text">
             <h3 class="about-row__info-title title3"><strong>Можно отдохнуть</strong> и покушать</h3>
             <p>
-              Большая, удобная и комфортная зона отдыха. Шаговая доступность от раздевалок до игровых площадок и зон
+              Большая, удобная и комфортная зона отдыха. Шаговая доступность от раздевалок до&nbsp;игровых площадок и
+              зон
               отдыха. Бесплатно предоставляем комнату отдыха, беседки, мангал, шампура.
             </p>
           </div>
@@ -245,9 +426,9 @@
           <div class="about-row__info-text">
             <h3 class="about-row__info-title title3"><strong>Всё для отдыха</strong> в одном месте</h3>
             <p>
-              Организация питания (напитки, пицца, торт, закуски, шашлык). Оформление комнаты отдыха. Пиньята
-              с наполнением. Фотосъёмка игрового процесса. Трансфер
-              до площадок. Живые квесты.
+              Организация питания (напитки, пицца, торт, закуски, шашлык). Оформление комнаты отдыха. Пиньята&nbsp;с
+              наполнением. Фотосъёмка игрового процесса. Трансфер
+              до&nbsp;площадок. Живые квесты.
             </p>
           </div>
           <div class="about-row__info-img">
@@ -719,6 +900,7 @@
   </footer>
   <!-- </ПОДВАЛ САЙТА> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/functions/jquery.formstyler.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>

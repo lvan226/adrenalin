@@ -57,6 +57,7 @@ button {
   &_active {
     width: 100%;
     opacity: .7;
+    z-index: 9000;
   }
 }
 .ibg {
