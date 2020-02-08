@@ -6,11 +6,193 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Adrenalin</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  //= template/style.html
 </head>
 
 <body class="company">
   <div class="overlay" id="overlay"></div>
+  <div class="quiz popup" id="quiz">
+    <div class="quiz__cost">
+      <div class="quiz__cost-text">Ваша скидка</div>
+      <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text"
+          value="300">₽</div>
+    </div>
+    <div class="quiz__close popup__close popup-close"></div>
+    <form class="quiz__content form-send" method="post" action="order-landing.php" id="quizForm">
+      <div class="quiz-item current" data-quiz="1">
+        <input type="radio" checked class="dis-none">
+        <div class="quiz__title">
+          Ответьте на 6 вопросов
+          и получите скидку на игру,
+          а&nbsp;также индивидуальный расчёт стоимости игры.
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="2">
+        <div class="quiz__title">
+          Какой у вас повод для игры?
+        </div>
+        <div class="quiz-row">
+          <div class="quiz-row__info">
+            <div class="quiz__radio">
+              <input id="reason1" name="Тип мероприятия:" type="radio" value="День рождения">
+              <label for="reason1">День рождения</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason2" name="Тип мероприятия:" type="radio" value="Игра класса/выпускной">
+              <label for="reason2">Игра класса/выпускной</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason3" name="Тип мероприятия:" type="radio" value="Сборная игра">
+              <label for="reason3">Сборная игра</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason4" name="Тип мероприятия:" type="radio" value="Корпоратив">
+              <label for="reason4">Корпоратив</label>
+            </div>
+          </div>
+          <div class="quiz-row__img ibg" style="background-image: url(img/kwiz/item1.jpg);">
+
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="3">
+        <div class="quiz__title">
+          Сколько человек планируется?
+        </div>
+        <div class="quiz-row1">
+          <div class="quiz-row1__info">
+            <div class="quiz__radio">
+              <input id="howmuch1" name="Сколько человек?" type="radio" value="1">
+              <label for="howmuch1">1</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch2" name="Сколько человек?" type="radio" value="до 6">
+              <label for="howmuch2">до 6</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch3" name="Сколько человек?" type="radio" value="6-10">
+              <label for="howmuch3">6-10</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch4" name="Сколько человек?" type="radio" value="10-15">
+              <label for="howmuch4">10-15</label>
+            </div>
+            <div class="quiz__radio any">
+
+              <input id="howmuch5" class="checkform" name="Сколько человек?" type="radio" value="">
+              <label for="change_input">
+                <input class="quiz-form-text" id="change_input" name="none" type="text" placeholder="Другое">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="4">
+        <div class="quiz__title">
+          Средний возраст участников?
+        </div>
+        <div class="quiz-row1 quiz-age">
+          <div class="quiz-row1__info">
+            <div class="quiz__radio">
+              <input id="age1" name="Средний возраст участников:" type="radio" value="до 6 лет">
+              <label for="age1">до 6 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age2" name="Средний возраст участников:" type="radio" value="9-11 лет">
+              <label for="age2">9-11 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age3" name="Средний возраст участников:" type="radio" value="15-18 лет">
+              <label for="age3">15-18 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age4" name="Средний возраст участников:" type="radio" value="6 -8 лет">
+              <label for="age4">6 -8 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age5" name="Средний возраст участников:" type="radio" value="12-14 лет">
+              <label for="age5">12-14 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age6" name="Средний возраст участников:" type="radio" value="18+ лет">
+              <label for="age6">18+ лет</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="5">
+        <div class="quiz__title">
+          Какую площадку выберете?
+        </div>
+        <div class="quiz-row2 quiz-platform">
+          <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform1" value="Лыжный cтадион в ЗШК">
+            <label for="platform1">
+              <img src="img/quiz/1.png" alt="">
+              <span>Лыжный cтадион в ЗШК</span>
+            </label>
+          </div>
+          <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform2" value="Гоголя, 56 (за ТЦ «Рассвет»)">
+            <label for="platform2">
+              <img src="img/quiz/2.png" alt="">
+              <span>Гоголя, 56 (за ТЦ «Рассвет»)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="6">
+        <div class="quiz__title">
+          Напишите дату и время игры
+        </div>
+
+        <div class="quiz-row3 quiz-time">
+          <div class="quiz__radio any">
+            <input id="data-time" type="radio">
+            <label for="change_input2">
+              <input id="change_input2" name="Дата проведения:" class="quiz-form-text" type="text"
+                placeholder="Желаемые дата и время игры">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="7">
+        <div class="quiz__title">
+          Оставьте контакты и получите
+          расчёт стоимости и скидку
+          на&nbsp;игру
+        </div>
+        <div class="quiz-row4 quiz-contact">
+          <div class="quiz__radio any any2">
+            <input id="quizName" name="Имя пользователя:" class="quiz-form-text" type="text" required>
+            <label for="quizName">Имя</label>
+          </div>
+          <div class="quiz__radio any any2">
+            <input id="quizPhone" name="Телефон:" class="quiz-form-text" type="text" required>
+            <label for="quizPhone">Телефон</label>
+          </div>
+        </div>
+        <button type="submit" class="btn quiz-btn-send btn-12"><span>Далее</span></button>
+      </div>
+    </form>
+    <!-- /.quiz__content -->
+    <div class="quiz__info">
+      <div class="quiz__info-content">
+        <button class="quiz__info-prev btn"><span>Назад</span><span class="arr"></span></button>
+        <div class="quiz__info-question">Вопрос <span class="quiz__info-start"></span> из <span
+            class="quiz__info-end"></span></div>
+        <button class="quiz__info-next btn"><span>Далее</span><span class="arr"></span></button>
+      </div>
+      <div class="quiz__line">
+        <div class="quiz__line-complete"></div>
+      </div>
+    </div>
+    <!-- /.quiz__info -->
+  </div>
+  <!-- /.quiz -->
+
+
+
   //= template/header.html
 
   <!-- <ГЛАВНЫЙ ЭКРАН КОРПОРАТИВЫ> -->
@@ -24,7 +206,7 @@
           <li>3 оригинальных формата для развлечения</li>
           <li>Все что нужно для отдыха в одном месте</li>
         </ul>
-        <button class="heroblock__btn btn btn-12"><span>Выбрать формат корпоратива</span></button>
+        <button class="heroblock__btn btn btn-12 popup-btn" data-popup="quiz"><span>Выбрать формат корпоратива</span></button>
       </div>
     </div>
     <!-- /.container -->
@@ -34,6 +216,7 @@
   <!-- <ТАБЫ> -->
   <section class="blocktab sect">
     <div class="container">
+      <h2 class="title right">Выбирайте формат</h2>
       <div class="blocktab__inner">
         <div class="tab-title">
           <div class="tab-title__item current" data-tab="tab1">
@@ -75,30 +258,31 @@
             <div class="tab-content__item-inner">
               <h3 class="blocktab__title title3 yellow">Пейнтбол от 500₽/час с чел.</h3>
               <div class="blocktab__text">
-                <p>Командная игра с применением маркеров (пневматическая пушка), стреляющих шариками с краской
-                  (желатиновая оболочка с пищевой краской), разбивающимися при ударе о препятствие
-                  и окрашивающими его.
+                <p>Командная игра с применением маркеров (пневматическая пушка), стреляющих шариками с&nbsp;краской (желатиновая оболочка с пищевой краской), разбивающимися при ударе о препятствие и окрашивающими его.
                 </p>
-                <p>Самая эмоциональная и захватывающая игра для детей и взрослых. Хлёсткое попадание шарика никого не
-                  оставит равнодушным. Море краски и град шаров во время штурма врага заставляют мыслить по-другому. Это
-                  совершенно новый мир — мир в котором нужно выжить и не покраситься. </p>
-                <p>Все что тебе нужно — это взять с собой обувь, а хорошее настроение и экипировку получишь у нас!</p>
+                <p>Самая эмоциональная и захватывающая игра для&nbsp;детей 
+                  и&nbsp;взрослых. Хлёсткое попадание шарика никого не оставит равнодушным. Море краски и град шаров во время штурма врага заставляют мыслить по-другому. Это совершенно новый мир — мир в котором нужно выжить 
+                  и&nbsp;не&nbsp;покраситься.</p>
+                <p>Все что тебе нужно — это взять с собой обувь, а хорошее настроение и экипировку получишь у нас! Не боишься,
+                  что&nbsp;тебя раскрасят?</p>
               </div>
               <button class="blocktab__btn btn btn-12"><span>Получить коммерческое предложение</span></button>
             </div>
           </div>
-          <div class="tab-content__item ibg" style="background-image: url(img/company/lazertag-bg.jpg);" id="tab3">
+          <div class="tab-content__item ibg" style="background-image: url(img/company/quest-bg.jpg);" id="tab3">
             <div class="tab-content__item-inner">
-              <h3 class="blocktab__title title3 yellow">Квест.</h3>
+              <h3 class="blocktab__title title3 yellow">Квест от 400₽ с чел.</h3>
               <div class="blocktab__text">
-                <p>Командная игра с применением маркеров (пневматическая пушка), стреляющих шариками с краской
-                  (желатиновая оболочка с пищевой краской), разбивающимися при ударе о препятствие
-                  и окрашивающими его.
+                <p>Это новый, популярный формат развлечений для&nbsp;детей. Тематические игры, в которых детям нужно
+                  выполнять различные задания.
                 </p>
-                <p>Самая эмоциональная и захватывающая игра для детей и взрослых. Хлёсткое попадание шарика никого не
-                  оставит равнодушным. Море краски и град шаров во время штурма врага заставляют мыслить по-другому. Это
-                  совершенно новый мир — мир в котором нужно выжить и не покраситься. </p>
-                <p>Все что тебе нужно — это взять с собой обувь, а хорошее настроение и экипировку получишь у нас!</p>
+                <p>Благодаря большому выбору сценариев и адаптации заданий под возраст участников, играть в них будет
+                  интересно детям от 6 до 14 лет. Оптимальное количество игроков от 4 человек. </p>
+                <p>В отличие от квест-комнат, в которых упор делается
+                  на&nbsp;взаимодействие с&nbsp;реквизитом, в&nbsp;Живых квестах
+                  с&nbsp;детьми работает профессиональный квест-менеджер, который вовлекает детей в игру, подстраивает
+                  задания
+                  под&nbsp;уровень детей прямо в процессе игры, погружает детей в&nbsp;атмосферу&nbsp;квеста.</p>
               </div>
               <button class="blocktab__btn btn btn-12"><span>Получить коммерческое предложение</span></button>
             </div>
@@ -228,59 +412,59 @@
   <!-- </ФОТО> -->
 
 
-    <!-- <ПЛОЩАДКИ> -->
-    <section class="platform sect">
-      <div class="container">
-        <h2 class="platform__title title">Площадки</h2>
-        <div class="platform__list">
-          <div class="platform__item">
-            <div class="platform__item-img ibg" style="background-image: url(img/platform/1.jpg);">
-              <h3 class="platform__item-title title3">Лыжный cтадион в ЗШК</h3>
-            </div>
-            <div class="platform__item-info">
-              <p>Большая площадка на свежем воздухе. Имеет множество укрытий, как естественных, так и созданных нами.
-                Интересная площадка станет настоящим испытанием
-                для бойца любого возраста. </p>
-              <p>После игры можно посидеть в беседке, отдохнуть
-                и просто пообщаться с товарищами по оружию.</p>
-              <div class="platform__nav">
-                <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
-                <div class="video">
-                  <div class="video__click">
-                    <div class="video__click-body"></div>
-                  </div>
-                  <button class="video__btn">Смотреть видео</button>
+  <!-- <ПЛОЩАДКИ> -->
+  <section class="platform sect">
+    <div class="container">
+      <h2 class="platform__title title">Площадки</h2>
+      <div class="platform__list">
+        <div class="platform__item">
+          <div class="platform__item-img ibg" style="background-image: url(img/platform/1.jpg);">
+            <h3 class="platform__item-title title3">Лыжный cтадион в ЗШК</h3>
+          </div>
+          <div class="platform__item-info">
+            <p>Большая площадка на свежем воздухе. Имеет множество укрытий, как естественных, так и созданных нами.
+              Интересная площадка станет настоящим испытанием
+              для бойца любого возраста. </p>
+            <p>После игры можно посидеть в беседке, отдохнуть
+              и просто пообщаться с товарищами по оружию.</p>
+            <div class="platform__nav">
+              <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
+              <div class="video">
+                <div class="video__click">
+                  <div class="video__click-body"></div>
                 </div>
+                <button class="video__btn">Смотреть видео</button>
               </div>
             </div>
           </div>
-          <!-- /.platform__item -->
-  
-          <div class="platform__item">
-            <div class="platform__item-img ibg" style="background-image: url(img/platform/2.jpg);">
-              <h3 class="platform__item-title title3">Гоголя, 56 (за ТЦ «Рассвет»)</h3>
-            </div>
-            <div class="platform__item-info">
-              <p>Большая площадка на свежем воздухе. Имеет множество укрытий, как естественных, так и созданных нами.
-                Интересная площадка станет настоящим испытанием
-                для бойца любого возраста. </p>
-              <p>После игры можно посидеть в беседке, отдохнуть
-                и просто пообщаться с товарищами по оружию.</p>
-              <div class="platform__nav">
-                <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
-                <div class="video">
-                  <div class="video__click">
-                    <div class="video__click-body"></div>
-                  </div>
-                  <button class="video__btn">Смотреть видео</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.platform__item -->
         </div>
-        <!-- /.platform__list -->
-        <!-- <div class="platform__about ibg" style="background-image: url(img/platform/bg.jpg);">
+        <!-- /.platform__item -->
+
+        <div class="platform__item">
+          <div class="platform__item-img ibg" style="background-image: url(img/platform/2.jpg);">
+            <h3 class="platform__item-title title3">Гоголя, 56 (за ТЦ «Рассвет»)</h3>
+          </div>
+          <div class="platform__item-info">
+            <p>Большая площадка на свежем воздухе. Имеет множество укрытий, как естественных, так и созданных нами.
+              Интересная площадка станет настоящим испытанием
+              для бойца любого возраста. </p>
+            <p>После игры можно посидеть в беседке, отдохнуть
+              и просто пообщаться с товарищами по оружию.</p>
+            <div class="platform__nav">
+              <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
+              <div class="video">
+                <div class="video__click">
+                  <div class="video__click-body"></div>
+                </div>
+                <button class="video__btn">Смотреть видео</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.platform__item -->
+      </div>
+      <!-- /.platform__list -->
+      <!-- <div class="platform__about ibg" style="background-image: url(img/platform/bg.jpg);">
           <div class="platform__about-content">
             <h3 class="platform__about-title title3">Гоголя, 56 2000 м²</h3>
             <p>Большая площадка на свежем воздухе. Имеет множество укрытий, как естественных, так и созданных нами.
@@ -298,18 +482,17 @@
             </div>
           </div>
         </div> -->
-        <!-- /.platform__about -->
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- </ПЛОЩАДКИ> -->
+      <!-- /.platform__about -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </ПЛОЩАДКИ> -->
 
   //= template/form.html
 
   //= template/footer.html
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+  
+  //= template/script.html
 </body>
 
 </html>

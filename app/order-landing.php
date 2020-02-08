@@ -25,7 +25,7 @@ $subject = 'Заявка с Adrenalin';
 // }
 $c = true;
 foreach ( $_POST as $key => $value ) {
-  if ( $value != "") {
+  if ( $value != "" && $key != 'none') {
     $message .= "
     " . ( ($c = !$c) ? '<div>':'<div style="background-color: #f8f8f8;">' ) . "
       <p style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b><i style='padding-left: 10px;'>        $value</i></p>

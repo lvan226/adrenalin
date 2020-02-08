@@ -38,6 +38,9 @@
 // <ТАБЫ> =============================================================================================================
 .blocktab {
   // .blocktab__inner
+  h2 {
+    margin-bottom: 60px;
+  }
   &__inner {}
   // .blocktab__title
   &__title {
@@ -49,6 +52,7 @@
     font-size: 18px;
     line-height: 1.4;
     margin-bottom: 50px;
+    max-width: 514px;
     p {
       margin-bottom: 25px;
     }
@@ -57,10 +61,16 @@
   &__btn {
     background-color: $yellow;
     width: 100%;
-    max-width: 370px;
+    max-width: 412px;
     min-height: 64px;
     font-size: 18px;
     position: relative;
+    &::before {
+      transform: translate(-60%, -50%);
+    }
+    &::after {
+      transform: translate(60%, -50%);
+    }
   }
   }
   .sect {
@@ -114,10 +124,10 @@
   }
   .tab-content {
     border-radius: 10px;
-    // overflow: hidden;
+    overflow: hidden;
     background-color: #000;
     position: relative;
-    height: 660px;
+    // height: 660px;
       // .tab-content__item
   &__item {
     position: relative;
@@ -136,6 +146,7 @@
       // transition-delay: .2s;
       opacity: 1;
       height: 100%;
+      min-height: 670px;
       padding: 60px;
     }
     &::after {

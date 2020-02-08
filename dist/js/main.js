@@ -46,11 +46,20 @@ function ready() {
 
   let input_change = $('#change_input');
   if(input_change.length) {
-    console.log('1', input_change);
-    alert('324234');
+    // console.log('1', input_change);
+    // alert('324234');
     input_change.on('keyup', function() {
       let radio = document.querySelector('#howmuch5');
+      $('.quiz-item.current .jq-radio.checkform').addClass('checked');
+      $('.quiz__info-next').removeAttr('disabled');
       radio.value = input_change.val();
+    });
+  }
+
+  let input_change2 = $('#change_input2');
+  if(input_change2.length) {
+    input_change2.on('keyup', function() {
+      $('.quiz__info-next').removeAttr('disabled');
     });
   }
 

@@ -45,12 +45,22 @@ function ready() {
   })
 
   let input_change = $('#change_input');
-  if(input_change.length) {
-    console.log('1', input_change);
-    alert('324234');
-    input_change.on('keyup', function() {
+  if (input_change.length) {
+    // console.log('1', input_change);
+    // alert('324234');
+    input_change.on('keyup', function () {
       let radio = document.querySelector('#howmuch5');
+      $('.quiz-item.current .jq-radio').removeClass('checked');
+      $('.quiz-item.current .jq-radio.checkform').addClass('checked');
+      $('.quiz__info-next').removeAttr('disabled');
       radio.value = input_change.val();
+    });
+  }
+
+  let input_change2 = $('#change_input2');
+  if (input_change2.length) {
+    input_change2.on('keyup', function () {
+      $('.quiz__info-next').removeAttr('disabled');
     });
   }
 
@@ -58,8 +68,9 @@ function ready() {
   let quizID = 1;
   let arrQuiz = document.querySelectorAll('[data-quiz]');
   let quizLine = document.querySelector('.quiz__line-complete');
-  let quizLineWidth = 100 / arrQuiz.length;
-  let quizLineComplete = quizLineWidth;
+  let quizLineWidth = 100 / (arrQuiz.length - 1);
+  let quizLineComplete = 0;
+  quizLine.style.width = quizLineComplete + "%";
   let quizStart = document.querySelector('.quiz__info-start');
   let quizEnd = document.querySelector('.quiz__info-end');
   let quizStartNumber = 0;
@@ -81,15 +92,20 @@ function ready() {
       quizLine.style.width = quizLineComplete + "%";
     }
     if (isQuiz) {
-      let intervalQuiz = setInterval(function() {
+      let intervalQuiz = setInterval(function () {
         quizPrice.value = quizPriceNumber--;
-        if(Number(quizPrice.value) == 100 ) {clearInterval(intervalQuiz);}
+        if (Number(quizPrice.value) == 100) {
+          clearInterval(intervalQuiz);
+        }
       }, 1000)
       isQuiz = false;
     }
   })
 
   $('.quiz__info-prev').on('click', () => {
+    if(quizID == 2) {
+      quizLine.style.width = 0;
+    }
     if (quizID > 1) {
       $('[data-quiz=' + quizID + ']').removeClass('current');
       quizID--;
@@ -101,34 +117,39 @@ function ready() {
     }
   })
 
-  let mainblockBtn = document.querySelector('.mainblock__btn').addEventListener('click', function() {
-    $('.quiz-item .jq-radio').change(function() {
-      disableBtn();
+  if ($('.mainblockBtn').length) {
+    let mainblockBtn = document.querySelector('mainblockBtn').addEventListener('click', function () {
+      $('.quiz-item .jq-radio').change(function () {
+        disableBtn();
+      });
+      $('.quiz__info-next').on('click', function () {
+        disableBtn();
+      })
+      $('.quiz__info-prev').on('click', function () {
+        disableBtn();
+      });
     });
-    $('.quiz__info-next').on('click', function() {
-      disableBtn();
-    })
-    $('.quiz__info-prev').on('click', function() {
-      disableBtn();
-    });
-  });
+  }
+
 
   // radioAll[0].addEventListener('click', function() {
   //   disableBtn();
   // });
- 
+
   function disableBtn() {
     let radioList = document.querySelectorAll('.quiz-item.current .jq-radio');
     let isChecked = false;
     // console.log(radioList);
-    for(let i=0; i<radioList.length; i++) {
-        if( radioList[i].classList.contains('checked') ) { isChecked = true; break; }
+    for (let i = 0; i < radioList.length; i++) {
+      if (radioList[i].classList.contains('checked')) {
+        isChecked = true;
+        break;
+      }
     }
-    if( isChecked ) {
+    if (isChecked) {
       // alert("Разблокировано");
       $('.quiz__info-next').removeAttr('disabled');
-    }
-    else {
+    } else {
       $('.quiz__info-next').attr('disabled', 'disabled');
     }
   }
@@ -137,6 +158,17 @@ function ready() {
   $('input[type=radio]').styler({
 
   });
+
+  // Слайдер в игре классов
+  // $('.game-slider__inner').slick({
+  //   slidesToShow: 1,
+  //   // variableWidth: true,
+  //   arrows: false,
+  //   infinite: true,
+  //   centerMode: true  
+  //   // centerMode: true
+  // });
+
 
   // Модальные окна
   function modalPopUp() {
@@ -175,9 +207,9 @@ function submitHandler(e) {
   var result = '<div class="quiz-item current quiz-item-success" data-quiz="8g"><div class="quiz__title">Сообщение отправлено</div>';
   result += '<div class="quiz-img"></div><div class="quiz__text">Спасибо! Мы свяжемся с вами в ближайшее время</div>';
   result += '<div class="quiz__okey popup__close">ОК</div></div><div class="quiz__close popup__close popup-close"></div>'
-       
-       
-      
+
+
+
   var request = new XMLHttpRequest();
   // var th = document.querySelector('.contact__form-thanks');
 
@@ -186,9 +218,9 @@ function submitHandler(e) {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
 
       form.innerHTML = result;
-      $('.popup__close').on('click', function() {
-       $('.quiz').removeClass('active');
-       overlay.classList.remove('overlay_active');
+      $('.popup__close').on('click', function () {
+        $('.quiz').removeClass('active');
+        overlay.classList.remove('overlay_active');
       });
       // Выполнится когда форма успешно отправлена
       // success, show this.responseText here

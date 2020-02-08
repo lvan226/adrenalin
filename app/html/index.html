@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Adrenalin</title>
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="css/jquery.formstyler.css">
+  //= template/style.html
 </head>
 
 <body>
@@ -15,15 +14,16 @@
   <div class="quiz popup" id="quiz">
     <div class="quiz__cost">
       <div class="quiz__cost-text">Ваша скидка</div>
-      <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text" value="300">₽</div>
+      <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text"
+          value="300">₽</div>
     </div>
     <div class="quiz__close popup__close popup-close"></div>
     <form class="quiz__content form-send" method="post" action="order-landing.php" id="quizForm">
       <div class="quiz-item current" data-quiz="1">
-        <input id="" type="radio" checked class="dis-none">
+        <input type="radio" checked class="dis-none">
         <div class="quiz__title">
           Ответьте на 6 вопросов
-          и&nbsp;получите скидку на игру,
+          и получите скидку на игру,
           а&nbsp;также индивидуальный расчёт стоимости игры.
         </div>
       </div>
@@ -78,10 +78,10 @@
               <label for="howmuch4">10-15</label>
             </div>
             <div class="quiz__radio any">
-              <input id="howmuch5" name="Сколько человек?" type="radio" value="">
 
-              <label for="howmuch5">
-                <input class="quiz-form-text" id="change_input" name="" type="text" placeholder="Другое">
+              <input id="howmuch5" class="checkform" name="Сколько человек?" type="radio" value="">
+              <label for="change_input">
+                <input class="quiz-form-text" id="change_input" name="none" type="text" placeholder="Другое">
               </label>
             </div>
           </div>
@@ -145,11 +145,13 @@
         <div class="quiz__title">
           Напишите дату и время игры
         </div>
+
         <div class="quiz-row3 quiz-time">
           <div class="quiz__radio any">
             <input id="data-time" type="radio">
-            <label for="data-time">
-              <input name="Дата проведения:" class="quiz-form-text" type="text" placeholder="Желаемые дата и время игры">
+            <label for="change_input2">
+              <input id="change_input2" name="Дата проведения:" class="quiz-form-text" type="text"
+                placeholder="Желаемые дата и время игры">
             </label>
           </div>
         </div>
@@ -626,10 +628,8 @@
   //= template/form.html
 
   //= template/footer.html
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/functions/jquery.formstyler.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+ 
+  //= template/script.html
 </body>
 
 </html>

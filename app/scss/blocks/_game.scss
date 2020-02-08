@@ -1,0 +1,257 @@
+.game-of-classes {
+  .photo__titile {
+    max-width: 520px;
+  }
+  .services-add__title {
+    text-align: right;
+  }
+}
+
+// <ГЛАВНЫЙ БЛОК> =============================================================================================================
+.gamemain {
+  min-height: 844px;
+  margin-bottom: 50px;
+  // .gamemain__inner
+  &__inner {
+    max-width: 580px;
+    padding-top: 260px;
+    padding-bottom: 50px;
+  }
+  // .gamemain__title
+  &__title {
+    font-size: 64px;
+    color: $yellow;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+  // .gamemain__list
+  &__list {
+    color: #fff;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    font-size: 24px;
+    font-weight: 500;
+    li {
+      margin-bottom: 30px;
+    }
+  }
+  // .gamemain__btn
+  &__btn {
+    background-color: $yellow;
+    font-size: 18px;
+    min-height: 61px;
+    max-width: 254px;
+    width: 100%;
+    font-weight: 700;
+  }
+  }
+  .container {
+  }
+  .btn {
+  }
+  .btn-12 {
+  }
+// </ГЛАВНЫЙ БЛОК> =============================================================================================================
+
+// <НЕЗАБЫВАЕМЫЕ РАЗВЛЕЧЕНИЯ> ================================================================================================
+.game-about {
+  // .game-about__title
+  &__title {
+    margin-bottom: 58px;
+    max-width: 680px;
+  }
+  // .game-about__row
+  &__row {
+    padding: 60px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    min-height: 635px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+    &:nth-child(odd) {
+      justify-content: flex-start;
+      &::after {
+        transform: rotate(0);
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #3D3D3D 30.87%, rgba(61, 61, 61, 0) 100%);
+      transform: rotate(180deg);
+      z-index: 2;
+    }
+  }
+  // .game-about__row-inner
+  &__row-inner {
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    max-width: 530px;
+  }
+  // .game-about__row-title
+  &__row-title {
+    margin-bottom: 10px;
+    color: $yellow;
+  }
+  // .game-about__row-text
+  &__row-text {
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 40px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  // .game-about__row-btn
+  &__row-btn {
+    background-color: $yellow;
+    width: 100%;
+    max-width: 162px;
+  }
+  }
+// </НЕЗАБЫВАЕМЫЕ РАЗВЛЕЧЕНИЯ> ================================================================================================
+
+// <СЛАЙДЕР> ================================================================================================
+.game-slider {
+  // .game-slider__title
+  &__title {
+    margin-bottom: 60px;
+  }
+  // .game-slider__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 20px;
+  }
+  // .game-slider__item
+  &__item {
+    max-width: 360px;
+    width: 100%;
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 60px 0px 40px 40px;
+    &.active {
+      max-width: 460px;
+      width: 100%;
+      margin: 0 20px;
+      box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.25);
+    }
+    &:hover {
+      .slider-game__btn {
+        &::after {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  &__item-inner {
+    max-width: 270px;
+  }
+  }
+  .slider-game {
+  // .slider-game__price
+  &__price {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: $yellow;
+    padding-bottom: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 117px;
+      height: 2px;
+      background-color: $yellow;
+    }
+  }
+  // .slider-game__list
+  &__list {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.4;
+    position: relative;
+    margin-bottom: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $yellow;
+    }
+    li {
+      padding-bottom: 20px;
+    }
+  }
+  // .slider-game__time
+  &__time {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: $yellow;
+    margin-bottom: 30px;
+  }
+  // .slider-game__btn
+  &__btn {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+    padding-right: 23px;
+    display: inline-block;
+    color: $yellow;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 0;
+      background-image: url(../img/game/arrow-r.png);
+      background-size: cover;
+      transform: translateX(-20px);
+      opacity: 0;
+      width: 20px;
+      height: 8px;
+      transition: .3s;
+    }
+  }
+  }
+
+  ///////////////////
+  // .game-slider {
+  //   .slick-slide {
+  //     width: 350px;
+  //     min-height: 550px;
+  //     // height: 540px;
+  //   }
+  //   .slick-slide.slick-current {
+  //     // transform: scaleY(1.2);
+  //     transform-origin: top bottom;
+  //     margin: 0 20px;
+  //     // height: 660px;
+  //   }
+  //   .slider-game {
+  //     width: 100%;
+  //     max-width: 100%;
+  //     margin: 0;
+  //   }
+  // }
+  ///////////////////
+// </СЛАЙДЕР> ================================================================================================
