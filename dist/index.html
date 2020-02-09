@@ -24,7 +24,7 @@
         <input type="radio" checked class="dis-none">
         <div class="quiz__title">
           Ответьте на 6 вопросов
-          и&nbsp;получите скидку на игру,
+          и получите скидку на игру,
           а&nbsp;также индивидуальный расчёт стоимости игры.
         </div>
       </div>
@@ -192,6 +192,10 @@
   </div>
   <!-- /.quiz -->
 
+  <div id="video1" class="popup popup-video">
+    <div class="popup-close popup__close"></div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mCVKgvxfLMA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
 
   <div class="mainblock-wrapper ibg" style="background-image: url(img/main/bg.jpg);">
@@ -199,33 +203,43 @@
     <header class="header fixed white">
       <div class="container">
         <div class="header__inner">
-          <a href="" class="header__logo">
+          <a href="index.html" class="header__logo">
             <img src="img/header/logo.png" alt="">
           </a>
-          <ul class="header__menu">
-            <li class="header__list">
-              Услуги
-              <ul class="header__submenu">
-                <li><a href="#">День рождения</a></li>
-                <li><a href="#">Игра классов</a></li>
-                <li><a href="#">Корпоратив</a></li>
-                <li><a href="#">Выпускной</a></li>
-                <li><a href="#">Квесты</a></li>
-              </ul>
-            </li>
-            <li class="header__list">
-              Площадки для игр
-              <ul class="header__submenu">
-                <li><a href="#">г. Череповец, Лыжный стадион</a></li>
-                <li><a href="#">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
-                <li><a href="#">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
-              </ul>
-            </li>
-            <li class="header__cost"><a href="#">Стоимость</a></li>
-          </ul>
+          <div class="header-menu">
+            <div class="header-menu__close popup-close">
+              
+            </div>
+            <ul class="header__menu">
+              <li class="header__list">
+                Услуги
+                <ul class="header__submenu">
+                  <li><a href="birthday.html">День рождения</a></li>
+                  <li><a href="game.html">Игра классов</a></li>
+                  <li><a href="company.html">Корпоратив</a></li>
+                  <li><a href="release.html">Выпускной</a></li>
+                  <li><a href="#">Квесты</a></li>
+                </ul>
+              </li>
+              <li class="header__list">
+                Площадки для игр
+                <ul class="header__submenu">
+                  <li><a href="platform1.html">г. Череповец, Лыжный стадион</a></li>
+                  <li><a href="platform2.html">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
+                  <li><a href="#">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
+                </ul>
+              </li>
+              <li class="header__cost"><a href="#">Стоимость</a></li>
+            </ul>
+          </div>
           <div>
-            <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+            <a href="tel:+541316" class="header__phone">54-13-16</a>
             <button class="header__btn btn btn-11"><span>Заказать звонок</span></button>
+          </div>
+          <div class="header-burger">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
         <!-- /.header__inner -->
@@ -255,8 +269,8 @@
             </li>
           </ul>
           <div class="mainblock__row">
-            <button class="mainblock__btn btn popup-btn" data-popup="quiz">Рассчитать стоимость</button>
-            <div class="video">
+            <button class="mainblock__btn btn popup-btn quiz-play" data-popup="quiz">Рассчитать стоимость</button>
+            <div class="video popup-btn" data-popup="video1">
               <div class="video__click">
                 <div class="video__click-body"></div>
                 <img src="img/icons/play.svg" alt="" class="video__click-play">
@@ -664,7 +678,7 @@
     <div class="services-add sect">
       <div class="container">
         <h2 class="services-add__title title">Доп. услуги</h2>
-        <div class="services-add__row row">
+        <div class="services-add__row row row-top">
           <div class="row__left">
             <div class="column-big ibg" style="background-image: url(img/servicesadd/1.jpg);">
               <div class="services-add__item">
@@ -826,7 +840,7 @@
   <!-- <ФОРМА ОБРАТНОЙ СВЯЗИ> -->
   <section class="mainform sect">
     <div class="container">
-      <h2 class="mainform__title title3 yellow">Есть вопросы? Хотите заказать игру?
+      <h2 class="mainform__title title3 yellow">Есть вопросы? Хотите&nbsp;заказать&nbsp;игру?
         Оставьте заявку и мы вам перезвоним.</h2>
       <form action="mailer.php" method="POST">
         <div class="mainform__row">
@@ -841,8 +855,8 @@
           <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
         </div>
       </form>
-      <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="">Оферты по использованию сайта </a> и
-        согласен с <a href="">Политикой конфиденциальности</a></div>
+      <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по использованию сайта </a> и
+        согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
     </div>
     <!-- /.container -->
   </section>
@@ -855,10 +869,10 @@
         <div class="footer__column">
           <h5 class="footer__title">Наши услуги</h5>
           <ul class="footer__list">
-            <li class="footer__list-item"><a href="#">День рождения</a></li>
-            <li class="footer__list-item"><a href="#">Игра классов</a></li>
-            <li class="footer__list-item"><a href="#">Корпоратив</a></li>
-            <li class="footer__list-item"><a href="#">Выпускной</a></li>
+            <li class="footer__list-item"><a href="birthday.html">День рождения</a></li>
+            <li class="footer__list-item"><a href="game.html">Игра классов</a></li>
+            <li class="footer__list-item"><a href="company.html">Корпоратив</a></li>
+            <li class="footer__list-item"><a href="release.html">Выпускной</a></li>
             <li class="footer__list-item"><a href="#">Квесты</a></li>
           </ul>
         </div>
@@ -866,9 +880,9 @@
         <div class="footer__column">
           <h5 class="footer__title">Площадки для игр</h5>
           <ul class="footer__list">
-            <li class="footer__list-item"><a href="#">г. Череповец, Лыжный стадион</a></li>
-            <li class="footer__list-item"><a href="#">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
-            <li class="footer__list-item"><a href="#">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
+            <li class="footer__list-item"><a href="platform1.html">г. Череповец, Лыжный стадион</a></li>
+            <li class="footer__list-item"><a href="platform2.html">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
+            <li class="footer__list-item"><a href="platform2.html">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
           </ul>
         </div>
         <!-- /.footer__column -->
@@ -886,8 +900,8 @@
         <div class="footer__column">
           <h5 class="footer__title">Документы</h5>
           <ul class="footer__list">
-            <li class="footer__list-item"><a href="#">Конфиденциальность и защита</a></li>
-            <li class="footer__list-item"><a href="#">Договор-оферта</a></li>
+            <li class="footer__list-item"><a href="confidentiality.html">Конфиденциальность и защита</a></li>
+            <li class="footer__list-item"><a href="protect.html">Договор-оферта</a></li>
           </ul>
         </div>
         <!-- /.footer__column -->
@@ -902,8 +916,9 @@
     <!-- /.container -->
   </footer>
   <!-- </ПОДВАЛ САЙТА> -->
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/functions/jquery.formstyler.min.js"></script>
+  <script src="js/custom.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -4,6 +4,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 16px;
+  @media (max-width: $xs){padding-top: 20px;}
   &.fixed {
     position: absolute;
     top: 0;
@@ -44,10 +45,16 @@
   }
   // .header__menu
   &__menu {
+    @media (max-width: $sm) {
+
+    }
     .header__cost {
       display: inline-block;
       transition: .3s;
       margin-left: 25px;
+      @media (max-width: $sm) {
+        margin: 0;
+      }
       &:hover {
         color: $blue;
       }
@@ -58,6 +65,13 @@
       padding-right: 15px;
       position: relative;
       cursor: pointer;
+      @media (max-width: $md) {
+        margin: 0 15px;
+      }
+      @media (max-width: $sm) {
+        margin: 0;
+        margin-bottom: 20px;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -71,6 +85,9 @@
         background-position: center;
         background-repeat: no-repeat;
         transition: .3s;
+        @media (max-width: $sm) {
+          top: 8px;
+        }
       }
       &:hover {
         &::after {
@@ -105,6 +122,13 @@
     transition: all 0.05s;
     cursor: auto;
     z-index: 10;
+    @media (max-width: $sm) {
+      position: relative;
+      right: 0;
+      width: 100%;
+      font-size: 16px;
+      transition: all .6s;
+    }
     // &::after {
     //   content: "";
     //   position: absolute;
@@ -125,9 +149,13 @@
   }
   // .header__phone
   &__phone {
-    margin-right: 30px;
+    margin-right: 50px;
     font-size: 20px;
     transition: .3s;
+    vertical-align: middle;
+    @media (max-width: $md) {
+      margin-right: 0;
+    }
     &:hover {
       color: $blue;
     }
@@ -135,10 +163,91 @@
   // .header__btn
   &__btn {
     height: auto;
+    @media (max-width: $md) {
+      display: none;
+    }
   }
   }
   .container {
   }
   .btn {
   }
-  
+
+.header-burger {
+  width: 40px;
+  height: 16px;
+  cursor: pointer;
+  @media(min-width: 768px) {
+    display: none;
+  }
+  span {
+    background-color: #fff;
+    height: 2px;
+    width: 30px;
+    display: block;
+    margin-left: auto;
+    &:first-child {
+      width: 40px;
+    }
+    &:last-child {
+      width: 20px;
+    }
+  }
+  span + span {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-menu__close  {
+    display: none;
+  }
+}
+@media (max-width: $sm) {
+  .header__logo {
+    max-width: 120px;
+  }
+  .header {
+    z-index: 9998;
+  }
+  .header-menu__close  {
+    display: block;
+    &::after,
+    &::before {
+      background-color: #fff;
+    }
+  }
+  .header-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100%;
+    // bottom: 0;
+    width: 100%;
+    // height: 100%; 
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    background-color: #3d3d3d;
+    text-align: center;
+    padding: 60px 10px;
+    font-size: 18px;
+    transition: .4s;
+  }
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-menu.active {
+    z-index: 9999;
+    top: 0;
+  }
+  .header__menu>li.header__list::after {
+    right: 30px;
+  }
+}
+@media (max-width: $xs) {
+  .header__logo {
+    max-width: 80px;
+  }
+}

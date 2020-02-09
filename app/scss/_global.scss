@@ -1,3 +1,26 @@
+
+// <НАСТРОЙКИ СЕТКИ> =========================================================================================================
+
+$mw: 1290px;
+$xs: 575.98px;
+$sm: 767.98px;
+$md: 991.98px;
+$lg: 1199.98px;
+
+.container{max-width:$mw;margin: 0 auto; padding: 0 15px; width: 100%;
+	@media (max-width:$lg){max-width: 970px;}
+	@media (max-width:$md){max-width: 750px;}
+  @media (max-width:$sm){max-width: 600px;padding:0 10px;}
+  @media (max-width:$xs){max-width: 100%;padding:0 10px;}
+}
+.container-big{max-width:1450px;margin: 0 auto; padding: 0 15px; width: 100%;
+  @media (max-width: 1500px){max-width: 1290px;}
+	@media (max-width:$lg){max-width: 970px;}
+	@media (max-width:$md){max-width: 750px;}
+  @media (max-width:$sm){max-width: 600px;padding:0 10px;}
+  @media (max-width:$xs){max-width: 100%;padding:0 10px;}
+}
+// </НАСТРОЙКИ СЕТКИ> =========================================================================================================
 html {
   box-sizing: border-box;
 }
@@ -70,11 +93,15 @@ button {
 }
 .sect {
   padding: 50px 0;
+  @media (max-width: $xs) {padding: 30px 0;}
 }
 .title {
   font-size: 48px;
   color: $yellow;
   font-weight: 700;
+  @media (max-width: $md) {font-size: 44px;}
+  @media (max-width: $sm) {font-size: 38px;}
+  @media (max-width: $xs) {font-size: 32px;}
   &_r {
     text-align: right;
     padding-right: 90px;
@@ -83,6 +110,8 @@ button {
 .title3 {
   font-size: 36px;
   font-weight: 500;
+  @media (max-width: $sm) {font-size: 30px;}
+  @media (max-width: $xs) {font-size: 24px;}
   strong {
     color: $yellow;
   }
@@ -93,27 +122,7 @@ button {
 .right {
   text-align: right;
 }
+.mobile-none {
+  @media (max-width: $xs) {display: none;}
+}
 // <БЛОКИ> =============================================================================================================
-
-// <НАСТРОЙКИ СЕТКИ> =========================================================================================================
-
-$mw: 1290px;
-$xs: 575.98px;
-$sm: 767.98px;
-$md: 991.98px;
-$lg: 1199.98px;
-
-.container{max-width:$mw;margin: 0 auto; padding: 0 15px; width: 100%;
-	@media (max-width:$lg){max-width: 970px;}
-	@media (max-width:$md){max-width: 750px;}
-  @media (max-width:$sm){max-width: 600px;padding:0 10px;}
-  @media (max-width:$xs){max-width: 100%;padding:0 10px;}
-}
-.container-big{max-width:1450px;margin: 0 auto; padding: 0 15px; width: 100%;
-  @media (max-width: 1500px){max-width: 1290px;}
-	@media (max-width:$lg){max-width: 970px;}
-	@media (max-width:$md){max-width: 750px;}
-  @media (max-width:$sm){max-width: 600px;padding:0 10px;}
-  @media (max-width:$xs){max-width: 100%;padding:0 10px;}
-}
-// </НАСТРОЙКИ СЕТКИ> =========================================================================================================

@@ -7,7 +7,8 @@ let gulp = require('gulp'),
     del = require('del'),
     autoprefixer = require('gulp-autoprefixer'),
     rigger = require('gulp-rigger')
-    cleanCSS = require('gulp-clean-css');
+    cleanCSS = require('gulp-clean-css'),
+    imagemin = require('gulp-imagemin');
 
 
 gulp.task('clean', async function(){
@@ -46,6 +47,12 @@ gulp.task('script', function(){
   return gulp.src('app/js/*.js')
   .pipe(browserSync.reload({stream: true}))
 });
+gulp.task('script2', function(){
+  return gulp.src('app/js/functions/*.js')
+  .pipe(concat('custom.js'))
+  .pipe(gulp.dest('app/js'))
+  .pipe(browserSync.reload({stream: true}))
+});
 
 gulp.task('js', function(){
   return gulp.src([
@@ -53,7 +60,7 @@ gulp.task('js', function(){
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
+    .pipe(gulp.dest('app/js/'))
     .pipe(browserSync.reload({stream: true}))
 });
 
@@ -82,15 +89,19 @@ gulp.task('export', function(){
     .pipe(gulp.dest('dist/fonts'));
 
   let BuildImg = gulp.src('app/img/**/*.*')
+    .pipe(imagemin([
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+    ]))
     .pipe(gulp.dest('dist/img'));   
 });
 
 gulp.task('watch', function(){
   gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
-  gulp.watch('app/html/**/*.html', gulp.parallel('html'))
-  gulp.watch('app/js/*.js', gulp.parallel('script'))
+  gulp.watch('app/html/**/*.html', gulp.parallel('html'));
+  gulp.watch('app/js/*.js', gulp.parallel('script'));
 });
 
 gulp.task('build', gulp.series('clean', 'export'))
 
-gulp.task('default', gulp.parallel('css' ,'scss', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('css' ,'scss', 'js', 'script2', 'browser-sync', 'watch'));

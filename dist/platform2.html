@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adrenalin</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
+</head>
+
+<body class="platform1">
+  <div class="overlay" id="overlay"></div>
+  <div class="quiz popup" id="quiz">
+    <div class="quiz__cost">
+      <div class="quiz__cost-text">Ваша скидка</div>
+      <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text"
+          value="300">₽</div>
+    </div>
+    <div class="quiz__close popup__close popup-close"></div>
+    <form class="quiz__content form-send" method="post" action="order-landing.php" id="quizForm">
+      <div class="quiz-item current" data-quiz="1">
+        <input type="radio" checked class="dis-none">
+        <div class="quiz__title">
+          Ответьте на 6 вопросов
+          и получите скидку на игру,
+          а&nbsp;также индивидуальный расчёт стоимости игры.
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="2">
+        <div class="quiz__title">
+          Какой у вас повод для игры?
+        </div>
+        <div class="quiz-row">
+          <div class="quiz-row__info">
+            <div class="quiz__radio">
+              <input id="reason1" name="Тип мероприятия:" type="radio" value="День рождения">
+              <label for="reason1">День рождения</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason2" name="Тип мероприятия:" type="radio" value="Игра класса/выпускной">
+              <label for="reason2">Игра класса/выпускной</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason3" name="Тип мероприятия:" type="radio" value="Сборная игра">
+              <label for="reason3">Сборная игра</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="reason4" name="Тип мероприятия:" type="radio" value="Корпоратив">
+              <label for="reason4">Корпоратив</label>
+            </div>
+          </div>
+          <div class="quiz-row__img ibg" style="background-image: url(img/kwiz/item1.jpg);">
+
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="3">
+        <div class="quiz__title">
+          Сколько человек планируется?
+        </div>
+        <div class="quiz-row1">
+          <div class="quiz-row1__info">
+            <div class="quiz__radio">
+              <input id="howmuch1" name="Сколько человек?" type="radio" value="1">
+              <label for="howmuch1">1</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch2" name="Сколько человек?" type="radio" value="до 6">
+              <label for="howmuch2">до 6</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch3" name="Сколько человек?" type="radio" value="6-10">
+              <label for="howmuch3">6-10</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="howmuch4" name="Сколько человек?" type="radio" value="10-15">
+              <label for="howmuch4">10-15</label>
+            </div>
+            <div class="quiz__radio any">
+
+              <input id="howmuch5" class="checkform" name="Сколько человек?" type="radio" value="">
+              <label for="change_input">
+                <input class="quiz-form-text" id="change_input" name="none" type="text" placeholder="Другое">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="4">
+        <div class="quiz__title">
+          Средний возраст участников?
+        </div>
+        <div class="quiz-row1 quiz-age">
+          <div class="quiz-row1__info">
+            <div class="quiz__radio">
+              <input id="age1" name="Средний возраст участников:" type="radio" value="до 6 лет">
+              <label for="age1">до 6 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age2" name="Средний возраст участников:" type="radio" value="9-11 лет">
+              <label for="age2">9-11 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age3" name="Средний возраст участников:" type="radio" value="15-18 лет">
+              <label for="age3">15-18 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age4" name="Средний возраст участников:" type="radio" value="6 -8 лет">
+              <label for="age4">6 -8 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age5" name="Средний возраст участников:" type="radio" value="12-14 лет">
+              <label for="age5">12-14 лет</label>
+            </div>
+            <div class="quiz__radio">
+              <input id="age6" name="Средний возраст участников:" type="radio" value="18+ лет">
+              <label for="age6">18+ лет</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="5">
+        <div class="quiz__title">
+          Какую площадку выберете?
+        </div>
+        <div class="quiz-row2 quiz-platform">
+          <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform1" value="Лыжный cтадион в ЗШК">
+            <label for="platform1">
+              <img src="img/quiz/1.png" alt="">
+              <span>Лыжный cтадион в ЗШК</span>
+            </label>
+          </div>
+          <div class="quiz-row2__column">
+            <input type="radio" name="Площадка:" id="platform2" value="Гоголя, 56 (за ТЦ «Рассвет»)">
+            <label for="platform2">
+              <img src="img/quiz/2.png" alt="">
+              <span>Гоголя, 56 (за ТЦ «Рассвет»)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="6">
+        <div class="quiz__title">
+          Напишите дату и время игры
+        </div>
+
+        <div class="quiz-row3 quiz-time">
+          <div class="quiz__radio any">
+            <input id="data-time" type="radio">
+            <label for="change_input2">
+              <input id="change_input2" name="Дата проведения:" class="quiz-form-text" type="text"
+                placeholder="Желаемые дата и время игры">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="7">
+        <div class="quiz__title">
+          Оставьте контакты и получите
+          расчёт стоимости и скидку
+          на&nbsp;игру
+        </div>
+        <div class="quiz-row4 quiz-contact">
+          <div class="quiz__radio any any2">
+            <input id="quizName" name="Имя пользователя:" class="quiz-form-text" type="text" required>
+            <label for="quizName">Имя</label>
+          </div>
+          <div class="quiz__radio any any2">
+            <input id="quizPhone" name="Телефон:" class="quiz-form-text" type="text" required>
+            <label for="quizPhone">Телефон</label>
+          </div>
+        </div>
+        <button type="submit" class="btn quiz-btn-send btn-12"><span>Далее</span></button>
+      </div>
+    </form>
+    <!-- /.quiz__content -->
+    <div class="quiz__info">
+      <div class="quiz__info-content">
+        <button class="quiz__info-prev btn"><span>Назад</span><span class="arr"></span></button>
+        <div class="quiz__info-question">Вопрос <span class="quiz__info-start"></span> из <span
+            class="quiz__info-end"></span></div>
+        <button class="quiz__info-next btn"><span>Далее</span><span class="arr"></span></button>
+      </div>
+      <div class="quiz__line">
+        <div class="quiz__line-complete"></div>
+      </div>
+    </div>
+    <!-- /.quiz__info -->
+  </div>
+  <!-- /.quiz -->
+  <!-- <Шапка сайта> -->
+  <header class="header relative">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <img src="img/header/logo.png" alt="">
+        </a>
+        <ul class="header__menu">
+          <li class="header__list">
+            Услуги
+            <ul class="header__submenu">
+              <li><a href="birthday.html">День рождения</a></li>
+              <li><a href="game.html">Игра классов</a></li>
+              <li><a href="company.html">Корпоратив</a></li>
+              <li><a href="release.html">Выпускной</a></li>
+              <li><a href="#">Квесты</a></li>
+            </ul>
+          </li>
+          <li class="header__list">
+            Площадки для игр
+            <ul class="header__submenu">
+              <li><a href="platform1.html">г. Череповец, Лыжный стадион</a></li>
+              <li><a href="platform2.html">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
+              <li><a href="#">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
+            </ul>
+          </li>
+          <li class="header__cost"><a href="#">Стоимость</a></li>
+        </ul>
+        <div>
+          <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+          <button class="header__btn btn btn-11"><span>Заказать звонок</span></button>
+        </div>
+      </div>
+      <!-- /.header__inner -->
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- </Шапка сайта> -->
+
+  <!-- <ПЛОЩАДКА ГЛАВНЫЙ ЭКРАН> -->
+  <section class="platform-hero sect">
+    <div class="container">
+      <div class="platform-hero__inner">
+        <div class="platform-hero__info">
+          <h2 class="platform-hero__title title">Гоголя, 56 
+            (за&nbsp;ТЦ&nbsp;«Рассвет»)</h2>
+          <div class="platform-hero__text">
+            <p>Огромная площадка которая может вместить до 100 человек. В ней есть множество укрытий, место для отдыха после игры. 
+              Там&nbsp;же мы устраиваем турниры. А ещё, когда темно, мы выключаем свет и включаем неоновый свет. Приходите и почувствуйте 
+              это&nbsp;сами!
+            </p>
+          </div>
+          <button class="platform-hero__btn btn btn-11 popup-btn quiz-play" data-popup="quiz"><span>Забронировать игру здесь</span></button>
+        </div>
+        <!-- /.platform-hero__info -->
+        <div class="platform-hero__img ibg" style="background-image: url(img/platform1/hero/hero-img2.jpg);"></div>
+        <!-- /.platform-hero__img -->
+      </div>
+      <!-- /.platform-hero__inner -->
+      <div class="platform-hero__fact">
+        <div class="platform-hero__fact-item">
+          <div class="platform-hero__fact-img"><img src="img/platform1/hero/icon1.png" alt=""></div>
+          <p class="platform-hero__fact-text">Большое количество
+            интересных укрытий
+            для динамичной игры</p>
+        </div>
+        <div class="platform-hero__fact-item">
+          <div class="platform-hero__fact-img"><img src="img/platform1/hero/icon2.png" alt=""></div>
+          <p class="platform-hero__fact-text">Зона для отдыха
+            и&nbsp;сладкого стола
+            после&nbsp;игры</p>
+        </div>
+        <div class="platform-hero__fact-item">
+          <div class="platform-hero__fact-img"><img src="img/platform1/hero/light.png" alt=""></div>
+          <p class="platform-hero__fact-text">Неон и музыкальное
+            сопровождение</p>
+        </div>
+        <div class="platform-hero__fact-item">
+          <div class="platform-hero__fact-img"><img src="img/platform1/hero/100.png" alt=""></div>
+          <p class="platform-hero__fact-text">Одновременно могут
+            играть до 100 человек</p>
+        </div>
+      </div>
+      <!-- /.platform-hero__fact -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </ПЛОЩАДКА ГЛАВНЫЙ ЭКРАН> -->
+
+  <!-- <ФОТО> -->
+  <section class="photo sect">
+    <div class="container">
+      <h2 class="photo__titile title">Фотографии</h2>
+    </div>
+    <!-- /.container -->
+    <div class="container-big">
+      <div class="photo__slider slider-main">
+        <div class="photo__item ibg" style="background-image: url(img/photo/1.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/photo/2.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/photo/3.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/photo/2.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/photo/3.jpg);"></div>
+      </div>
+      <!-- /.photo__slider -->
+    </div>
+  </section>
+  <!-- </ФОТО> -->
+
+  <!-- <КАК ДОБРАТЬСЯ ДО ПЛОЩАДКИ> -->
+  <section class="platform-travel sect">
+    <div class="container">
+      <h2 class="platform-travel__title title right">Как добраться до площадки</h2>
+      <div class="platform-travel__inner">
+        <div class="platform-travel__info">
+          <div class="platform-travel__info-item">
+            <h3 class="platform-travel__info-title title3">На общественном транспорте</h3>
+            <p>На автобусе под номерами 1, 1К, 2, 3, 5, 5Ш, 5НУ, 12, 13, 18, 31, 108, 109 или на трамвае под номерами 2, 4, 4А, 8 до Рассвета. Затем пешком 3 минуты в сторону улицы Краснодонцев. </p>
+          </div>
+          <div class="platform-travel__info-item">
+            <h3 class="platform-travel__info-title title3">На машине</h3>
+            <p>Улица Гоголя, 56, за ТЦ «Рассвет».</p>
+          </div>
+          <!-- /.platform-travel__info-item -->
+        </div>
+        <!-- /.platform-travel__info -->
+        <div class="platform-travel__video ibg" style="background-image: url(img/platform1/travel/video-bg.jpg);">
+          <div class="video">
+            <div class="video__click">
+              <div class="video__click-body"></div>
+            </div>
+            <button class="video__btn">Смотреть видео</button>
+          </div>
+        </div>
+        <!-- /.platform-travel__video -->
+      </div>
+      <!-- /.platform-travel__inner -->
+      <div class="platform-travel__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1725.8824155439556!2d104.29368322402577!3d52.28394426034614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da83b48198f9385%3A0xba2ffd07655e3bc0!2z0KDRg9Cx0LvQtdCy!5e0!3m2!1sru!2sru!4v1580716287028!5m2!1sru!2sru"
+          style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </КАК ДОБРАТЬСЯ ДО ПЛОЩАДКИ> -->
+
+  <!-- <ФОРМА ОБРАТНОЙ СВЯЗИ> -->
+  <section class="mainform sect">
+    <div class="container">
+      <h2 class="mainform__title title">Забронируйте игру</h2>
+      <form action="mailer.php" method="POST">
+        <div class="mainform__row">
+          <div class="mainform__line">
+            <input required class="mainform__field" type="text" id="name" name="userName">
+            <label class="mainform__label" for="name">Имя</label>
+          </div>
+          <div class="mainform__line">
+            <input required class="mainform__field" type="text" id="phone" name="userPhone">
+            <label class="mainform__label" for="phone">Телефон</label>
+          </div>
+          <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
+        </div>
+      </form>
+      <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="">Оферты по использованию сайта </a> и
+        согласен с <a href="">Политикой конфиденциальности</a></div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </ФОРМА ОБРАТНОЙ СВЯЗИ> -->
+
+  <!-- <ПЛОЩАДКИ> -->
+  <section class="platform sect">
+    <div class="container">
+      <h2 class="platform__title title right">Другие наши полигоны</h2>
+      <div class="platform__about ibg" style="background-image: url(img/platform1/hero/platform2.jpg);">
+        <div class="platform__about-content">
+          <h3 class="platform__about-title title3">Лыжный стадион</h3>
+          <p>Большая площадка на свежем воздухе. Имеет множество укрытий, как естественных, так и созданных нами. Интересная площадка станет настоящим испытанием 
+            для бойца любого возраста.             
+          </p>
+          <div class="platform__nav">
+            <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
+            <div class="video">
+              <div class="video__click">
+                <div class="video__click-body"></div>
+              </div>
+              <button class="video__btn">Смотреть видео</button>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- /.platform__about -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- </ПЛОЩАДКИ> -->
+
+  <!-- <ПОДВАЛ САЙТА> -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__column">
+          <h5 class="footer__title">Наши услуги</h5>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="birthday.html">День рождения</a></li>
+            <li class="footer__list-item"><a href="game.html">Игра классов</a></li>
+            <li class="footer__list-item"><a href="company.html">Корпоратив</a></li>
+            <li class="footer__list-item"><a href="release.html">Выпускной</a></li>
+            <li class="footer__list-item"><a href="#">Квесты</a></li>
+          </ul>
+        </div>
+        <!-- /.footer__column -->
+        <div class="footer__column">
+          <h5 class="footer__title">Площадки для игр</h5>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="platform1.html">г. Череповец, Лыжный стадион</a></li>
+            <li class="footer__list-item"><a href="platform2.html">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
+            <li class="footer__list-item"><a href="platform2.html">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
+          </ul>
+        </div>
+        <!-- /.footer__column -->
+        <div class="footer__column">
+          <h5 class="footer__title">Контакты</h5>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="#">Телефон</a></li>
+            <li class="footer__list-item"><a href="#">Почта</a></li>
+          </ul>
+          <div class="footer__list-social">
+            <a href="#"><span class="footer__list-social-img ibg"></span></a>
+            <a href="#"><span class="footer__list-social-img ibg"></span></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h5 class="footer__title">Документы</h5>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="confidentiality.html">Конфиденциальность и защита</a></li>
+            <li class="footer__list-item"><a href="protect.html">Договор-оферта</a></li>
+          </ul>
+        </div>
+        <!-- /.footer__column -->
+      </div>
+      <!-- /.footer__inner -->
+      <div class="footer__info">
+        <p class="footer__copy">Copyright © 2020 Adrenalin. All rights reserved</p>
+        <a href="#" class="development-link"><span>Разработано в Sideguide</span></a>
+      </div>
+      <!-- /.footer__info -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- </ПОДВАЛ САЙТА> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -199,33 +199,43 @@
   <header class="header fixed white">
     <div class="container">
       <div class="header__inner">
-        <a href="" class="header__logo">
+        <a href="index.html" class="header__logo">
           <img src="img/header/logo.png" alt="">
         </a>
-        <ul class="header__menu">
-          <li class="header__list">
-            Услуги
-            <ul class="header__submenu">
-              <li><a href="birthday.html">День рождения</a></li>
-              <li><a href="game.html">Игра классов</a></li>
-              <li><a href="company.html">Корпоратив</a></li>
-              <li><a href="release.html">Выпускной</a></li>
-              <li><a href="#">Квесты</a></li>
-            </ul>
-          </li>
-          <li class="header__list">
-            Площадки для игр
-            <ul class="header__submenu">
-              <li><a href="#">г. Череповец, Лыжный стадион</a></li>
-              <li><a href="#">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
-              <li><a href="#">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
-            </ul>
-          </li>
-          <li class="header__cost"><a href="#">Стоимость</a></li>
-        </ul>
+        <div class="header-menu">
+          <div class="header-menu__close popup-close">
+            
+          </div>
+          <ul class="header__menu">
+            <li class="header__list">
+              Услуги
+              <ul class="header__submenu">
+                <li><a href="birthday.html">День рождения</a></li>
+                <li><a href="game.html">Игра классов</a></li>
+                <li><a href="company.html">Корпоратив</a></li>
+                <li><a href="release.html">Выпускной</a></li>
+                <li><a href="#">Квесты</a></li>
+              </ul>
+            </li>
+            <li class="header__list">
+              Площадки для игр
+              <ul class="header__submenu">
+                <li><a href="platform1.html">г. Череповец, Лыжный стадион</a></li>
+                <li><a href="platform2.html">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
+                <li><a href="#">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
+              </ul>
+            </li>
+            <li class="header__cost"><a href="#">Стоимость</a></li>
+          </ul>
+        </div>
         <div>
-          <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+          <a href="tel:+541316" class="header__phone">54-13-16</a>
           <button class="header__btn btn btn-11"><span>Заказать звонок</span></button>
+        </div>
+        <div class="header-burger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
       <!-- /.header__inner -->
@@ -245,7 +255,7 @@
           <li>Все, что нужно для праздника в одном месте</li>
           <li>Комната и беседка чтобы покушать</li>
         </ul>
-        <button class="gamemain__btn btn btn-12 popup-btn" data-popup="quiz"><span>Рассчитать стоимость</span></button>
+        <button class="gamemain__btn btn btn-12 popup-btn quiz-play" data-popup="quiz"><span>Рассчитать стоимость</span></button>
       </div>
       <!-- /.gamemain__inner -->
     </div>
@@ -257,7 +267,7 @@
   <!-- <НЕЗАБЫВАЕМЫЕ РАЗВЛЕЧЕНИЯ> -->
   <section class="game-about sect">
     <div class="container">
-      <h2 class="game-about__title title">Незабываемые развлечения в клубе Адреналин</h2>
+      <h2 class="game-about__title title">Незабываемые развлечения в&nbsp;клубе Адреналин</h2>
       <div class="game-about__row ibg" style="background-image: url(img/game/about-1.jpg);">
         <div class="game-about__row-inner">
           <h3 class="game-about__row-title title3">Лазертаг</h3>
@@ -265,9 +275,9 @@
             <p>Суть игры состоит в поражении игроков-противников безопасными лазерными выстрелами из бластера-автомата.
               Играя в лазертаг, чувствуешь себя настоящим бойцом спецназа, защитником Родины. В эту игру с лёгкостью
               играют взрослые и дети от 6 лет, в том числе девочки.</p>
-            <p>Перед каждой игрой игрокам рассказывают легенду, согласно которой они играют. Это может быть захват
+            <p class="mobile-none">Перед каждой игрой игрокам рассказывают легенду, согласно которой они играют. Это может быть захват
               флага, конвой, бомба, контрольная точка, зачистка и т.д.</p>
-            <p>После начала игры, жизнь уже не станет прежней — новые эмоции, мысли, постоянное волнение и напряжённость
+            <p class="mobile-none">После начала игры, жизнь уже не станет прежней — новые эмоции, мысли, постоянное волнение и напряжённость
               боевых действий не дадут отдохнуть ни секунды. Эмоциональная и запоминающаяся игра с классом
               обеспечена!</p>
           </div>
@@ -284,7 +294,7 @@
               различные задания.</p>
             <p>Благодаря большому выбору сценариев и адаптации заданий под возраст участников, играть в них будет
               интересно детям от 6 до 14 лет. Оптимальное количество игроков от 4 человек.</p>
-            <p>В отличие от квест-комнат, в которых упор делается
+            <p class="mobile-none">В отличие от квест-комнат, в которых упор делается
               на взаимодействие с реквизитом, в Живых квестах
               с детьми работает профессиональный квест-менеджер, который вовлекает детей в игру, подстраивает задания
               под уровень детей прямо в процессе игры, погружает детей в атмосферу квеста.</p>
@@ -558,73 +568,43 @@
   </section>
   <!-- </ПЛОЩАДКИ> -->
 
-  <!-- <СЛАЙДЕР ИГРА КЛАССОВ> -->
-  <section class="game-slider sect">
+  <!-- <СТОИМОСТЬ ИГРА КЛАССОВ> -->
+  <section class="gamecost sect">
     <div class="container">
-      <h2 class="game-slider__title title">Стоимость</h2>
-      <div class="game-slider__inner">
-        <a href="#" class="game-slider__item slider-game">
-          <div class="game-slider__item-inner">
-            <div class="slider-game__price">от 600 рублей</div>
-            <ul class="slider-game__list">
-              <li>Лазертаг</li>
-              <li>Обед</li>
-              <li>Дискотека + ведущий
-                с&nbsp;конкурсами</li>
-              <li>Бесплатная фотосессия</li>
-            </ul>
-            <div class="slider-game__time">2,5 часа</div>
+      <h2 class="gamecost__title title">Стоимость</h2>
+      <div class="gamecost__inner">
+        <a href="#" class="gamecost__item">
+          <div class="gamecost__img"><img src="img/game/i1.png" alt=""></div>
+          <div class="gamecost__info">
+            <div class="gamecost__info-price">450 ₽/час</div>
+            <p class="gamecost__info-text">С человека при заказе
+              игры в&nbsp;лазертаг</p>
             <span class="slider-game__btn">Рассчитать стоимость</span>
           </div>
-          <!-- /.game-slider__item-inner -->
         </a>
-        <!-- /.game-slider__item slider-game -->
-        <a href="#" class="game-slider__item slider-game active">
-          <div class="game-slider__item-inner">
-            <div class="slider-game__price">1500 рублей</div>
-            <ul class="slider-game__list">
-              <li>Лазертаг</li>
-              <li>Фрироуп</li>
-              <li>Обед</li>
-              <li>Полоса препятствий</li>
-              <li>Дискотека + ведущий
-                с&nbsp;конкурсами</li>
-              <li>Бесплатная фотосессия</li>
-            </ul>
-            <div class="slider-game__time">4,5 часа</div>
-            <span class="slider-game__btn">Рассчитать стоимость</span>
+        <!-- /.gamecost__item -->
+        <a href="#" class="gamecost__item">
+          <div class="gamecost__img"><img src="img/game/i2.png" alt=""></div>
+          <div class="gamecost__info">
+            <div class="gamecost__info-price">400 ₽</div>
+            <p class="gamecost__info-text">С человека при заказе
+              любого квеста</p>
+              <span class="slider-game__btn">Рассчитать стоимость</span>
           </div>
-          <!-- /.game-slider__item-inner -->
         </a>
-        <!-- /.game-slider__item slider-game -->
-        <a href="#" class="game-slider__item slider-game">
-          <div class="game-slider__item-inner">
-            <div class="slider-game__price">1200 рублей</div>
-            <ul class="slider-game__list">
-              <li>Лазертаг</li>
-              <li>Фрироуп</li>
-              <li>Полоса препятствий</li>
-              <li>Обед</li>
-              <li>Бесплатная фотосессия</li>
-            </ul>
-            <div class="slider-game__time">3,5 часа</div>
-            <span class="slider-game__btn">Рассчитать стоимость</span>
-          </div>
-          <!-- /.game-slider__item-inner -->
-        </a>
-        <!-- /.game-slider__item slider-game -->
+        <!-- /.gamecost__item -->
       </div>
-      <!-- /.game-slider__inner -->
+      <!-- /.gamecost__inner -->
     </div>
     <!-- /.container -->
   </section>
-  <!-- </СЛАЙДЕР ИГРА КЛАССОВ> -->
+  <!-- </СТОИМОСТЬ ИГРА КЛАССОВ> -->
 
 
   <!-- <ФОРМА ОБРАТНОЙ СВЯЗИ> -->
   <section class="mainform sect">
     <div class="container">
-      <h2 class="mainform__title title3 yellow">Есть вопросы? Хотите заказать игру?
+      <h2 class="mainform__title title3 yellow">Есть вопросы? Хотите&nbsp;заказать&nbsp;игру?
         Оставьте заявку и мы вам перезвоним.</h2>
       <form action="mailer.php" method="POST">
         <div class="mainform__row">
@@ -639,8 +619,8 @@
           <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
         </div>
       </form>
-      <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="">Оферты по использованию сайта </a> и
-        согласен с <a href="">Политикой конфиденциальности</a></div>
+      <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по использованию сайта </a> и
+        согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
     </div>
     <!-- /.container -->
   </section>
@@ -654,10 +634,10 @@
         <div class="footer__column">
           <h5 class="footer__title">Наши услуги</h5>
           <ul class="footer__list">
-            <li class="footer__list-item"><a href="#">День рождения</a></li>
-            <li class="footer__list-item"><a href="#">Игра классов</a></li>
-            <li class="footer__list-item"><a href="#">Корпоратив</a></li>
-            <li class="footer__list-item"><a href="#">Выпускной</a></li>
+            <li class="footer__list-item"><a href="birthday.html">День рождения</a></li>
+            <li class="footer__list-item"><a href="game.html">Игра классов</a></li>
+            <li class="footer__list-item"><a href="company.html">Корпоратив</a></li>
+            <li class="footer__list-item"><a href="release.html">Выпускной</a></li>
             <li class="footer__list-item"><a href="#">Квесты</a></li>
           </ul>
         </div>
@@ -665,9 +645,9 @@
         <div class="footer__column">
           <h5 class="footer__title">Площадки для игр</h5>
           <ul class="footer__list">
-            <li class="footer__list-item"><a href="#">г. Череповец, Лыжный стадион</a></li>
-            <li class="footer__list-item"><a href="#">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
-            <li class="footer__list-item"><a href="#">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
+            <li class="footer__list-item"><a href="platform1.html">г. Череповец, Лыжный стадион</a></li>
+            <li class="footer__list-item"><a href="platform2.html">г. Череповец, ул. Гоголя, 56 2000 м²</a></li>
+            <li class="footer__list-item"><a href="platform2.html">г. Череповец, ул. Гоголя, 56 1000 м²</a></li>
           </ul>
         </div>
         <!-- /.footer__column -->
@@ -685,8 +665,8 @@
         <div class="footer__column">
           <h5 class="footer__title">Документы</h5>
           <ul class="footer__list">
-            <li class="footer__list-item"><a href="#">Конфиденциальность и защита</a></li>
-            <li class="footer__list-item"><a href="#">Договор-оферта</a></li>
+            <li class="footer__list-item"><a href="confidentiality.html">Конфиденциальность и защита</a></li>
+            <li class="footer__list-item"><a href="protect.html">Договор-оферта</a></li>
           </ul>
         </div>
         <!-- /.footer__column -->
@@ -702,7 +682,7 @@
   </footer>
   <!-- </ПОДВАЛ САЙТА> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/functions/jquery.formstyler.min.js"></script>
+  <script src="js/custom.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -117,8 +117,8 @@ function ready() {
     }
   })
 
-  if ($('.mainblockBtn').length) {
-    let mainblockBtn = document.querySelector('mainblockBtn').addEventListener('click', function () {
+  if ($('.quiz-play').length) {
+    let mainblockBtn = document.querySelector('.quiz-play').addEventListener('click', function () {
       $('.quiz-item .jq-radio').change(function () {
         disableBtn();
       });
@@ -168,6 +168,16 @@ function ready() {
   //   centerMode: true  
   //   // centerMode: true
   // });
+
+  // Бургер меню в шапке
+  $('.header-burger').on('click', function() {
+    $('.header-menu').addClass('active');
+    $('#overlay').addClass('overlay_active');
+  });
+  $('.header-menu__close').on('click', function() {
+    $('.header-menu').removeClass('active');
+    $('#overlay').removeClass('overlay_active');
+  })
 
 
   // Модальные окна

@@ -8,7 +8,8 @@
   }
   // .platform-hero__info
   &__info {
-    width: calc(50% - 15px);
+    width: 100%;
+    max-width: 530px;
   }
   // .platform-hero__title
   &__title {
@@ -31,7 +32,9 @@
   }
   // .platform-hero__img
   &__img {
-    width: calc(50% - 15px);
+    width: 100%;
+    max-width: 700px;
+    margin-left: 30px;
     border-radius: 10px;
     overflow: hidden;
     height: 430px;
@@ -96,13 +99,14 @@
     // .platform-travel__info
     &__info {
       width: 100%;
-      max-width: 520px;
+      max-width: 536px;
     }
     // .platform-travel__info-item
     &__info-item {
       margin-bottom: 40px;
       p {
-        max-width: 460px;
+        max-width: 100%;
+        line-height: 1.4;
       }
     }
     // .platform-travel__info-title
