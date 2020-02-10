@@ -3,18 +3,40 @@
   color: #fff;
   font-size: 12px;
   line-height: 1.4;
-  margin-top: 50px;
   padding-top: 60px;
   padding-bottom: 100px;
+  @media (max-width: $sm) {padding: 40px 0;}
   // .footer__inner
   &__inner {
     display: flex;
     margin-bottom: 60px;
+    @media (max-width: $sm) {flex-wrap: wrap;margin-bottom: 10px;}
   }
   // .footer__column
   &__column {
+    margin-bottom: 20px;
     &+& {
       margin-left: 150px;
+      @media (max-width: $lg) {margin-left: 100px;}
+      @media (max-width: $md) {margin-left: 35px;}
+    }
+    &:first-child {
+      @media(max-width: $sm){
+        order: -2;
+        width: 50%;
+      }
+    }
+    &:nth-child(3) {
+      @media (max-width: $sm){
+        order: -1;
+        margin-left: 0px;
+        width: 50%;
+      }
+    }
+    &:nth-child(4),
+    &:nth-child(2) {
+      @media (max-width: $sm) {width: 50%;margin-left: 0;}
+      @media (max-width: $xs) {width: 100%;}
     }
   }
   // .footer__title
@@ -23,6 +45,7 @@
     color: $yellow;
     margin-bottom: 7px;
     font-weight: 400;
+    @media (max-width: $sm) {margin-top: 0;}
   }
   // .footer__list
   &__list {}
@@ -57,31 +80,36 @@
       display: inline-block;
       background-image: url(../img/icons/vk.svg);
       transition: .5s;
+      @media (max-width: $sm) {background-image: url(../img/icons/vk2.png);}
     }
     a +a:hover span {
-      background-image: url(../img/icons/Inst2.png);
+      background-image: url(../img/icons/inst2.png);
     }
     a + a span {
       background-image: url(../img/icons/Inst.svg);
       height: 16px;
       width: 16px;
+      @media (max-width: $sm) {background-image: url(../img/icons/inst2.png);}
     }
   }
   // .footer__info
   &__info {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $xs) {flex-direction: column;}
   }
   // .footer__copy
   &__copy {
     font-size: 14px;
     width: 50%;
+    @media (max-width: $xs) {width: 100%;max-width: 184px;margin-bottom: 30px;}
   }
   }
   .development-link {
     width: 50%;
     font-size: 14px;
     transition: .3s;
+    @media (max-width: $xs) {width: 100%;}
     &:hover {
       color: $blue;
     }

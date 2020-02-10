@@ -178,7 +178,28 @@ function ready() {
     $('.header-menu').removeClass('active');
     $('#overlay').removeClass('overlay_active');
   })
+  $('.header__list').on('click', function() {
+    $('.header__list').removeClass('active');
+    $(this).addClass('active');
+  });
 
+  let arrMore = [];
+  let arrMoreCounter = 0;
+  arrMore[0] = document.querySelectorAll('.row__right')[0];
+  arrMore[2] = document.querySelectorAll('.row__right')[1];
+  arrMore[1] = document.querySelectorAll('.services-add__row:nth-child(3)')[0];
+  console.log(arrMore);
+  $('.btn-more').on('click', function(e) {
+    e.preventDefault();
+    for (var i = 0; i < arrMore.length; i++) {
+      if (!(arrMore[i].classList.contains('active'))) {
+        arrMore[i].classList.add('active');
+        arrMoreCounter++;
+        if(arrMoreCounter == 3){document.querySelector('.btn-more').remove();}
+        break;
+      }
+    }
+  })
 
   // Модальные окна
   function modalPopUp() {
