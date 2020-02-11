@@ -121,6 +121,7 @@ button {
 }
 .right {
   text-align: right;
+  @media (max-width: $sm){text-align: left;}
 }
 .mobile-none {
   @media (max-width: $xs) {display: none;}

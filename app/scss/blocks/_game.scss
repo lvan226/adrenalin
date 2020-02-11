@@ -167,13 +167,13 @@
   // .game-slider__title
   &__title {
     margin-bottom: 60px;
+    @media (max-width: $sm){margin-bottom: 30px;}
   }
   // .game-slider__inner
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 30px 20px;
+    padding: 0px 20px 60px;
+    position: relative;
+    @media (max-width: $md){padding: 0px 10px 40px;}
   }
   // .game-slider__item
   &__item {
@@ -183,11 +183,16 @@
     border-radius: 10px;
     overflow: hidden;
     padding: 60px 0px 40px 40px;
+    @media (max-width: $lg){min-height: auto;height: 490px;padding: 30px 0px 20px 20px;max-width: 400px;}
+    @media (max-width: $md){max-width: 340px;}
+    @media (max-width: $sm){max-width: 100%;padding: 10px 10px 10px 10px;height: 370px;}
+    @media (max-width: $xs){height: auto;}
     &.active {
       max-width: 460px;
       width: 100%;
-      margin: 0 20px;
+      // margin: 0 20px;
       box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.25);
+      @media (max-width: $lg){box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.25);}
     }
     &:hover {
       .slider-game__btn {
@@ -200,6 +205,7 @@
   }
   &__item-inner {
     max-width: 270px;
+    @media (max-width: $lg){display: flex;flex-direction:column;height: 100%;}
   }
   }
   .slider-game {
@@ -212,6 +218,8 @@
     padding-bottom: 10px;
     position: relative;
     margin-bottom: 30px;
+    @media (max-width: $lg){margin-bottom: 15px;}
+    @media (max-width: $sm){margin-bottom: 15px;font-size: 30px;line-height: 35px;margin-bottom: 7px;}
     &::after {
       content: "";
       position: absolute;
@@ -229,6 +237,8 @@
     line-height: 1.4;
     position: relative;
     margin-bottom: 20px;
+    @media (max-width: $lg){font-size: 20px;}
+    @media (max-width: $sm){font-size: 18px;}
     &::after {
       content: "";
       position: absolute;
@@ -237,9 +247,12 @@
       width: 100%;
       height: 2px;
       background-color: $yellow;
+
     }
     li {
       padding-bottom: 20px;
+      @media (max-width: $lg){padding-bottom: 10px;}
+      @media (max-width: $sm){padding-bottom: 5px;}
     }
   }
   // .slider-game__time
@@ -249,6 +262,9 @@
     line-height: 40px;
     color: $yellow;
     margin-bottom: 30px;
+    @media (max-width: $lg){margin-bottom: 15px;margin-top: auto;}
+    @media (max-width: $sm){margin-bottom: 15px;font-size: 26px;line-height: 35px;margin-bottom: 7px;}
+    @media (max-width: $xs){font-size: 24px;}
   }
   // .slider-game__btn
   &__btn {
@@ -271,17 +287,75 @@
       width: 20px;
       height: 8px;
       transition: .3s;
+      @media (max-width: $sm){  opacity: 1;
+        transform: translateX(0);}
     }
   }
   }
 
   ///////////////////
-  // .game-slider {
-  //   .slick-slide {
-  //     width: 350px;
-  //     min-height: 550px;
-  //     // height: 540px;
-  //   }
+  .game-slider {
+    .slick-track {
+     display: flex;
+     align-items: flex-start;
+    //  padding: 10px 30px;
+    //  @media (max-width: $md){padding: 10px 10px;}
+    }
+    .slick-list {overflow: hidden;}
+    .slick-slide {
+      height: 100%;
+      padding: 10px 10px;
+      @media(max-width: $sm){width: 280px;}
+    }
+    .slick-arrow {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 20px auto 0;
+      bottom: 0;
+      background-color: $yellow;
+      border: none;
+      border-radius: 106px;
+      cursor: pointer;
+      width: 80px;
+      height: 40px;
+      font-size: 0;
+      outline: none;
+    }
+    .slick-next {
+      transform: translateX(50px);
+      background-image: url(../img/icons/triangle-r.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: .6s;
+      animation: photo-r 1.5s infinite;
+      @media (max-width: $xs) {
+        transform: translateX(40px) scale(0.7);
+      }
+      &:hover {
+        transform: translateX(60px);
+        @media (max-width: $xs) {
+          transform: translateX(50px) scale(0.9);
+        }
+      }
+    }
+    .slick-prev {
+      transform: translateX(-50px);
+      background-image: url(../img/icons/triangle-l.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: .6s;
+      animation: photo-l 1.5s infinite;
+      @media (max-width: $xs) {
+        transform: translateX(-40px) scale(0.7);
+      }
+      &:hover {
+        transform: translateX(-60px);
+        @media (max-width: $xs) {
+          transform: translateX(-50px) scale(0.9);
+        }
+      }
+    }
   //   .slick-slide.slick-current {
   //     // transform: scaleY(1.2);
   //     transform-origin: top bottom;
@@ -293,7 +367,7 @@
   //     max-width: 100%;
   //     margin: 0;
   //   }
-  // }
+  }
   ///////////////////
 // </СЛАЙДЕР> ================================================================================================
 
