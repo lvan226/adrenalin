@@ -103,7 +103,7 @@ function ready() {
   })
 
   $('.quiz__info-prev').on('click', () => {
-    if(quizID == 2) {
+    if (quizID == 2) {
       quizLine.style.width = 0;
     }
     if (quizID > 1) {
@@ -159,26 +159,86 @@ function ready() {
 
   });
 
-  // Слайдер в игре классов
-  // $('.game-slider__inner').slick({
-  //   slidesToShow: 1,
-  //   // variableWidth: true,
-  //   arrows: false,
-  //   infinite: true,
-  //   centerMode: true  
-  //   // centerMode: true
-  // });
+
+  $('.cost__list').slick({
+    slidesToShow: 4,
+    variableWidth: true,
+    responsive: [{
+      breakpoint: 1290,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        variableWidth: true
+      },
+    },
+    {
+      breakpoint: 476,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,
+        adaptiveHeight: true
+      },
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
+  // Слайдер выпускной
+  $('.game-slider__inner').slick({
+    slidesToShow: 3,
+    dots: true,
+    arrows: false,
+    // adaptiveHeight: true
+    // variableWidth: true,
+    // arrows: false,
+    // infinite: false,
+    // centerMode: true  
+    // centerMode: true
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: true
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+          adaptiveHeight: true
+        },
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+
 
   // Бургер меню в шапке
-  $('.header-burger').on('click', function() {
+  $('.header-burger').on('click', function () {
     $('.header-menu').addClass('active');
     $('#overlay').addClass('overlay_active');
   });
-  $('.header-menu__close').on('click', function() {
+  $('.header-menu__close').on('click', function () {
     $('.header-menu').removeClass('active');
     $('#overlay').removeClass('overlay_active');
   })
-  $('.header__list').on('click', function() {
+  $('.header__list').on('click', function () {
     $('.header__list').removeClass('active');
     $(this).addClass('active');
   });
@@ -189,17 +249,20 @@ function ready() {
   arrMore[2] = document.querySelectorAll('.row__right')[1];
   arrMore[1] = document.querySelectorAll('.services-add__row:nth-child(3)')[0];
   console.log(arrMore);
-  $('.btn-more').on('click', function(e) {
+  $('.btn-more').on('click', function (e) {
     e.preventDefault();
     for (var i = 0; i < arrMore.length; i++) {
       if (!(arrMore[i].classList.contains('active'))) {
         arrMore[i].classList.add('active');
         arrMoreCounter++;
-        if(arrMoreCounter == 3){document.querySelector('.btn-more').remove();}
+        if (arrMoreCounter == 3) {
+          document.querySelector('.btn-more').remove();
+        }
         break;
       }
     }
-  })
+  });
+
 
   // Модальные окна
   function modalPopUp() {
@@ -221,6 +284,7 @@ function ready() {
       });
     }
   }
+
 
   modalPopUp();
 

@@ -552,7 +552,7 @@
   &__title {
     margin-bottom: 60px;
     @media (max-width: $md) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       text-align: left;
     }
   }
@@ -644,7 +644,7 @@
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
     @media (max-width: $md){height: 370px;}
     @media (max-width: $sm){height: 320px;}
-    @media (max-width: $xs) {height: auto;min-height: 260px;padding: 10px 10px 20px 0;}
+    @media (max-width: $xs) {height: auto;min-height: 240px;padding: 10px 10px 20px 30px;align-items: flex-end;}
     &::after {
       content: "";
       position: absolute;
@@ -658,8 +658,8 @@
       border-radius: 10px;
       z-index: 2;
       @media (max-width: $md){background: linear-gradient(-90deg, #3D3D3D 20.19%, rgba(61, 61, 61, 0.5) 82.82%);}
-      @media (max-width: $sm){background: linear-gradient(-270deg, #3D3D3D 20.19%, rgba(61, 61, 61, 0.5) 82.82%);}
-      @media (max-width: $xs){background: linear-gradient(-360deg, #3D3D3D 1.19%, rgba(61, 61, 61, 0.75) 72.82%);}
+      @media (max-width: $sm){background: linear-gradient(4.23deg, #3D3D3D 3.55%, rgba(61, 61, 61, 0) 95.14%);}
+      @media (max-width: $xs){background: linear-gradient(4.23deg, #3D3D3D 3.55%, rgba(61, 61, 61, 0) 95.14%);}
     }
   }
   // .platform__about-content
@@ -672,10 +672,11 @@
     margin-right: 60px;
     @media (max-width: $md){max-width: 49%;}
     @media (max-width: $sm){max-width: 70%;margin-right: 0;margin-left: 15px;}
-    @media (max-width: $xs) {max-width: 100%;}
+    @media (max-width: $xs) {max-width: 240px;}
     p {
       color: #fff;
       line-height: 1.4;
+      @media(max-width: $xs){display: none;}
     }
     .video__btn {
       color: #fff;
@@ -684,7 +685,7 @@
   // .platform__about-title
   &__about-title {
     margin-bottom: 40px;
-    @media (max-width: $md){margin-bottom: 20px;}
+    @media (max-width: $md){margin-bottom: 30px;}
   }
   }
   .video {
@@ -692,6 +693,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 200px;
+    @media (max-width: $xs){transform: scale(0.65)}
     &:hover {
       .video__btn {
         opacity: 1;
@@ -753,7 +755,8 @@
   .slick-slide {
     margin-right: 20px;
     width: 300px;
-    @media (max-width: 476px){margin-right: 0;padding: 0px 20px;}
+    padding: 15px 0;
+    @media (max-width: 476px){margin-right: 0;padding: 15px 20px;}
   }
   .slick-list {
     overflow: hidden;
@@ -812,7 +815,7 @@
   // .cost__title
   &__title {
     margin-bottom: 60px;
-    @media (max-width: $sm){margin-bottom: 30px;text-align: left;}
+    @media (max-width: $sm){margin-bottom: 5px;text-align: left;}
     
   }
   // .cost__list
@@ -1183,7 +1186,7 @@
     margin-bottom: 75px;
     max-width: 700px;
     font-weight: 700;
-    @media (max-width: $sm){margin-bottom: 30px;}
+    @media (max-width: $sm){margin-bottom: 20px;}
   }
   // .mainform__row
   &__row {

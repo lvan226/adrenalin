@@ -74,7 +74,7 @@
   &__title {
     margin-bottom: 58px;
     max-width: 680px;
-    @media (max-width: $sm) {margin-bottom: 30px;}
+    @media (max-width: $sm) {margin-bottom: 20px;}
   }
   // .game-about__row
   &__row {
@@ -167,13 +167,13 @@
   // .game-slider__title
   &__title {
     margin-bottom: 60px;
-    @media (max-width: $sm){margin-bottom: 30px;}
+    @media (max-width: $sm){margin-bottom: 10px;}
   }
   // .game-slider__inner
   &__inner {
-    padding: 0px 20px 60px;
+    padding: 0px 20px 0px;
     position: relative;
-    @media (max-width: $md){padding: 0px 10px 40px;}
+    @media (max-width: $md){padding: 0px 10px 0px;}
   }
   // .game-slider__item
   &__item {
@@ -185,7 +185,7 @@
     padding: 60px 0px 40px 40px;
     @media (max-width: $lg){min-height: auto;height: 490px;padding: 30px 0px 20px 20px;max-width: 400px;}
     @media (max-width: $md){max-width: 340px;}
-    @media (max-width: $sm){max-width: 100%;padding: 10px 10px 10px 10px;height: 370px;}
+    @media (max-width: $sm){max-width: 100%;padding: 40px 10px 40px 20px;height: 370px;}
     @media (max-width: $xs){height: auto;}
     &.active {
       max-width: 460px;
@@ -321,6 +321,28 @@
       height: 40px;
       font-size: 0;
       outline: none;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      li + li {
+        margin-left: 20px;
+      }
+      li.slick-active {
+        button {
+          background-color: #FBC436;
+        }
+      }
+      button {
+        cursor: pointer;
+        background-color: #C4C4C4;
+        border: none;
+        border-radius: 50%;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        transition: .3s;
+      }
     }
     .slick-next {
       transform: translateX(50px);

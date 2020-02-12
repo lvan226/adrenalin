@@ -192,6 +192,8 @@ function ready() {
   // Слайдер выпускной
   $('.game-slider__inner').slick({
     slidesToShow: 3,
+    dots: true,
+    arrows: false,
     // adaptiveHeight: true
     // variableWidth: true,
     // arrows: false,
