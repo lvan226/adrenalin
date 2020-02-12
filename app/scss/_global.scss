@@ -105,6 +105,8 @@ button {
   &_r {
     text-align: right;
     padding-right: 90px;
+    @media (max-width: $md){padding-right: 0;}
+    @media (max-width: $sm){text-align: left;}
   }
 }
 .title3 {
