@@ -264,6 +264,18 @@ function ready() {
   });
 
 
+  // Табы в квестах
+  $('.tabs-title .tabs-title__item').click(function () {
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tabs-title__item').removeClass('current');
+    $('.tabs-content__item').removeClass('current');
+
+    $(this).addClass('current');
+    $("#" + tab_id).addClass('current');
+  })
+  // Табы в квестах конец
+
   // Модальные окна
   function modalPopUp() {
     let overlay = document.getElementById('overlay');

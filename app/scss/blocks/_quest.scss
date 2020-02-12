@@ -1,0 +1,289 @@
+// <ГЛАВНЫЙ БЛОК> =============================================================================================================
+.mainquest__inner.gamemain__inner {
+  max-width: 800px;
+  padding-top: 220px;
+  @media (max-width: $sm){padding-top: 150px;}
+  @media (max-width: $xs){padding-top: 120px;}
+}
+// </ГЛАВНЫЙ БЛОК> =============================================================================================================
+
+// <СЦЕНАРИЙ> =============================================================================================================
+.quest-script {
+  // .quest-script__title
+  &__title {
+    margin-bottom: 60px;
+    @media(max-width: $md){margin-bottom: 40px;}
+    @media(max-width: $sm){margin-bottom: 0px;}
+  }
+  // .quest-script__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: $md){flex-wrap: wrap;}
+  }
+  // .quest-script__item
+  &__item {
+    width: calc(50% - 10px);
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    @media(max-width: $md){width: 100%;margin-top: 20px;}
+    &:hover {
+      .quest-script__item-content {
+        transform: translateY(-100%);
+        transition-delay: 0s;
+      }
+      .quest-script__item-title {
+        transform: translateY(-0%);
+        padding-bottom: 0;
+        transition-delay: 0s;
+      }
+    }
+  }
+  // .quest-script__item-img
+  &__item-img {
+    min-height: 385px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @media(max-width: $md){min-height: 320px;}
+    @media(max-width: $sm){min-height: 250px;}
+    @media(max-width: $xs){min-height: 190px;}
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 2;
+      background: linear-gradient(360deg, #3D3D3D 0%, rgba(61, 61, 61, 0) 100%);
+    }
+  }
+  // .quest-script__item-content
+  &__item-content {
+    position: absolute;
+    padding-left: 30px;
+    z-index: 10;
+    left: 0px;
+    top: 100%;
+    transition: ease-in-out .5s;
+    transition-delay: .5s;
+    background: linear-gradient(360deg, #3D3D3D 44%, rgba(61, 61, 61, 0) 100%);
+    @media(max-width: $lg){padding-left: 20px;}
+    @media(max-width: $md){background: linear-gradient(360deg, #3D3D3D 24%, rgba(61, 61, 61, 0) 100%);}
+  }
+  // .quest-script__item-title
+  &__item-title {
+    color: $yellow;
+    margin-bottom: 10px;
+    transform: translateY(-100%);
+    transition: ease-in-out .5s;
+    padding-bottom: 10px;
+    transition-delay: .5s;
+    @media(max-width: $lg){font-size: 30px;}
+    @media(max-width: $xs){font-size: 24px;}
+  }
+  // .quest-script__item-text
+  &__item-text {
+    color: #fff;
+    line-height: 1.4;
+    font-size: 18px;
+    padding-bottom: 25px;
+    @media (max-width: $sm){display: none;}
+  }
+  // .quest-script__item-info
+  &__item-info {
+    padding: 60px;
+    font-size: 18px;
+    @media(max-width: $lg){padding: 40px;}
+    @media(max-width: $sm){padding: 30px 30px 40px;}
+  }
+  // .quest-script__item-quantity
+  &__item-quantity {
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 18px;
+    padding-left: 50px;
+    @media(max-width: $sm){font-size: 16px;margin-bottom: 18px;padding-left: 35px;}
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-image: url(../img/quest/men.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media(max-width: $sm){width: 20px;height: 20px;}
+    }
+  }
+  // .quest-script__item-time
+  &__item-time {
+    margin-bottom: 30px;
+    position: relative;
+    font-size: 18px;
+    padding-left: 50px;
+    @media(max-width: $sm){font-size: 16px;margin-bottom: 18px;padding-left: 35px;}
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-image: url(../img/quest/clock.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media(max-width: $sm){width: 20px;height: 20px;}
+    }
+  }
+  // .quest-script__item-complexity
+  &__item-complexity {
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 18px;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    @media(max-width: $sm){font-size: 16px;margin-bottom: 30px;padding-left: 35px;}
+    .rating {
+      margin-left: 10px;
+      display: flex;
+    }
+    .rating__item {
+      display: block;
+     @media (max-width: $sm){width: 20px;height: 20px;}
+      & + .rating__item {
+        margin-left: 15px;
+        @media (max-width: $sm){margin-left: 10px;}
+      }
+      img{
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+  // .quest-script__item-explanation
+  &__item-explanation {
+    padding-left: 50px;
+    font-size: 24px;
+    margin-bottom: 40px;
+    @media(max-width: $sm){margin-bottom: 30px;padding-left: 35px;}
+  }
+  // .quest-script__item-btn
+  &__item-btn {
+    background-color: $yellow;
+    width: 100%;
+    max-width: 244px;
+    font-size: 18px;
+    min-height: 60px;
+  }
+  }
+  .sect {
+  }
+  .container {
+  }
+  .title {
+  }
+  .title3 {
+  }
+  .rating {
+  // .rating__item
+  &__item {}
+  }
+  .btn {
+  }
+  .btn-12 {
+  }
+// </СЦЕНАРИЙ> =============================================================================================================
+
+
+// <ТАБЫ> =============================================================================================================
+.quest-about {
+  // .quest-about__title
+  @media (max-width: $sm){padding-bottom: 0;}
+  &__title {
+    margin-bottom: 60px;
+    @media (max-width: $md){margin-bottom: 40px;}
+    @media (max-width: $sm){margin-bottom: 20px;}
+  }
+  // .quest-about__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $sm){flex-wrap: wrap;}
+  }
+  // .quest-about__content
+  &__content {
+    max-width: 560px;
+    line-height: 1.4;
+    font-size: 18px;
+    p {
+      margin-bottom: 20px;
+      @media (max-width: $xs){margin-bottom: 15px;font-size: 16px;}
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  // .quest-about__name
+  &__name {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 20px;
+    @media (max-width: $lg){max-width: 400px;}
+    @media (max-width: $md){max-width: 300px;}
+    @media (max-width: $sm){flex-wrap: wrap;margin-left: 0;order: -1;}
+  }
+  // .quest-about__name-item
+  &__name-item {
+    color: #FFDC83;
+    cursor: pointer;
+    transition: .3s;
+    @media (max-width: $md){font-size: 30px;}
+    @media (max-width: $sm){font-size: 24px;margin-bottom: 20px;}
+    &.current {
+      color: $yellow;
+      cursor: auto;
+    }
+  }
+  }
+  .sect {
+  }
+  .container {
+  }
+  .title {
+  }
+  .right {
+  }
+  .tabs-content {
+    transition: 3s;
+    overflow: hidden;
+    // min-height: 500px;
+    min-height: 240px;
+    height: 100%;
+    @media (max-width: $sm){min-height: 270px;}
+  }
+  .tabs-content__item {
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .6s;
+    &.current {
+      opacity: 1;
+      max-height: 100%;
+      transition: .9s;
+    }
+  }
+  .tabs-title {
+  }
+  .title3 {
+  }
+// </ТАБЫ> =============================================================================================================

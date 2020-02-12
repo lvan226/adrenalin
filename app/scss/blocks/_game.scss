@@ -418,7 +418,7 @@
     transition: .3s;
     @media (max-width: $lg) {padding: 30px;}
     @media (max-width: $md) {padding: 15px;}
-    @media (max-width: $xs) {box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);padding: 10px 0 10px 6px;}
+    @media (max-width: $xs) {box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);padding: 10px 0 10px 6px;min-height: 160px;}
     &:hover {
       transform: scale(1.03);
       .slider-game__btn::after {
@@ -440,6 +440,7 @@
     @media (max-width: $lg) {margin-left: 40px;}
     @media (max-width: $md) {margin-left: 20px;}
     @media (max-width: $sm) {margin-left: 0;}
+    @media (max-width: $xs) {display: flex;flex-wrap: wrap;height: 100%;}
   }
   // .gamecost__info-price
   &__info-price {
@@ -472,7 +473,7 @@
 
     color: #000000;
     margin-bottom: 14px;
-    @media (max-width: $xs) {font-size: 14px;}
+    @media (max-width: $xs) {font-size: 14px;width: 100%;}
   }
   // .gamecost__info-link
   .slider-game__btn {
@@ -480,15 +481,19 @@
     font-size: 18px;
     line-height: 24px;
     color: #FBC436;
+    position: relative;
     @media (max-width: $md) {font-size: 16px;line-height: 21px;}
+    @media (max-width: $xs){max-width: 80%;}
+    @media (max-width: 380px){max-width: 100%;margin-top: auto;}
     &::after {
       @media (max-width: $xs) {
         opacity: 1;
         transform: translateX(0);
         top: auto;
-        bottom: 6px;
+        bottom: 12px;
         right: 15px;
       }
+      @media (max-width: 380px){bottom: 6px;}
     }
   }
   }

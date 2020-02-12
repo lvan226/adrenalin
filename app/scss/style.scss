@@ -7,6 +7,7 @@
 @import "blocks/company";
 @import "blocks/contract";
 @import "blocks/game";
+@import "blocks/quest";
 
 
 // <ГЛАВНЫЙ БЛОК> =============================================================================================================
@@ -644,7 +645,7 @@
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
     @media (max-width: $md){height: 370px;}
     @media (max-width: $sm){height: 320px;}
-    @media (max-width: $xs) {height: auto;min-height: 240px;padding: 10px 10px 20px 30px;align-items: flex-end;}
+    @media (max-width: $xs) {height: auto;min-height: 240px;padding: 10px 10px 20px 20px;align-items: flex-end;}
     &::after {
       content: "";
       position: absolute;
