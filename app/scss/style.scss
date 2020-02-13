@@ -1784,6 +1784,124 @@
     outline: none;
     max-width: 42px;
   }
+  @media (max-width: 630px){
+    .quiz__title {
+      font-size: 21px;
+      text-align: center;
+    }
+    .quiz__cost {
+      font-size: 20px;
+      top: 15px;
+      max-width: 100%;
+      width: 100%;
+      &-text {
+        margin-left: auto;
+      }
+      &-number {
+        margin-right: auto;
+      }
+    }
+    .quiz__content {
+      padding-top: 40px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .quiz .quiz-discount {
+      max-width: 35px;
+    }
+    .quiz__info {
+      width: 80%;
+    }
+    .quiz__info-prev,
+    .quiz__info-next,
+    .quiz-btn-send {
+      max-width: 100px;
+      width: 100%;
+      font-size: 15px;
+      text-align: center;
+      padding-right: 0;
+      padding-left: 0;
+      padding: 0;
+      min-height: 40px;
+      span.arr {
+        display: none;
+      }
+    }
+    .quiz-btn-send {
+      right: 43px;
+    }
+    .quiz__info-question {
+      font-size: 16px;
+      text-align: center;
+      padding: 0 6px;
+    }
+    .quiz__line {
+      width: 100%;
+    }
+    .quiz-row2__column {
+      width: 48%;
+      &:first-child {
+        padding-left: 5px;
+      }
+      &:last-child {
+        padding-right: 5px;
+      }
+    }
+    .quiz-row2 label span {
+      font-size: 16px;
+    }
+    .quiz {
+      width: 420px;
+    }
+  }
+  @media (max-width: 460px) {
+    .quiz-btn-send {
+      right: 32px;
+    }
+    .quiz {
+      width: 310px;
+    }
+    .quiz-item[data-quiz="2"] {
+      // .quiz-row__img {
+      //   display: none;
+      // }
+      .quiz-row {
+        flex-wrap: wrap;
+        &__info {
+          width: 100%;
+        }
+        &__img {
+          width: 100%;
+          height: auto;
+          min-height: 120px;
+        }
+      } 
+    }
+    .quiz-time.quiz-row3 label {
+      left: 0;
+    }
+    .quiz-row1.quiz-age .quiz-row1__info {
+      justify-content: center;
+    }
+    .quiz-row1.quiz-age .quiz__radio {
+      width: 33%;
+    }
+    .quiz__radio label, .quiz__radio input {
+      font-size: 16px;
+    }
+    .jq-radio {
+      margin-right: 6px;
+    }
+    .quiz__radio.any input[type=text] {
+      margin-left: 0;
+      padding-left: 25px;
+    }
+    .quiz__info-prev,
+    .quiz__info-next,
+    .quiz-btn-send {
+      max-width: 90px;
+    }
+  }
 // </КВИЗ> ==================================================================================================
 
 @import "blocks/footer";

@@ -88,6 +88,12 @@ gulp.task('export', function(){
   let BuildFonts = gulp.src('app/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'));
 
+  let BuildPhp = gulp.src('app/*.php')
+    .pipe(gulp.dest('dist/'));
+
+  let BuildHta = gulp.src('app/*.ico')
+    .pipe(gulp.dest('dist/'));
+
   let BuildImg = gulp.src('app/img/**/*.*')
     .pipe(imagemin([
       imagemin.mozjpeg({quality: 75, progressive: true}),
