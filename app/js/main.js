@@ -22,15 +22,16 @@ function ready() {
 
         }
         _Seconds += numhow; // прибавляем 1
+        if(_Seconds > num) {_Seconds = num}
         $(field).text(_Seconds); // выводим получившееся значение в блок
       } else {
         clearInterval(int); // очищаем интервал, чтобы он не продолжал работу при _Seconds = 0
       }
     }, second);
   }
-  timer('#animNumber1', 8, 6549, 10);
-  timer('#animNumber2', 9, 3743, 6);
-  timer('#animNumber3', 30, 2000, 10);
+  timer('#animNumber1', 5, 21735, 50);
+  timer('#animNumber2', 1, 14336, 30);
+  timer('#animNumber3', 10, 4653, 20);
   timer('#animNumber4', 800, 4, 1);
 
   // Табы
@@ -297,6 +298,10 @@ function ready() {
     }
   }
 
+  $('.header__cost').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#cost-point').offset().top }, 1000);
+    e.preventDefault();
+  });
 
   modalPopUp();
 
@@ -304,6 +309,17 @@ function ready() {
   document.querySelectorAll(".form-send").forEach(form =>
     form.addEventListener("submit", submitHandler)
   );
+
+  if ($('.send-form-mess').length) {
+    document.querySelectorAll(".send-form-mess").forEach(form2 =>
+      form2.addEventListener("submit", submitHandler2)
+    );
+  }
+  if ($('.send-form-mess2').length) {
+    document.querySelectorAll(".send-form-mess2").forEach(form3 =>
+      form3.addEventListener("submit", submitHandler3)
+    );
+  }
 }
 
 // Отправка формы с помощью Ajax на чистом javascript
@@ -334,6 +350,80 @@ function submitHandler(e) {
       // console.log("SUCCESS", this);
       // th.classList.add('contact__form-thanks_active');
       // form.setAttribute('disabled', 'disabled');
+    }
+  }
+
+  request.open(this.method, this.action, true);
+  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  var data = new FormData(this);
+  var dataPost;
+  // Формируем массив данных для отправки 
+  data.forEach(function (value, key) {
+    dataPost += '&' + key + '=' + value;
+  })
+  // console.log(data);
+
+  request.send(dataPost);
+}
+
+function submitHandler2(e) {
+  e.preventDefault();
+  // var form = this.querySelector('button');
+  // var form = document.querySelector('')
+  var result = '<div class="quiz-item current quiz-item-success" data-quiz="8g"><div class="quiz__title">Сообщение отправлено</div>';
+  result += '<div class="quiz-img"></div><div class="quiz__text">Спасибо! Мы свяжемся с вами в ближайшее время</div>';
+  result += '<div class="quiz__okey popup__close">ОК</div></div><div class="quiz__close popup__close popup-close"></div>'
+
+
+  var request = new XMLHttpRequest();
+  // var th = document.querySelector('.contact__form-thanks');
+
+  request.onreadystatechange = function () {
+    // console.log("readyState=", this.readyState, "statis=", this.status);
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      document.querySelector('.main-modal').innerHTML = result;
+      $('.popup__close').on('click', function () {
+        $('.popup').removeClass('active');
+        overlay.classList.remove('overlay_active');
+      });
+      // Выполнится когда форма успешно отправлена
+      // success, show this.responseText here
+      // console.log("SUCCESS", this);
+      // th.classList.add('contact__form-thanks_active');
+      // form.setAttribute('disabled', 'disabled');
+    }
+  }
+
+  request.open(this.method, this.action, true);
+  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  var data = new FormData(this);
+  var dataPost;
+  // Формируем массив данных для отправки 
+  data.forEach(function (value, key) {
+    dataPost += '&' + key + '=' + value;
+  })
+  // console.log(data);
+
+  request.send(dataPost);
+}
+
+function submitHandler3(e) {
+  e.preventDefault();
+  // var form = this.querySelector('button');
+  // var form = document.querySelector('')
+  var result = '<div class="mainform__thanks">Спасибо за заявку!</div>';
+  var form = this;
+
+  var request = new XMLHttpRequest();
+  // var th = document.querySelector('.contact__form-thanks');
+
+  request.onreadystatechange = function () {
+    // console.log("readyState=", this.readyState, "statis=", this.status);
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      console.log(form);
+      form.innerHTML = result;
     }
   }
 

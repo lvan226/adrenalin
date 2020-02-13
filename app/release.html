@@ -13,6 +13,29 @@
 
 <body class="game-of-classes">
   <div class="overlay" id="overlay"></div>
+  <div class="popup main-modal" id="main-modal">
+    <div class="popup__close popup-close"></div>
+    <div class="main-modal__inner">
+      <div class="main-modal__title title3"><span class="yellow">Оставьте заявку</span><br>
+        и&nbsp;мы&nbsp;вам перезвоним</div>
+        <form class="send-form-mess" action="mailer.php" method="POST">
+          <div class="mainform__row">
+            <div class="mainform__line">
+              <input required class="mainform__field" type="text" id="name" name="Имя пользователя:">
+              <label class="mainform__label" for="name">Имя</label>
+            </div>
+            <div class="mainform__line">
+              <input required class="mainform__field" type="text" id="phone" name="Телефон пользователя:">
+              <label class="mainform__label" for="phone">Телефон</label>
+            </div>
+            <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по использованию сайта </a> и&nbsp;согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
+            <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
+          </div>
+        </form>
+    </div>
+  </div>
+  
+  
   <div class="quiz popup" id="quiz">
     <div class="quiz__cost">
       <div class="quiz__cost-text">Ваша скидка</div>
@@ -20,12 +43,12 @@
           value="300">₽</div>
     </div>
     <div class="quiz__close popup__close popup-close"></div>
-    <form class="quiz__content form-send" method="post" action="order-landing.php" id="quizForm">
+    <form class="quiz__content form-send" method="post" action="mailer.php" id="quizForm">
       <div class="quiz-item current" data-quiz="1">
         <input type="radio" checked class="dis-none">
         <div class="quiz__title">
           Ответьте на 6 вопросов
-          и&nbsp;получите скидку на игру,
+          и получите скидку на игру,
           а&nbsp;также индивидуальный расчёт стоимости игры.
         </div>
       </div>
@@ -53,7 +76,7 @@
             </div>
           </div>
           <div class="quiz-row__img ibg" style="background-image: url(img/kwiz/item1.jpg);">
-
+  
           </div>
         </div>
       </div>
@@ -80,7 +103,7 @@
               <label for="howmuch4">10-15</label>
             </div>
             <div class="quiz__radio any">
-
+  
               <input id="howmuch5" class="checkform" name="Сколько человек?" type="radio" value="">
               <label for="change_input">
                 <input class="quiz-form-text" id="change_input" name="none" type="text" placeholder="Другое">
@@ -147,7 +170,7 @@
         <div class="quiz__title">
           Напишите дату и время игры
         </div>
-
+  
         <div class="quiz-row3 quiz-time">
           <div class="quiz__radio any">
             <input id="data-time" type="radio">
@@ -205,7 +228,7 @@
         </a>
         <div class="header-menu">
           <div class="header-menu__close popup-close">
-            
+  
           </div>
           <ul class="header__menu">
             <li class="header__list">
@@ -228,9 +251,12 @@
             <li class="header__cost"><a href="#">Стоимость</a></li>
           </ul>
         </div>
-        <div>
-          <a href="tel:+541316" class="header__phone">54-13-16</a>
-          <button class="header__btn btn btn-11"><span>Заказать звонок</span></button>
+        <div class="header__col">
+          <div class="header__phone">
+            <a href="tel:+541316">54-13-16</a>
+            <a href="tel:+79217231316">+7 (921) 723-13-16</a>
+          </div>
+          <button class="header__btn btn btn-11 popup-btn" data-popup="main-modal"><span>Заказать звонок</span></button>
         </div>
         <div class="header-burger">
           <span></span>
@@ -281,7 +307,7 @@
               боевых действий не дадут отдохнуть ни секунды. Эмоциональная и запоминающаяся игра с классом
               обеспечена!</p>
           </div>
-          <button class="game-about__row-btn btn btn-12"><span>Заказать игру</span></button>
+          <button class="game-about__row-btn btn btn-12 popup-btn" data-popup="main-modal"><span>Заказать игру</span></button>
         </div>
         <!-- /.game-about__row-inner -->
       </div>
@@ -299,7 +325,7 @@
               с детьми работает профессиональный квест-менеджер, который вовлекает детей в игру, подстраивает задания
               под уровень детей прямо в процессе игры, погружает детей в атмосферу квеста.</p>
           </div>
-          <button class="game-about__row-btn btn btn-12"><span>Заказать игру</span></button>
+          <button class="game-about__row-btn btn btn-12 popup-btn" data-popup="main-modal"><span>Заказать игру</span></button>
         </div>
         <!-- /.game-about__row-inner -->
       </div>
@@ -509,7 +535,7 @@
             <p>После игры можно посидеть в беседке, отдохнуть
               и просто пообщаться с товарищами по оружию.</p>
             <div class="platform__nav">
-              <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
+              <a href="platform1.html" class="platform__link btn btn-12"><span>Подробнее</span></a>
               <div class="video">
                 <div class="video__click">
                   <div class="video__click-body"></div>
@@ -532,7 +558,7 @@
             <p>После игры можно посидеть в беседке, отдохнуть
               и просто пообщаться с товарищами по оружию.</p>
             <div class="platform__nav">
-              <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
+              <a href="platform2.html" class="platform__link btn btn-12"><span>Подробнее</span></a>
               <div class="video">
                 <div class="video__click">
                   <div class="video__click-body"></div>
@@ -570,11 +596,11 @@
   <!-- </ПЛОЩАДКИ> -->
 
   <!-- <СЛАЙДЕР ИГРА КЛАССОВ> -->
-  <section class="game-slider sect">
+  <section class="game-slider sect" id="cost-point">
     <div class="container">
       <h2 class="game-slider__title title">Стоимость</h2>
       <div class="game-slider__inner">
-        <a href="#" class="game-slider__item slider-game">
+        <div class="game-slider__item slider-game popup-btn quiz-play" data-popup="quiz">
           <div class="game-slider__item-inner">
             <div class="slider-game__price">от 600 рублей</div>
             <ul class="slider-game__list">
@@ -588,9 +614,9 @@
             <span class="slider-game__btn">Рассчитать стоимость</span>
           </div>
           <!-- /.game-slider__item-inner -->
-        </a>
+        </div>
         <!-- /.game-slider__item slider-game -->
-        <a href="#" class="game-slider__item slider-game active">
+        <div class="game-slider__item slider-game active popup-btn quiz-play" data-popup="quiz">
           <div class="game-slider__item-inner">
             <div class="slider-game__price">1500 рублей</div>
             <ul class="slider-game__list">
@@ -606,9 +632,9 @@
             <span class="slider-game__btn">Рассчитать стоимость</span>
           </div>
           <!-- /.game-slider__item-inner -->
-        </a>
+        </div>
         <!-- /.game-slider__item slider-game -->
-        <a href="#" class="game-slider__item slider-game">
+        <div class="game-slider__item slider-game popup-btn quiz-play" data-popup="quiz">
           <div class="game-slider__item-inner">
             <div class="slider-game__price">1200 рублей</div>
             <ul class="slider-game__list">
@@ -622,7 +648,7 @@
             <span class="slider-game__btn">Рассчитать стоимость</span>
           </div>
           <!-- /.game-slider__item-inner -->
-        </a>
+        </div>
         <!-- /.game-slider__item slider-game -->
       </div>
       <!-- /.game-slider__inner -->
@@ -635,23 +661,27 @@
   <!-- <ФОРМА ОБРАТНОЙ СВЯЗИ> -->
   <section class="mainform sect">
     <div class="container">
-      <h2 class="mainform__title title3 yellow">Есть вопросы? Хотите&nbsp;заказать&nbsp;игру?
-        Оставьте заявку и мы вам перезвоним.</h2>
-      <form action="mailer.php" method="POST">
-        <div class="mainform__row">
-          <div class="mainform__line">
-            <input required class="mainform__field" type="text" id="name" name="userName">
-            <label class="mainform__label" for="name">Имя</label>
+      <div class="mainform__inner">
+        <h2 class="mainform__title title3 yellow">Есть вопросы? Хотите&nbsp;заказать&nbsp;игру?
+          Оставьте заявку и мы вам перезвоним.</h2>
+        <form action="mailer.php" method="POST" class="send-form-mess2">
+          <div class="mainform__row">
+            <div class="mainform__line">
+              <input required class="mainform__field" type="text" id="name" name="Имя пользователя:">
+              <label class="mainform__label" for="name">Имя</label>
+            </div>
+            <div class="mainform__line">
+              <input required class="mainform__field" type="text" id="phone" name="Телефон пользователя:">
+              <label class="mainform__label" for="phone">Телефон</label>
+            </div>
+            <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
           </div>
-          <div class="mainform__line">
-            <input required class="mainform__field" type="text" id="phone" name="userPhone">
-            <label class="mainform__label" for="phone">Телефон</label>
-          </div>
-          <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
-        </div>
-      </form>
-      <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по использованию сайта </a> и
-        согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
+        </form>
+        <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по
+            использованию сайта </a> и
+          согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
+      </div>
+      <!-- /.mainform__inner -->
     </div>
     <!-- /.container -->
   </section>
@@ -695,8 +725,8 @@
         <div class="footer__column">
           <h5 class="footer__title">Документы</h5>
           <ul class="footer__list">
-            <li class="footer__list-item"><a href="confidentiality.html">Конфиденциальность и защита</a></li>
-            <li class="footer__list-item"><a href="protect.html">Договор-оферта</a></li>
+            <li class="footer__list-item"><a href="protect.html">Конфиденциальность и защита</a></li>
+            <li class="footer__list-item"><a href="confidentiality.html">Договор-оферта</a></li>
           </ul>
         </div>
         <!-- /.footer__column -->

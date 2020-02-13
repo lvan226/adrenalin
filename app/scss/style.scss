@@ -280,7 +280,9 @@
   }
 }
 // </УСЛУГИ> =============================================================================================================
-
+.quiz-play {
+  cursor: pointer;
+}
 // <О НАС> =============================================================================================================
 .about {
   // .about__title
@@ -411,7 +413,9 @@
   }
 }
 // </БОНУС> =============================================================================================================
-
+.slick-slide {
+  outline: none;
+}
 // <ФОТОГРАФИИ> =============================================================================================================
 .photo {
   // .photo__titile
@@ -888,7 +892,8 @@
     position: relative;
     @media (max-width: 1300px){ padding: 30px 10px 60px 15px;}
     @media (max-width: $lg){min-height: 470px;}
-    @media (max-width: $md){min-height: 360px;}
+    @media (max-width: $md){min-height: 400px;}
+    @media (max-width: $sm){min-height: 360px;}
     &:hover {
       // box-shadow: -6px 6px 15px rgba(0, 0, 0, 0.3);
       transform: scale(1.03);
@@ -1307,7 +1312,88 @@
     }
   }
   }
+  .mainform__thanks {
+    font-size: 36px;
+    color: #3d3d3d;
+    transition: .3s;
+    @media (max-width: $sm){font-size: 30px;}
+    @media (max-width: $xs){font-size: 24px;}
+  }
 // </ФОРМА ОБРАТНОЙ СВЯЗИ> ==================================================================================================
+// <МОДАЛЬНОЕ ОКНО ОСТАВИТЬ ЗАЯВКУ> =====================================================================================
+.main-modal {
+  height: 475px;
+  max-width: 620px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  .mainform__row {
+    flex-direction: column;
+  }
+  .mainform__line {
+    margin-top: 40px;
+  }
+  .main-modal__inner {
+    max-width: 100%;
+    padding: 60px;
+  }
+  .mainform__btn {
+    margin-top: 40px;
+  }
+  .main-modal__title {
+    max-width: 380px;
+  }
+  .mainform__alert {
+    max-width: 370px;
+  }
+}
+@media (max-width: $sm) {
+  .main-modal {
+    height: 475px;
+    max-width: 620px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    .mainform__row {
+      flex-direction: column;
+    }
+    .mainform__line {
+      margin-top: 20px;
+    }
+    .main-modal__inner {
+      max-width: 100%;
+      padding: 60px;
+    }
+    .mainform__btn {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .main-modal__title {
+      max-width: 380px;
+    }
+    .mainform__alert {
+      max-width: 370px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .main-modal {
+    max-width: 450px;
+    min-height: 400px;
+    height: auto;
+    .mainform__alert {
+      margin-top: 0;
+    }
+    .main-modal__inner {
+      padding: 20px;
+    }
+  }
+}
+@media (max-width: 460px){
+  .main-modal {
+    max-width: calc(100% - 10px);
+  }
+}
+// </МОДАЛЬНОЕ ОКНО ОСТАВИТЬ ЗАЯВКУ> =====================================================================================
+
 
 // <КВИЗ> ==================================================================================================
 // .quiz-item.current + .quiz-item {
@@ -1853,6 +1939,13 @@
     .quiz {
       width: 420px;
     }
+    .quiz__okey {
+      font-size: 38px;
+      margin-top: 10px;
+    }
+    .quiz-item-success.quiz-item .quiz__title {
+      padding-top: 30px;
+    }
   }
   @media (max-width: 460px) {
     .quiz-btn-send {
@@ -1860,6 +1953,7 @@
     }
     .quiz {
       width: 310px;
+      height: 440px;
     }
     .quiz-item[data-quiz="2"] {
       // .quiz-row__img {
@@ -1895,6 +1989,9 @@
     .quiz__radio.any input[type=text] {
       margin-left: 0;
       padding-left: 25px;
+    }
+    .quiz__radio.any {
+      margin-top: 20px;
     }
     .quiz__info-prev,
     .quiz__info-next,

@@ -42,6 +42,9 @@
   &__logo {
     max-width: 140px;
     width: 100%;
+    @media (min-width: 1200px) {
+      max-width: 180px;
+    }
   }
   // .header__menu
   &__menu {
@@ -52,6 +55,7 @@
       display: inline-block;
       transition: .3s;
       margin-left: 25px;
+      @media (max-width: $lg){display: none;}
       @media (max-width: $sm) {
         margin: 0;
       }
@@ -153,12 +157,32 @@
     font-size: 20px;
     transition: .3s;
     vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      transition: .3s;
+    }
+    a:hover {
+      color: $blue;
+    }
+    a + a {
+      margin-top: 2px;
+    }
     @media (max-width: $md) {
       margin-right: 0;
     }
-    &:hover {
-      color: $blue;
+    @media (max-width: $sm) {
+      font-size: 18px;
     }
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+  }
+  &__col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   // .header__btn
   &__btn {

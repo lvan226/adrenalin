@@ -11,190 +11,7 @@
 
 <body>
   <div class="overlay" id="overlay"></div>
-  <div class="quiz popup" id="quiz">
-    <div class="quiz__cost">
-      <div class="quiz__cost-text">Ваша скидка</div>
-      <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text"
-          value="300">₽</div>
-    </div>
-    <div class="quiz__close popup__close popup-close"></div>
-    <form class="quiz__content form-send" method="post" action="order-landing.php" id="quizForm">
-      <div class="quiz-item current" data-quiz="1">
-        <input type="radio" checked class="dis-none">
-        <div class="quiz__title">
-          Ответьте на 6 вопросов
-          и получите скидку на игру,
-          а&nbsp;также индивидуальный расчёт стоимости игры.
-        </div>
-      </div>
-      <div class="quiz-item" data-quiz="2">
-        <div class="quiz__title">
-          Какой у вас повод для игры?
-        </div>
-        <div class="quiz-row">
-          <div class="quiz-row__info">
-            <div class="quiz__radio">
-              <input id="reason1" name="Тип мероприятия:" type="radio" value="День рождения">
-              <label for="reason1">День рождения</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="reason2" name="Тип мероприятия:" type="radio" value="Игра класса/выпускной">
-              <label for="reason2">Игра класса/выпускной</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="reason3" name="Тип мероприятия:" type="radio" value="Сборная игра">
-              <label for="reason3">Сборная игра</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="reason4" name="Тип мероприятия:" type="radio" value="Корпоратив">
-              <label for="reason4">Корпоратив</label>
-            </div>
-          </div>
-          <div class="quiz-row__img ibg" style="background-image: url(img/kwiz/item1.jpg);">
-
-          </div>
-        </div>
-      </div>
-      <div class="quiz-item" data-quiz="3">
-        <div class="quiz__title">
-          Сколько человек планируется?
-        </div>
-        <div class="quiz-row1">
-          <div class="quiz-row1__info">
-            <div class="quiz__radio">
-              <input id="howmuch1" name="Сколько человек?" type="radio" value="1">
-              <label for="howmuch1">1</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="howmuch2" name="Сколько человек?" type="radio" value="до 6">
-              <label for="howmuch2">до 6</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="howmuch3" name="Сколько человек?" type="radio" value="6-10">
-              <label for="howmuch3">6-10</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="howmuch4" name="Сколько человек?" type="radio" value="10-15">
-              <label for="howmuch4">10-15</label>
-            </div>
-            <div class="quiz__radio any">
-
-              <input id="howmuch5" class="checkform" name="Сколько человек?" type="radio" value="">
-              <label for="change_input">
-                <input class="quiz-form-text" id="change_input" name="none" type="text" placeholder="Другое">
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="quiz-item" data-quiz="4">
-        <div class="quiz__title">
-          Средний возраст участников?
-        </div>
-        <div class="quiz-row1 quiz-age">
-          <div class="quiz-row1__info">
-            <div class="quiz__radio">
-              <input id="age1" name="Средний возраст участников:" type="radio" value="до 6 лет">
-              <label for="age1">до 6 лет</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="age2" name="Средний возраст участников:" type="radio" value="9-11 лет">
-              <label for="age2">9-11 лет</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="age3" name="Средний возраст участников:" type="radio" value="15-18 лет">
-              <label for="age3">15-18 лет</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="age4" name="Средний возраст участников:" type="radio" value="6 -8 лет">
-              <label for="age4">6 -8 лет</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="age5" name="Средний возраст участников:" type="radio" value="12-14 лет">
-              <label for="age5">12-14 лет</label>
-            </div>
-            <div class="quiz__radio">
-              <input id="age6" name="Средний возраст участников:" type="radio" value="18+ лет">
-              <label for="age6">18+ лет</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="quiz-item" data-quiz="5">
-        <div class="quiz__title">
-          Какую площадку выберете?
-        </div>
-        <div class="quiz-row2 quiz-platform">
-          <div class="quiz-row2__column">
-            <input type="radio" name="Площадка:" id="platform1" value="Лыжный cтадион в ЗШК">
-            <label for="platform1">
-              <img src="img/quiz/1.png" alt="">
-              <span>Лыжный cтадион в ЗШК</span>
-            </label>
-          </div>
-          <div class="quiz-row2__column">
-            <input type="radio" name="Площадка:" id="platform2" value="Гоголя, 56 (за ТЦ «Рассвет»)">
-            <label for="platform2">
-              <img src="img/quiz/2.png" alt="">
-              <span>Гоголя, 56 (за ТЦ «Рассвет»)</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="quiz-item" data-quiz="6">
-        <div class="quiz__title">
-          Напишите дату и время игры
-        </div>
-
-        <div class="quiz-row3 quiz-time">
-          <div class="quiz__radio any">
-            <input id="data-time" type="radio">
-            <label for="change_input2">
-              <input id="change_input2" name="Дата проведения:" class="quiz-form-text" type="text"
-                placeholder="Желаемые дата и время игры">
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="quiz-item" data-quiz="7">
-        <div class="quiz__title">
-          Оставьте контакты и получите
-          расчёт стоимости и скидку
-          на&nbsp;игру
-        </div>
-        <div class="quiz-row4 quiz-contact">
-          <div class="quiz__radio any any2">
-            <input id="quizName" name="Имя пользователя:" class="quiz-form-text" type="text" required>
-            <label for="quizName">Имя</label>
-          </div>
-          <div class="quiz__radio any any2">
-            <input id="quizPhone" name="Телефон:" class="quiz-form-text" type="text" required>
-            <label for="quizPhone">Телефон</label>
-          </div>
-        </div>
-        <button type="submit" class="btn quiz-btn-send btn-12"><span>Далее</span></button>
-      </div>
-    </form>
-    <!-- /.quiz__content -->
-    <div class="quiz__info">
-      <div class="quiz__info-content">
-        <button class="quiz__info-prev btn"><span>Назад</span><span class="arr"></span></button>
-        <div class="quiz__info-question">Вопрос <span class="quiz__info-start"></span> из <span
-            class="quiz__info-end"></span></div>
-        <button class="quiz__info-next btn"><span>Далее</span><span class="arr"></span></button>
-      </div>
-      <div class="quiz__line">
-        <div class="quiz__line-complete"></div>
-      </div>
-    </div>
-    <!-- /.quiz__info -->
-  </div>
-  <!-- /.quiz -->
-
-  <!-- <div id="video1" class="popup popup-video">
-    <div class="popup-close popup__close"></div>
-  </div> -->
-
+  //= template/modal.html
 
   <div class="mainblock-wrapper ibg" style="background-image: url(img/main/bg.jpg);">
     //= template/header.html
@@ -273,25 +90,25 @@
         <div class="services__item ibg" style="background-image: url(img/services/1.jpg);">
           <div class="services__item-content">
             <h3 class="services__item-title title3 yellow">День рождения</h3>
-            <a href="#" class="services__more">Подробнее</a>
+            <a href="birthday.html" class="services__more">Подробнее</a>
           </div>
         </div>
         <div class="services__item ibg" style="background-image: url(img/services/2.jpg);">
           <div class="services__item-content">
             <h3 class="services__item-title title3 yellow">Игра классов</h3>
-            <a href="#" class="services__more">Подробнее</a>
+            <a href="game.html" class="services__more">Подробнее</a>
           </div>
         </div>
         <div class="services__item ibg" style="background-image: url(img/services/3.jpg);">
           <div class="services__item-content">
             <h3 class="services__item-title title3 yellow">Корпоратив</h3>
-            <a href="#" class="services__more">Подробнее</a>
+            <a href="company.html" class="services__more">Подробнее</a>
           </div>
         </div>
         <div class="services__item ibg" style="background-image: url(img/services/4.jpg);">
           <div class="services__item-content">
-            <h3 class="services__item-title title3 yellow">Активный отдых</h3>
-            <a href="#" class="services__more">Подробнее</a>
+            <h3 class="services__item-title title3 yellow">Квест</h3>
+            <a href="quest.html" class="services__more">Подробнее</a>
           </div>
         </div>
       </div>
@@ -313,7 +130,7 @@
           <div class="about-row__info-text">
             <h3 class="about-row__info-title title3"><strong>Площадки</strong> рядом с&nbsp;вами</h3>
             <p>
-              Две больших тёплых крытых площадки за ТЦ «Рассвет» по&nbsp;адресу ул. Гоголя 56 площадью 1000 м² и 2000 м²
+              Две больших крытых площадки за ТЦ «Рассвет» по&nbsp;адресу ул. Гоголя 56 площадью 1000 м² и 2000 м²
               для&nbsp;игры в&nbsp;лазертаг и пейнтболл. <a href="#">Схема проезда</a>.
             </p>
             <p>
@@ -423,7 +240,7 @@
           <h2 class="bonus__title title">Бесплатная игра <br> для именинника</h2>
           <p class="bonus__text">Мы любим делать скидки и дарить подарки! Именинник играет бесплатно! На праздничной
             неделе, мы дарим имениннику два бесплатных часа игры в Лазертаг. </p>
-          <button class="bonus__btn btn btn-11"><span>Оставить заявку</span></button>
+          <button class="bonus__btn btn btn-11 popup-btn" data-popup="main-modal"><span>Оставить заявку</span></button>
         </div>
       </div>
       <!-- /.bonus__inner -->
@@ -505,7 +322,7 @@
             <p>После игры можно посидеть в беседке, отдохнуть
               и просто пообщаться с товарищами по оружию.</p>
             <div class="platform__nav">
-              <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
+              <a href="platform1.html" class="platform__link btn btn-12"><span>Подробнее</span></a>
               <div class="video">
                 <div class="video__click">
                   <div class="video__click-body"></div>
@@ -528,7 +345,7 @@
             <p>После игры можно посидеть в беседке, отдохнуть
               и просто пообщаться с товарищами по оружию.</p>
             <div class="platform__nav">
-              <a href="" class="platform__link btn btn-12"><span>Подробнее</span></a>
+              <a href="platform2.html" class="platform__link btn btn-12"><span>Подробнее</span></a>
               <div class="video">
                 <div class="video__click">
                   <div class="video__click-body"></div>
@@ -566,11 +383,11 @@
   <!-- </ПЛОЩАДКИ> -->
 
   <!-- <СТОИМОСТЬ> -->
-  <section class="cost sect">
+  <section class="cost sect" id="cost-point">
     <div class="container">
       <h2 class="cost__title title title_r">Стоимость</h2>
       <div class="cost__list">
-        <a href="#" class="cost__item">
+        <div class="cost__item popup-btn quiz-play" data-popup="quiz">
           <div class="cost__item-img">
             <img src="img/cost/1.svg" alt="">
           </div>
@@ -580,9 +397,9 @@
             до и после дня рождения
           </p>
           <div class="cost__item-btn">Поиграть бесплатно →</div>
-        </a>
+        </div>
         <!-- /.cost__item -->
-        <a href="#" class="cost__item">
+        <div class="cost__item popup-btn quiz-play" data-popup="quiz">
           <div class="cost__item-img">
             <img src="img/cost/2.svg" alt="">
           </div>
@@ -592,9 +409,9 @@
             игры в лазертаг
           </p>
           <div class="cost__item-btn">Рассчитать стоимость →</div>
-        </a>
+        </div>
         <!-- /.cost__item -->
-        <a href="#" class="cost__item">
+        <div class="cost__item popup-btn quiz-play" data-popup="quiz">
           <div class="cost__item-img">
             <img src="img/cost/3.svg" alt="">
           </div>
@@ -604,19 +421,19 @@
             игры в пейнтболл
           </p>
           <div class="cost__item-btn">Рассчитать стоимость →</div>
-        </a>
+        </div>
         <!-- /.cost__item -->
-        <a href="#" class="cost__item">
+        <div class="cost__item popup-btn quiz-play" data-popup="quiz">
           <div class="cost__item-img">
             <img src="img/cost/4.svg" alt="">
           </div>
-          <h3 class="cost__item-heading">400 ₽</h3>
+          <h3 class="cost__item-heading">от 400 ₽</h3>
           <p class="cost__item-text">
             С человека при заказе
             квеста
           </p>
           <div class="cost__item-btn">Рассчитать стоимость →</div>
-        </a>
+        </div>
         <!-- /.cost__item -->
       </div>
       <!-- /.cost__list -->
