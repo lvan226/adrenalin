@@ -22,7 +22,9 @@ function ready() {
 
         }
         _Seconds += numhow; // прибавляем 1
-        if(_Seconds > num) {_Seconds = num}
+        if (_Seconds > num) {
+          _Seconds = num
+        }
         $(field).text(_Seconds); // выводим получившееся значение в блок
       } else {
         clearInterval(int); // очищаем интервал, чтобы он не продолжал работу при _Seconds = 0
@@ -159,36 +161,39 @@ function ready() {
   $('input[type=radio]').styler({
 
   });
+  $('.quiz-end__row [type=checkbox]').styler({
+
+  });
 
 
   $('.cost__list').slick({
     slidesToShow: 4,
     variableWidth: true,
     responsive: [{
-      breakpoint: 1290,
-      settings: {
-        slidesToShow: 3,
+        breakpoint: 1290,
+        settings: {
+          slidesToShow: 3,
+        },
       },
-    },
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 2,
-        variableWidth: true
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          variableWidth: true
+        },
       },
-    },
-    {
-      breakpoint: 476,
-      settings: {
-        slidesToShow: 1,
-        variableWidth: false,
-        adaptiveHeight: true
+      {
+        breakpoint: 476,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+          adaptiveHeight: true
+        },
       },
-    },
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   });
   // Слайдер выпускной
   $('.game-slider__inner').slick({
@@ -196,11 +201,11 @@ function ready() {
     dots: true,
     arrows: false,
     // adaptiveHeight: true
-    // variableWidth: true,
+    variableWidth: true,
     // arrows: false,
     // infinite: false,
-    // centerMode: true  
     // centerMode: true
+    // centerMode: true,
     responsive: [{
         breakpoint: 1200,
         settings: {
@@ -249,7 +254,7 @@ function ready() {
   arrMore[0] = document.querySelectorAll('.row__right')[0];
   arrMore[2] = document.querySelectorAll('.row__right')[1];
   arrMore[1] = document.querySelectorAll('.services-add__row:nth-child(3)')[0];
-  console.log(arrMore);
+  // console.log(arrMore);
   $('.btn-more').on('click', function (e) {
     e.preventDefault();
     for (var i = 0; i < arrMore.length; i++) {
@@ -274,7 +279,19 @@ function ready() {
 
     $(this).addClass('current');
     $("#" + tab_id).addClass('current');
-  })
+  });
+  // Табы в квестах конец
+
+  // Табы в квестах
+  $('.tabs-quiz .tabs-quiz__item').click(function () {
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tabs-quiz__item').removeClass('current');
+    $('.tabs-inner__item').removeClass('current');
+
+    $(this).addClass('current');
+    $("#" + tab_id).addClass('current');
+  });
   // Табы в квестах конец
 
   // Модальные окна
@@ -298,8 +315,10 @@ function ready() {
     }
   }
 
-  $('.header__cost').on('click', function(e){
-    $('html,body').stop().animate({ scrollTop: $('#cost-point').offset().top }, 1000);
+  $('.header__cost').on('click', function (e) {
+    $('html,body').stop().animate({
+      scrollTop: $('#cost-point').offset().top
+    }, 1000);
     e.preventDefault();
   });
 

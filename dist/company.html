@@ -21,12 +21,12 @@
         <form class="send-form-mess" action="mailer.php" method="POST">
           <div class="mainform__row">
             <div class="mainform__line">
-              <input required class="mainform__field" type="text" id="name" name="Имя пользователя:">
-              <label class="mainform__label" for="name">Имя</label>
+              <input required class="mainform__field" type="text" id="name5" name="Имя пользователя:">
+              <label class="mainform__label" for="name5">Имя</label>
             </div>
             <div class="mainform__line">
-              <input required class="mainform__field" type="text" id="phone" name="Телефон пользователя:">
-              <label class="mainform__label" for="phone">Телефон</label>
+              <input required class="mainform__field" type="text" id="phone5" name="Телефон пользователя:">
+              <label class="mainform__label" for="phone5">Телефон</label>
             </div>
             <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по использованию сайта </a> и&nbsp;согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
             <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
@@ -57,26 +57,29 @@
           Какой у вас повод для игры?
         </div>
         <div class="quiz-row">
-          <div class="quiz-row__info">
-            <div class="quiz__radio">
+          <div class="quiz-row__info tabs-quiz">
+            <div class="quiz__radio tabs-quiz__item current" data-tab="qi1">
               <input id="reason1" name="Тип мероприятия:" type="radio" value="День рождения">
               <label for="reason1">День рождения</label>
             </div>
-            <div class="quiz__radio">
+            <div class="quiz__radio tabs-quiz__item" data-tab="qi2">
               <input id="reason2" name="Тип мероприятия:" type="radio" value="Игра класса/выпускной">
               <label for="reason2">Игра класса/выпускной</label>
             </div>
-            <div class="quiz__radio">
+            <div class="quiz__radio tabs-quiz__item" data-tab="qi3">
               <input id="reason3" name="Тип мероприятия:" type="radio" value="Сборная игра">
               <label for="reason3">Сборная игра</label>
             </div>
-            <div class="quiz__radio">
+            <div class="quiz__radio tabs-quiz__item" data-tab="qi4">
               <input id="reason4" name="Тип мероприятия:" type="radio" value="Корпоратив">
               <label for="reason4">Корпоратив</label>
             </div>
           </div>
-          <div class="quiz-row__img ibg" style="background-image: url(img/kwiz/item1.jpg);">
-  
+          <div class="quiz-tabs">
+            <div class="quiz-row__img tabs-inner__item current ibg" id="qi1" style="background-image: url(img/birthday/hero.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi2" style="background-image: url(img/game/hero-bg2.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi3" style="background-image: url(img/quest/quest-bg.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi4" style="background-image: url(img/company/hero.jpg);"></div>
           </div>
         </div>
       </div>
@@ -170,7 +173,6 @@
         <div class="quiz__title">
           Напишите дату и время игры
         </div>
-  
         <div class="quiz-row3 quiz-time">
           <div class="quiz__radio any">
             <input id="data-time" type="radio">
@@ -182,6 +184,62 @@
         </div>
       </div>
       <div class="quiz-item" data-quiz="7">
+        <div class="quiz__title">
+          Что может понадобиться?
+        </div>
+        <input type="radio" checked class="dis-none">
+        <div class="quiz-end__row">
+          <div class="quiz__end-check">
+            <input id="check1" name="Гидробол" type="checkbox" value="Гидробол">
+            <label for="check1">Гидробол</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check2" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check2">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check3" name="Ведущая" type="checkbox" value="Ведущая">
+            <label for="check3">Ведущая</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check4" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check4">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check5" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check5">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check6" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check6">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check7" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check7">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check8" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check8">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check9" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check9">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check10" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check10">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check11" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check11">Полоса препятствий</label>
+          </div>
+          <div class="quiz__end-check">
+            <input id="check12" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+            <label for="check12">Полоса препятствий</label>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-item" data-quiz="8">
         <div class="quiz__title">
           Оставьте контакты и получите
           расчёт стоимости и скидку
@@ -308,7 +366,7 @@
         </div>
         <!-- /.tab-title -->
         <div class="tab-content">
-          <div class="tab-content__item current ibg" style="background-image: url(img/company/lazertag-bg.jpg);"
+          <div class="tab-content__item current ibg" style="background-image: url(img/company/format-lazertag.jpg);"
             id="tab1">
             <div class="tab-content__item-inner">
               <h3 class="blocktab__title title3 yellow">Лазертаг от 300₽/час с&nbsp;чел.</h3>
@@ -417,7 +475,7 @@
         </div>
         <!-- /.company-about__row -->
         <div class="company-about__row">
-          <div class="company-about__img ibg" style="background-image: url(img/company/about2.jpg);"></div>
+          <div class="company-about__img ibg" style="background-image: url(img/company/Korporativ_bezopasno.jpg);"></div>
           <!-- /.company-about__img -->
           <div class="company-about__info">
             <div class="company-about__info-inner">
@@ -435,7 +493,7 @@
         </div>
         <!-- /.company-about__row -->
         <div class="company-about__row">
-          <div class="company-about__img ibg order-1" style="background-image: url(img/company/about2.jpg);"></div>
+          <div class="company-about__img ibg order-1" style="background-image: url(img/company/Korporativ_komfortno.jpg);"></div>
           <!-- /.company-about__img -->
           <div class="company-about__info">
             <div class="company-about__info-inner">
@@ -451,7 +509,7 @@
         </div>
         <!-- /.company-about__row -->
         <div class="company-about__row">
-          <div class="company-about__img ibg" style="background-image: url(img/company/about2.jpg);"></div>
+          <div class="company-about__img ibg" style="background-image: url(img/company/Korporativ_v.jpg);"></div>
           <!-- /.company-about__img -->
           <div class="company-about__info">
             <div class="company-about__info-inner">
@@ -481,11 +539,14 @@
     <!-- /.container -->
     <div class="container-big">
       <div class="photo__slider slider-main">
-        <div class="photo__item ibg" style="background-image: url(img/photo/1.jpg);"></div>
-        <div class="photo__item ibg" style="background-image: url(img/photo/2.jpg);"></div>
-        <div class="photo__item ibg" style="background-image: url(img/photo/3.jpg);"></div>
-        <div class="photo__item ibg" style="background-image: url(img/photo/2.jpg);"></div>
-        <div class="photo__item ibg" style="background-image: url(img/photo/3.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/company/1.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/company/2.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/company/3.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/company/4.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/company/5.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/company/6.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/company/7.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/company/8.jpg);"></div>
       </div>
       <!-- /.photo__slider -->
     </div>
