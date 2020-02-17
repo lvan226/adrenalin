@@ -18,23 +18,33 @@
     <div class="main-modal__inner">
       <div class="main-modal__title title3"><span class="yellow">Оставьте заявку</span><br>
         и&nbsp;мы&nbsp;вам перезвоним</div>
-        <form class="send-form-mess" action="mailer.php" method="POST">
-          <div class="mainform__row">
-            <div class="mainform__line">
-              <input required class="mainform__field" type="text" id="name5" name="Имя пользователя:">
-              <label class="mainform__label" for="name5">Имя</label>
-            </div>
-            <div class="mainform__line">
-              <input required class="mainform__field" type="text" id="phone5" name="Телефон пользователя:">
-              <label class="mainform__label" for="phone5">Телефон</label>
-            </div>
-            <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по использованию сайта </a> и&nbsp;согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
-            <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
+      <form class="send-form-mess" action="mailer.php" method="POST">
+        <div class="mainform__row">
+          <div class="mainform__line">
+            <input required class="mainform__field" type="text" id="name5" name="Имя пользователя:">
+            <label class="mainform__label" for="name5">Имя</label>
           </div>
-        </form>
+          <div class="mainform__line">
+            <input required class="mainform__field" type="text" id="phone5" name="Телефон пользователя:">
+            <label class="mainform__label" for="phone5">Телефон</label>
+          </div>
+          <div class="mainform__alert">Нажимая кнопку, я принимаю условия <a href="confidentiality.html">Оферты по
+              использованию сайта </a> и&nbsp;согласен с <a href="protect.html">Политикой конфиденциальности</a></div>
+          <button class="mainform__btn btn btn-11"><span>Перезвоните мне</span></button>
+        </div>
+      </form>
     </div>
   </div>
   
+  <div class="calc-btn blick-btn popup-btn quiz-play" data-popup="quiz">
+    <img src="img/calc-btn.png" alt="" class="calc-btn__img">
+    <span>
+      Рассчитать
+      стоимость
+    </span>
+    <div class="blick-btn__before"></div>
+    <div class="blick-btn__after"></div>
+  </div>
   
   <div class="quiz popup" id="quiz">
     <div class="quiz__cost">
@@ -76,10 +86,14 @@
             </div>
           </div>
           <div class="quiz-tabs">
-            <div class="quiz-row__img tabs-inner__item current ibg" id="qi1" style="background-image: url(img/birthday/hero.jpg);"></div>
-            <div class="quiz-row__img tabs-inner__item ibg" id="qi2" style="background-image: url(img/game/hero-bg2.jpg);"></div>
-            <div class="quiz-row__img tabs-inner__item ibg" id="qi3" style="background-image: url(img/quest/quest-bg.jpg);"></div>
-            <div class="quiz-row__img tabs-inner__item ibg" id="qi4" style="background-image: url(img/company/hero.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item current ibg" id="qi1"
+              style="background-image: url(img/birthday/hero.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi2"
+              style="background-image: url(img/game/hero-bg2.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi3"
+              style="background-image: url(img/quest/quest-bg.jpg);"></div>
+            <div class="quiz-row__img tabs-inner__item ibg" id="qi4" style="background-image: url(img/company/hero.jpg);">
+            </div>
           </div>
         </div>
       </div>
@@ -190,52 +204,52 @@
         <input type="radio" checked class="dis-none">
         <div class="quiz-end__row">
           <div class="quiz__end-check">
-            <input id="check1" name="Гидробол" type="checkbox" value="Гидробол">
+            <input id="check1" name="Гидробол" type="checkbox" value="Есть">
             <label for="check1">Гидробол</label>
           </div>
-          <div class="quiz__end-check">
-            <input id="check2" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
+          <div class="quiz__end-check hgj">
+            <input id="check2" name="Полоса препятствий" type="checkbox" value="Есть">
             <label for="check2">Полоса препятствий</label>
           </div>
           <div class="quiz__end-check">
-            <input id="check3" name="Ведущая" type="checkbox" value="Ведущая">
+            <input id="check3" name="Ведущая" type="checkbox" value="Есть">
             <label for="check3">Ведущая</label>
           </div>
           <div class="quiz__end-check">
-            <input id="check4" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check4">Полоса препятствий</label>
+            <input id="check4" name="Пиньята" type="checkbox" value="Есть">
+            <label for="check4">Пиньята</label>
+          </div>
+          <div class="quiz__end-check hgj">
+            <input id="check5" name="Сертификат участника" type="checkbox" value="Есть">
+            <label for="check5">Сертификат участника</label>
           </div>
           <div class="quiz__end-check">
-            <input id="check5" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check5">Полоса препятствий</label>
+            <input id="check6" name="Музыка" type="checkbox" value="Есть">
+            <label for="check6">Музыка</label>
           </div>
           <div class="quiz__end-check">
-            <input id="check6" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check6">Полоса препятствий</label>
+            <input id="check7" name="Грим" type="checkbox" value="Есть">
+            <label for="check7">Грим</label>
+          </div>
+          <div class="quiz__end-check hgj">
+            <input id="check8" name="Комната отдыха" type="checkbox" value="Есть">
+            <label for="check8">Комната отдыха</label>
           </div>
           <div class="quiz__end-check">
-            <input id="check7" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check7">Полоса препятствий</label>
+            <input id="check9" name="Фрироуп" type="checkbox" value="Есть">
+            <label for="check9">Фрироуп</label>
           </div>
           <div class="quiz__end-check">
-            <input id="check8" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check8">Полоса препятствий</label>
+            <input id="check10" name="Тир" type="checkbox" value="Есть">
+            <label for="check10">Тир</label>
+          </div>
+          <div class="quiz__end-check hgj">
+            <input id="check11" name="Пригласительные" type="checkbox" value="Есть">
+            <label for="check11">Пригласительные</label>
           </div>
           <div class="quiz__end-check">
-            <input id="check9" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check9">Полоса препятствий</label>
-          </div>
-          <div class="quiz__end-check">
-            <input id="check10" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check10">Полоса препятствий</label>
-          </div>
-          <div class="quiz__end-check">
-            <input id="check11" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check11">Полоса препятствий</label>
-          </div>
-          <div class="quiz__end-check">
-            <input id="check12" name="Полоса препятствий" type="checkbox" value="Полоса препятствий">
-            <label for="check12">Полоса препятствий</label>
+            <input id="check12" name="Тимбилдинг" type="checkbox" value="Есть">
+            <label for="check12">Тимбилдинг</label>
           </div>
         </div>
       </div>
@@ -335,11 +349,15 @@
         <h1 class="gamemain__title">Выпускной 
           в&nbsp;клубе Адреналин</h1>
         <ul class="gamemain__list">
-          <li>Три площадки вместимостью до 200 человек</li>
-          <li>Все, что нужно для праздника в одном месте</li>
-          <li>Комната и беседка чтобы покушать</li>
+          <li>Игровые квесты для классов</li>
+          <li>Комплексные предложения по низким ценам</li>
+          <li>Скидки на пиццу и комнаты отдыха после игры</li>
         </ul>
-        <button class="gamemain__btn btn btn-12 popup-btn quiz-play" data-popup="quiz"><span>Рассчитать стоимость</span></button>
+        <button class="gamemain__btn btn blick-btn popup-btn quiz-play" data-popup="quiz">
+          <span>Рассчитать стоимость</span>
+          <span class="blick-btn__before"></span>
+          <span class="blick-btn__after"></span>
+        </button>
       </div>
       <!-- /.gamemain__inner -->
     </div>
@@ -771,8 +789,8 @@
             <li class="footer__list-item"><a href="mailto:info@adrenalin35.ru">info@adrenalin35.ru</a></li>
           </ul>
           <div class="footer__list-social">
-            <a href="#"><span class="footer__list-social-img ibg"></span></a>
-            <a href="#"><span class="footer__list-social-img ibg"></span></a>
+            <a href="https://vk.com/adrenalinpaintball"><span class="footer__list-social-img ibg"></span></a>
+            <a href="https://www.instagram.com/_adrenalin35_/"><span class="footer__list-social-img ibg"></span></a>
           </div>
         </div>
         <div class="footer__column">
@@ -787,7 +805,7 @@
       <!-- /.footer__inner -->
       <div class="footer__info">
         <p class="footer__copy">Copyright © 2020 Adrenalin. All rights reserved</p>
-        <a href="#" class="development-link"><span>Разработано в Sideguide</span></a>
+        <a href="https://sideguide.ru/" class="development-link"><span>Разработано в Sideguide</span></a>
       </div>
       <!-- /.footer__info -->
     </div>
@@ -797,7 +815,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main-min.js"></script>
 </body>
 
 </html>

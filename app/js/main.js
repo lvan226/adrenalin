@@ -71,7 +71,7 @@ function ready() {
   let quizID = 1;
   let arrQuiz = document.querySelectorAll('[data-quiz]');
   let quizLine = document.querySelector('.quiz__line-complete');
-  let quizLineWidth = 100 / (arrQuiz.length - 1);
+  let quizLineWidth = 100 / (arrQuiz.length - 2);
   let quizLineComplete = 0;
   quizLine.style.width = quizLineComplete + "%";
   let quizStart = document.querySelector('.quiz__info-start');
@@ -82,7 +82,7 @@ function ready() {
   let isQuiz = true;
   quizPrice.innerHTML = quizPriceNumber;
   quizStart.innerHTML = quizStartNumber;
-  quizEnd.innerHTML = arrQuiz.length - 1;
+  quizEnd.innerHTML = arrQuiz.length - 2;
 
   $('.quiz__info-next').on('click', () => {
     if (quizID < arrQuiz.length) {
@@ -92,7 +92,12 @@ function ready() {
       quizLineComplete += quizLineWidth;
       quizStartNumber++;
       quizStart.innerHTML = quizStartNumber;
-      quizLine.style.width = quizLineComplete + "%";
+      if (quizID < 8) {
+        quizLine.style.width = quizLineComplete + "%";
+      }
+    }
+    if (quizID == 8){
+      document.querySelector('.quiz__info-question').style.opacity = '0';
     }
     if (isQuiz) {
       let intervalQuiz = setInterval(function () {
@@ -109,6 +114,9 @@ function ready() {
     if (quizID == 2) {
       quizLine.style.width = 0;
     }
+    if (quizID < 9){
+      document.querySelector('.quiz__info-question').style.opacity = '1';
+    }
     if (quizID > 1) {
       $('[data-quiz=' + quizID + ']').removeClass('current');
       quizID--;
@@ -121,17 +129,21 @@ function ready() {
   })
 
   if ($('.quiz-play').length) {
-    let mainblockBtn = document.querySelector('.quiz-play').addEventListener('click', function () {
-      $('.quiz-item .jq-radio').change(function () {
-        disableBtn();
+    let mainblockBtn = document.querySelectorAll('.quiz-play');
+    for (let i = 0; i < mainblockBtn.length; i++) {
+      mainblockBtn[i].addEventListener('click', function () {
+        $('.quiz-item .jq-radio').change(function () {
+          disableBtn();
+        });
+        $('.quiz__info-next').on('click', function () {
+          disableBtn();
+        })
+        $('.quiz__info-prev').on('click', function () {
+          disableBtn();
+        });
       });
-      $('.quiz__info-next').on('click', function () {
-        disableBtn();
-      })
-      $('.quiz__info-prev').on('click', function () {
-        disableBtn();
-      });
-    });
+    }
+
   }
 
 
@@ -339,6 +351,61 @@ function ready() {
       form3.addEventListener("submit", submitHandler3)
     );
   }
+
+
+
+
+
+
+  var animation1 = bodymovin.loadAnimation({
+		container: document.getElementById('anim1'), // Required
+		path: 'anim/Lazertag.json', // Required
+		renderer: 'svg', // Required
+		loop: false, // Optional
+		autoplay: false, // Optional
+	});
+
+	var animation2 = bodymovin.loadAnimation({
+		container: document.getElementById('anim2'), // Required
+		path: 'anim/Paintball.json', // Required
+		renderer: 'svg', // Required
+		loop: false, // Optional
+		autoplay: false, // Optional
+	});
+
+	var animation3 = bodymovin.loadAnimation({
+		container: document.getElementById('anim3'), // Required
+		path: 'anim/Present.json', // Required
+		renderer: 'svg', // Required
+		loop: false, // Optional
+		autoplay: false, // Optional
+	});
+
+	var animation4 = bodymovin.loadAnimation({
+		container: document.getElementById('anim4'), // Required
+		path: 'anim/Quest.json', // Required
+		renderer: 'svg', // Required
+		loop: false, // Optional
+		autoplay: false, // Optional
+	});
+  var data = Array(animation1, animation2, animation3, animation4);
+  data.forEach(function(item, i, arr) {
+    data[i].play();
+  });
+  // data[0].play();
+
+
+
+  $('.cost__item').hover(
+		function () {
+      let i = $(this).children('.anim').attr('data-anims');
+      data[i].stop();
+      data[i].play();
+
+			// data[id - 1].play();
+		},
+		function () {
+		});
 }
 
 // Отправка формы с помощью Ajax на чистом javascript

@@ -37,7 +37,11 @@
             </li>
           </ul>
           <div class="mainblock__row">
-            <button class="mainblock__btn btn popup-btn quiz-play" data-popup="quiz">Рассчитать стоимость</button>
+            <button class="mainblock__btn btn popup-btn quiz-play blick-btn" data-popup="quiz">
+              Рассчитать стоимость
+              <span class="blick-btn__before"></span>
+              <span class="blick-btn__after"></span>
+            </button>
             <div class="video">
               <div class="video__click">
                 <div class="video__click-body"></div>
@@ -368,8 +372,8 @@
       <h2 class="cost__title title title_r">Стоимость</h2>
       <div class="cost__list">
         <div class="cost__item popup-btn quiz-play" data-popup="quiz">
-          <div class="cost__item-img">
-            <img src="img/cost/1.svg" alt="">
+          <div class="cost__item-img anim" id="anim3" data-anims="2">
+            <!-- <img src="img/cost/1.svg" alt=""> -->
           </div>
           <h3 class="cost__item-heading">0 рублей</h3>
           <p class="cost__item-text">
@@ -380,8 +384,8 @@
         </div>
         <!-- /.cost__item -->
         <div class="cost__item popup-btn quiz-play" data-popup="quiz">
-          <div class="cost__item-img">
-            <img src="img/cost/2.svg" alt="">
+          <div class="cost__item-img anim" id="anim1" data-anims="0">
+            <!-- <img src="img/cost/2.svg" alt=""> -->
           </div>
           <h3 class="cost__item-heading">от 300 ₽/час</h3>
           <p class="cost__item-text">
@@ -392,8 +396,8 @@
         </div>
         <!-- /.cost__item -->
         <div class="cost__item popup-btn quiz-play" data-popup="quiz">
-          <div class="cost__item-img">
-            <img src="img/cost/3.svg" alt="">
+          <div class="cost__item-img anim" id="anim2" data-anims="1">
+            <!-- <img src="img/cost/3.svg" alt=""> -->
           </div>
           <h3 class="cost__item-heading">от 500 ₽/час</h3>
           <p class="cost__item-text">
@@ -404,8 +408,8 @@
         </div>
         <!-- /.cost__item -->
         <div class="cost__item popup-btn quiz-play" data-popup="quiz">
-          <div class="cost__item-img">
-            <img src="img/cost/4.svg" alt="">
+          <div class="cost__item-img anim" id="anim4" data-anims="3">
+            <!-- <img src="img/cost/4.svg" alt=""> -->
           </div>
           <h3 class="cost__item-heading">от 400 ₽</h3>
           <p class="cost__item-text">

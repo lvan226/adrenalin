@@ -235,7 +235,16 @@
 
 
 // <О КОМПАНИИ> ========================================================================================================
-
+.company {
+  .services-add__title {
+    text-align: right;
+    @media (max-width: $sm){text-align: left;}
+  }
+  .platform__title {
+    text-align: right;
+    @media (max-width: $sm){text-align: left;}
+  }
+}
 .company-about {
   // .company-about__title
   &__title {
