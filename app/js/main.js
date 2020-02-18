@@ -102,7 +102,7 @@ function ready() {
     if (isQuiz) {
       let intervalQuiz = setInterval(function () {
         quizPrice.value = quizPriceNumber--;
-        if (Number(quizPrice.value) == 100) {
+        if (Number(quizPrice.value) == 0) {
           clearInterval(intervalQuiz);
         }
       }, 1000)
@@ -387,18 +387,34 @@ function ready() {
 		renderer: 'svg', // Required
 		loop: false, // Optional
 		autoplay: false, // Optional
+  });
+  var animation5 = bodymovin.loadAnimation({
+		container: document.getElementById('anim5'), // Required
+		path: 'anim/Quest.json', // Required
+		renderer: 'svg', // Required
+		loop: false, // Optional
+		autoplay: false, // Optional
 	});
-  var data = Array(animation1, animation2, animation3, animation4);
+  // var data = Array(animation1, animation2, animation3, animation4, animation5);
+  var data = Array();
+  data[0] = animation1;
+  data[1] = animation2;
+  data[2] = animation3;
+  data[3] = animation4;
+  data[4] = animation5;
   data.forEach(function(item, i, arr) {
     data[i].play();
   });
   // data[0].play();
 
+  $('.gamecost__title').on('click', function() {
+    alert('asdasd');
+    data[0].play();
+  });
 
-
-  $('.cost__item').hover(
+  $('.cost-item-anim').hover(
 		function () {
-      let i = $(this).children('.anim').attr('data-anims');
+      let i = $(this).find('.anim').attr('data-anims');
       data[i].stop();
       data[i].play();
 

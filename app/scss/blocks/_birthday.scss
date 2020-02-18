@@ -102,6 +102,19 @@
     height: 460px;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background-color: #000;
+      opacity: .4;
+    }
     @media (max-width: $lg){max-width: 400px;height: 400px;}
     @media (max-width: $md){width: 100%;max-width: 100%;height: 320px;margin-top: 15px;}
     @media (max-width: $sm){height: 280px;position: absolute;
@@ -109,7 +122,13 @@
     @media (max-width: $xs){height: 230px;top: 30px;}
     .video {
       transform: translateX(40%);
+      position: relative;
+      z-index: 3;
+      &__btn {
+        color: #fff;
+      }
       @media (max-width: $md){transform: translateX(-50%);left: 50%;position: absolute;}
+      @media (max-width: $xs){transform: translateX(-50%) scale(0.65);top: 40%;}
     }
   }
   }

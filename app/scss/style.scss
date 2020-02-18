@@ -597,6 +597,9 @@
 
 // <ПЛОЩАДКИ> =============================================================================================================
 .platform {
+  .video {
+    display: none;
+  }
   // .platform__title
   h3 {
     color: $yellow;
@@ -780,6 +783,7 @@
     margin-left: 0px;
     transition: .7s;
     transform: translateX(-40px);
+    cursor: pointer;
     @media (max-width: $md) {display: none;}
   }
   }
@@ -1896,12 +1900,13 @@
     display: none;
   }
   .quiz .quiz-discount {
-    display: inline;
+    display: inline-block;
     padding-right: 0 !important;
     border: none;
     background-color: transparent;
     outline: none;
     max-width: 42px;
+    width: 42px;
   }
   .quiz-tabs {
     &>div {
@@ -2026,6 +2031,7 @@
     }
     .quiz .quiz-discount {
       max-width: 35px;
+      width: 35px;
     }
     .quiz__info {
       width: 80%;

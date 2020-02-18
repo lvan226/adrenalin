@@ -102,7 +102,7 @@ function ready() {
     if (isQuiz) {
       let intervalQuiz = setInterval(function () {
         quizPrice.value = quizPriceNumber--;
-        if (Number(quizPrice.value) == 100) {
+        if (Number(quizPrice.value) == 0) {
           clearInterval(intervalQuiz);
         }
       }, 1000)

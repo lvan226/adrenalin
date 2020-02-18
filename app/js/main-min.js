@@ -1,1 +1,506 @@
-document.addEventListener("DOMContentLoaded",ready);function ready(){function a(a,b,c,d){var e,f=$(a).text();f=0,e=setInterval(function(){f<c?(f==c-1,f+=d,f>c&&(f=c),$(a).text(f)):clearInterval(e)},b)}function b(){let a=document.querySelectorAll(".quiz-item.current .jq-radio"),b=!1;for(let c=0;c<a.length;c++)if(a[c].classList.contains("checked")){b=!0;break}b?$(".quiz__info-next").removeAttr("disabled"):$(".quiz__info-next").attr("disabled","disabled")}$(".slider-main").slick({slidesToShow:3,slidesToScroll:1,centerMode:!0,variableWidth:!0}),a("#animNumber1",5,21735,50),a("#animNumber2",1,14336,30),a("#animNumber3",10,4653,20),a("#animNumber4",800,4,1),$(".tab-title > div").click(function(){var a=$(this).attr("data-tab");$(".tab-title > div").removeClass("current"),$(".tab-content__item").removeClass("current"),$(this).addClass("current"),$("#"+a).addClass("current")});let c=$("#change_input");c.length&&c.on("keyup",function(){let a=document.querySelector("#howmuch5");$(".quiz-item.current .jq-radio").removeClass("checked"),$(".quiz-item.current .jq-radio.checkform").addClass("checked"),$(".quiz__info-next").removeAttr("disabled"),a.value=c.val()});let d=$("#change_input2");d.length&&d.on("keyup",function(){$(".quiz__info-next").removeAttr("disabled")});let e=1,f=document.querySelectorAll("[data-quiz]"),g=document.querySelector(".quiz__line-complete"),h=100/(f.length-2),i=0;g.style.width=i+"%";let j=document.querySelector(".quiz__info-start"),k=document.querySelector(".quiz__info-end"),l=0,m=document.querySelector(".quiz__cost-number input"),n=+m.value,o=!0;if(m.innerHTML=n,j.innerHTML=l,k.innerHTML=f.length-2,$(".quiz__info-next").on("click",()=>{if(e<f.length&&($("[data-quiz="+e+"]").removeClass("current"),e++,$("[data-quiz="+e+"]").addClass("current"),i+=h,l++,j.innerHTML=l,8>e&&(g.style.width=i+"%")),8==e&&(document.querySelector(".quiz__info-question").style.opacity="0"),o){let a=setInterval(function(){m.value=n--,100==+m.value&&clearInterval(a)},1e3);o=!1}}),$(".quiz__info-prev").on("click",()=>{2==e&&(g.style.width=0),9>e&&(document.querySelector(".quiz__info-question").style.opacity="1"),1<e&&($("[data-quiz="+e+"]").removeClass("current"),e--,$("[data-quiz="+e+"]").addClass("current"),i-=h,l--,j.innerHTML=l,g.style.width=i+"%")}),$(".quiz-play").length){let a=document.querySelectorAll(".quiz-play");for(let c=0;c<a.length;c++)a[c].addEventListener("click",function(){$(".quiz-item .jq-radio").change(function(){b()}),$(".quiz__info-next").on("click",function(){b()}),$(".quiz__info-prev").on("click",function(){b()})})}$("input[type=radio]").styler({}),$(".quiz-end__row [type=checkbox]").styler({}),$(".cost__list").slick({slidesToShow:4,variableWidth:!0,responsive:[{breakpoint:1290,settings:{slidesToShow:3}},{breakpoint:992,settings:{slidesToShow:2,variableWidth:!0}},{breakpoint:476,settings:{slidesToShow:1,variableWidth:!1,adaptiveHeight:!0}}]}),$(".game-slider__inner").slick({slidesToShow:3,dots:!0,arrows:!1,variableWidth:!0,responsive:[{breakpoint:1200,settings:{slidesToShow:2}},{breakpoint:768,settings:{slidesToShow:1,variableWidth:!0}},{breakpoint:576,settings:{slidesToShow:1,variableWidth:!1,adaptiveHeight:!0}}]}),$(".header-burger").on("click",function(){$(".header-menu").addClass("active"),$("#overlay").addClass("overlay_active")}),$(".header-menu__close").on("click",function(){$(".header-menu").removeClass("active"),$("#overlay").removeClass("overlay_active")}),$(".header__list").on("click",function(){$(".header__list").removeClass("active"),$(this).addClass("active")});let p=[],q=0;p[0]=document.querySelectorAll(".row__right")[0],p[2]=document.querySelectorAll(".row__right")[1],p[1]=document.querySelectorAll(".services-add__row:nth-child(3)")[0],$(".btn-more").on("click",function(a){a.preventDefault();for(var b=0;b<p.length;b++)if(!p[b].classList.contains("active")){p[b].classList.add("active"),q++,3==q&&document.querySelector(".btn-more").remove();break}}),$(".tabs-title .tabs-title__item").click(function(){var a=$(this).attr("data-tab");$(".tabs-title__item").removeClass("current"),$(".tabs-content__item").removeClass("current"),$(this).addClass("current"),$("#"+a).addClass("current")}),$(".tabs-quiz .tabs-quiz__item").click(function(){var a=$(this).attr("data-tab");$(".tabs-quiz__item").removeClass("current"),$(".tabs-inner__item").removeClass("current"),$(this).addClass("current"),$("#"+a).addClass("current")}),$(".header__cost").on("click",function(a){$("html,body").stop().animate({scrollTop:$("#cost-point").offset().top},1e3),a.preventDefault()}),function(){let a=document.getElementById("overlay"),b=document.querySelectorAll(".popup-btn");for(let c=0;c<b.length;c++)b[c].addEventListener("click",()=>{let d=b[c].getAttribute("data-popup"),e=document.querySelector("#"+d);e.classList.toggle("active"),a.classList.toggle("overlay_active")});let c=document.querySelectorAll(".popup__close");for(let b=0;b<c.length;b++)c[b].addEventListener("click",()=>{c[b].parentNode.classList.remove("active"),a.classList.remove("overlay_active")})}(),document.querySelectorAll(".form-send").forEach(a=>a.addEventListener("submit",submitHandler)),$(".send-form-mess").length&&document.querySelectorAll(".send-form-mess").forEach(a=>a.addEventListener("submit",submitHandler2)),$(".send-form-mess2").length&&document.querySelectorAll(".send-form-mess2").forEach(a=>a.addEventListener("submit",submitHandler3));var r=bodymovin.loadAnimation({container:document.getElementById("anim1"),path:"anim/Lazertag.json",renderer:"svg",loop:!1,autoplay:!1}),s=bodymovin.loadAnimation({container:document.getElementById("anim2"),path:"anim/Paintball.json",renderer:"svg",loop:!1,autoplay:!1}),t=bodymovin.loadAnimation({container:document.getElementById("anim3"),path:"anim/Present.json",renderer:"svg",loop:!1,autoplay:!1}),u=bodymovin.loadAnimation({container:document.getElementById("anim4"),path:"anim/Quest.json",renderer:"svg",loop:!1,autoplay:!1}),v=[r,s,t,u];v.forEach(function(a,b){v[b].play()}),$(".cost__item").hover(function(){let a=$(this).children(".anim").attr("data-anims");v[a].stop(),v[a].play()},function(){})}function submitHandler(a){a.preventDefault();var b=document.querySelector("#quiz"),c="<div class=\"quiz-item current quiz-item-success\" data-quiz=\"8g\"><div class=\"quiz__title\">\u0421\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E</div>";c+="<div class=\"quiz-img\"></div><div class=\"quiz__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u041C\u044B \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F \u0441 \u0432\u0430\u043C\u0438 \u0432 \u0431\u043B\u0438\u0436\u0430\u0439\u0448\u0435\u0435 \u0432\u0440\u0435\u043C\u044F</div>",c+="<div class=\"quiz__okey popup__close\">\u041E\u041A</div></div><div class=\"quiz__close popup__close popup-close\"></div>";var d=new XMLHttpRequest;d.onreadystatechange=function(){this.readyState===XMLHttpRequest.DONE&&200===this.status&&(b.innerHTML=c,$(".popup__close").on("click",function(){$(".quiz").removeClass("active"),overlay.classList.remove("overlay_active")}))},d.open(this.method,this.action,!0),d.setRequestHeader("Content-Type","application/x-www-form-urlencoded");var e,f=new FormData(this);f.forEach(function(a,b){e+="&"+b+"="+a}),d.send(e)}function submitHandler2(a){a.preventDefault();var b="<div class=\"quiz-item current quiz-item-success\" data-quiz=\"8g\"><div class=\"quiz__title\">\u0421\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E</div>";b+="<div class=\"quiz-img\"></div><div class=\"quiz__text\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u041C\u044B \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F \u0441 \u0432\u0430\u043C\u0438 \u0432 \u0431\u043B\u0438\u0436\u0430\u0439\u0448\u0435\u0435 \u0432\u0440\u0435\u043C\u044F</div>",b+="<div class=\"quiz__okey popup__close\">\u041E\u041A</div></div><div class=\"quiz__close popup__close popup-close\"></div>";var c=new XMLHttpRequest;c.onreadystatechange=function(){this.readyState===XMLHttpRequest.DONE&&200===this.status&&(document.querySelector(".main-modal").innerHTML=b,$(".popup__close").on("click",function(){$(".popup").removeClass("active"),overlay.classList.remove("overlay_active")}))},c.open(this.method,this.action,!0),c.setRequestHeader("Content-Type","application/x-www-form-urlencoded");var d,e=new FormData(this);e.forEach(function(a,b){d+="&"+b+"="+a}),c.send(d)}function submitHandler3(a){a.preventDefault();var b=this,c=new XMLHttpRequest;c.onreadystatechange=function(){this.readyState===XMLHttpRequest.DONE&&200===this.status&&(console.log(b),b.innerHTML="<div class=\"mainform__thanks\">\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u0437\u0430\u044F\u0432\u043A\u0443!</div>")},c.open(this.method,this.action,!0),c.setRequestHeader("Content-Type","application/x-www-form-urlencoded");var d,e=new FormData(this);e.forEach(function(a,b){d+="&"+b+"="+a}),c.send(d)}
+'use strict';
+
+document.addEventListener("DOMContentLoaded", ready);
+
+function ready() {
+
+  // Слайдер фотографий
+  $('.slider-main').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true
+  });
+
+  // Анимация чисел JavaScript
+  function timer(field, second, num, numhow) {
+    var _Seconds = $(field).text(),
+        int;
+    _Seconds = 0;
+    int = setInterval(function () {
+      // запускаем интервал
+      if (_Seconds < num) {
+        if (_Seconds == num - 1) {}
+        _Seconds += numhow; // прибавляем 1
+        if (_Seconds > num) {
+          _Seconds = num;
+        }
+        $(field).text(_Seconds); // выводим получившееся значение в блок
+      } else {
+        clearInterval(int); // очищаем интервал, чтобы он не продолжал работу при _Seconds = 0
+      }
+    }, second);
+  }
+  timer('#animNumber1', 5, 21735, 50);
+  timer('#animNumber2', 1, 14336, 30);
+  timer('#animNumber3', 10, 4653, 20);
+  timer('#animNumber4', 800, 4, 1);
+
+  // Табы
+  $('.tab-title > div').click(function () {
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tab-title > div').removeClass('current');
+    $('.tab-content__item').removeClass('current');
+
+    $(this).addClass('current');
+    $("#" + tab_id).addClass('current');
+  });
+
+  var input_change = $('#change_input');
+  if (input_change.length) {
+    // console.log('1', input_change);
+    // alert('324234');
+    input_change.on('keyup', function () {
+      var radio = document.querySelector('#howmuch5');
+      $('.quiz-item.current .jq-radio').removeClass('checked');
+      $('.quiz-item.current .jq-radio.checkform').addClass('checked');
+      $('.quiz__info-next').removeAttr('disabled');
+      radio.value = input_change.val();
+    });
+  }
+
+  var input_change2 = $('#change_input2');
+  if (input_change2.length) {
+    input_change2.on('keyup', function () {
+      $('.quiz__info-next').removeAttr('disabled');
+    });
+  }
+
+  // Квиз
+  var quizID = 1;
+  var arrQuiz = document.querySelectorAll('[data-quiz]');
+  var quizLine = document.querySelector('.quiz__line-complete');
+  var quizLineWidth = 100 / (arrQuiz.length - 2);
+  var quizLineComplete = 0;
+  quizLine.style.width = quizLineComplete + "%";
+  var quizStart = document.querySelector('.quiz__info-start');
+  var quizEnd = document.querySelector('.quiz__info-end');
+  var quizStartNumber = 0;
+  var quizPrice = document.querySelector('.quiz__cost-number input');
+  var quizPriceNumber = Number(quizPrice.value);
+  var isQuiz = true;
+  quizPrice.innerHTML = quizPriceNumber;
+  quizStart.innerHTML = quizStartNumber;
+  quizEnd.innerHTML = arrQuiz.length - 2;
+
+  $('.quiz__info-next').on('click', function () {
+    if (quizID < arrQuiz.length) {
+      $('[data-quiz=' + quizID + ']').removeClass('current');
+      quizID++;
+      $('[data-quiz=' + quizID + ']').addClass('current');
+      quizLineComplete += quizLineWidth;
+      quizStartNumber++;
+      quizStart.innerHTML = quizStartNumber;
+      if (quizID < 8) {
+        quizLine.style.width = quizLineComplete + "%";
+      }
+    }
+    if (quizID == 8) {
+      document.querySelector('.quiz__info-question').style.opacity = '0';
+    }
+    if (isQuiz) {
+      (function () {
+        var intervalQuiz = setInterval(function () {
+          quizPrice.value = quizPriceNumber--;
+          if (Number(quizPrice.value) == 0) {
+            clearInterval(intervalQuiz);
+          }
+        }, 1000);
+        isQuiz = false;
+      })();
+    }
+  });
+
+  $('.quiz__info-prev').on('click', function () {
+    if (quizID == 2) {
+      quizLine.style.width = 0;
+    }
+    if (quizID < 9) {
+      document.querySelector('.quiz__info-question').style.opacity = '1';
+    }
+    if (quizID > 1) {
+      $('[data-quiz=' + quizID + ']').removeClass('current');
+      quizID--;
+      $('[data-quiz=' + quizID + ']').addClass('current');
+      quizLineComplete -= quizLineWidth;
+      quizStartNumber--;
+      quizStart.innerHTML = quizStartNumber;
+      quizLine.style.width = quizLineComplete + "%";
+    }
+  });
+
+  if ($('.quiz-play').length) {
+    var mainblockBtn = document.querySelectorAll('.quiz-play');
+    for (var i = 0; i < mainblockBtn.length; i++) {
+      mainblockBtn[i].addEventListener('click', function () {
+        $('.quiz-item .jq-radio').change(function () {
+          disableBtn();
+        });
+        $('.quiz__info-next').on('click', function () {
+          disableBtn();
+        });
+        $('.quiz__info-prev').on('click', function () {
+          disableBtn();
+        });
+      });
+    }
+  }
+
+  // radioAll[0].addEventListener('click', function() {
+  //   disableBtn();
+  // });
+
+  function disableBtn() {
+    var radioList = document.querySelectorAll('.quiz-item.current .jq-radio');
+    var isChecked = false;
+    // console.log(radioList);
+    for (var _i = 0; _i < radioList.length; _i++) {
+      if (radioList[_i].classList.contains('checked')) {
+        isChecked = true;
+        break;
+      }
+    }
+    if (isChecked) {
+      // alert("Разблокировано");
+      $('.quiz__info-next').removeAttr('disabled');
+    } else {
+      $('.quiz__info-next').attr('disabled', 'disabled');
+    }
+  }
+
+  // Formstyle
+  $('input[type=radio]').styler({});
+  $('.quiz-end__row [type=checkbox]').styler({});
+
+  $('.cost__list').slick({
+    slidesToShow: 4,
+    variableWidth: true,
+    responsive: [{
+      breakpoint: 1290,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        variableWidth: true
+      }
+    }, {
+      breakpoint: 476,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,
+        adaptiveHeight: true
+      }
+    }]
+  });
+  // Слайдер выпускной
+  $('.game-slider__inner').slick({
+    slidesToShow: 3,
+    dots: true,
+    arrows: false,
+    // adaptiveHeight: true
+    variableWidth: true,
+    // arrows: false,
+    // infinite: false,
+    // centerMode: true
+    // centerMode: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true
+      }
+    }, {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,
+        adaptiveHeight: true
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+    ]
+  });
+
+  // Бургер меню в шапке
+  $('.header-burger').on('click', function () {
+    $('.header-menu').addClass('active');
+    $('#overlay').addClass('overlay_active');
+  });
+  $('.header-menu__close').on('click', function () {
+    $('.header-menu').removeClass('active');
+    $('#overlay').removeClass('overlay_active');
+  });
+  $('.header__list').on('click', function () {
+    $('.header__list').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  var arrMore = [];
+  var arrMoreCounter = 0;
+  arrMore[0] = document.querySelectorAll('.row__right')[0];
+  arrMore[2] = document.querySelectorAll('.row__right')[1];
+  arrMore[1] = document.querySelectorAll('.services-add__row:nth-child(3)')[0];
+  // console.log(arrMore);
+  $('.btn-more').on('click', function (e) {
+    e.preventDefault();
+    for (var i = 0; i < arrMore.length; i++) {
+      if (!arrMore[i].classList.contains('active')) {
+        arrMore[i].classList.add('active');
+        arrMoreCounter++;
+        if (arrMoreCounter == 3) {
+          document.querySelector('.btn-more').remove();
+        }
+        break;
+      }
+    }
+  });
+
+  // Табы в квестах
+  $('.tabs-title .tabs-title__item').click(function () {
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tabs-title__item').removeClass('current');
+    $('.tabs-content__item').removeClass('current');
+
+    $(this).addClass('current');
+    $("#" + tab_id).addClass('current');
+  });
+  // Табы в квестах конец
+
+  // Табы в квестах
+  $('.tabs-quiz .tabs-quiz__item').click(function () {
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tabs-quiz__item').removeClass('current');
+    $('.tabs-inner__item').removeClass('current');
+
+    $(this).addClass('current');
+    $("#" + tab_id).addClass('current');
+  });
+  // Табы в квестах конец
+
+  // Модальные окна
+  function modalPopUp() {
+    var overlay = document.getElementById('overlay');
+    var popupButton = document.querySelectorAll('.popup-btn');
+
+    var _loop = function _loop(_i2) {
+      popupButton[_i2].addEventListener('click', function () {
+        var attr = popupButton[_i2].getAttribute('data-popup');
+        var popup = document.querySelector('#' + attr);
+        popup.classList.toggle('active');
+        overlay.classList.toggle('overlay_active');
+      });
+    };
+
+    for (var _i2 = 0; _i2 < popupButton.length; _i2++) {
+      _loop(_i2);
+    }
+    var popup = document.querySelectorAll('.popup__close');
+
+    var _loop2 = function _loop2(_i3) {
+      popup[_i3].addEventListener('click', function () {
+        popup[_i3].parentNode.classList.remove('active');
+        overlay.classList.remove('overlay_active');
+      });
+    };
+
+    for (var _i3 = 0; _i3 < popup.length; _i3++) {
+      _loop2(_i3);
+    }
+  }
+
+  // $('.header__cost').on('click', function (e) {
+  //   $('html,body').stop().animate({
+  //     scrollTop: $('#cost-point').offset().top
+  //   }, 1000);
+  //   e.preventDefault();
+  // });
+
+  modalPopUp();
+
+  // Отправка формы с помощью Ajax на чистом javascript инициализация
+  document.querySelectorAll(".form-send").forEach(function (form) {
+    return form.addEventListener("submit", submitHandler);
+  });
+
+  if ($('.send-form-mess').length) {
+    document.querySelectorAll(".send-form-mess").forEach(function (form2) {
+      return form2.addEventListener("submit", submitHandler2);
+    });
+  }
+  if ($('.send-form-mess2').length) {
+    document.querySelectorAll(".send-form-mess2").forEach(function (form3) {
+      return form3.addEventListener("submit", submitHandler3);
+    });
+  }
+
+  var animation1 = bodymovin.loadAnimation({
+    container: document.getElementById('anim1'), // Required
+    path: 'anim/Lazertag.json', // Required
+    renderer: 'svg', // Required
+    loop: false, // Optional
+    autoplay: false });
+
+  var animation2 = bodymovin.loadAnimation({
+    container: document.getElementById('anim2'), // Required
+    path: 'anim/Paintball.json', // Required
+    renderer: 'svg', // Required
+    loop: false, // Optional
+    autoplay: false });
+
+  var animation3 = bodymovin.loadAnimation({
+    container: document.getElementById('anim3'), // Required
+    path: 'anim/Present.json', // Required
+    renderer: 'svg', // Required
+    loop: false, // Optional
+    autoplay: false });
+
+  var animation4 = bodymovin.loadAnimation({
+    container: document.getElementById('anim4'), // Required
+    path: 'anim/Quest.json', // Required
+    renderer: 'svg', // Required
+    loop: false, // Optional
+    autoplay: false });
+  var data = Array(animation1, animation2, animation3, animation4);
+  data.forEach(function (item, i, arr) {
+    data[i].play();
+  });
+  // data[0].play();
+
+
+  $('.cost__item').hover(function () {
+    var i = $(this).children('.anim').attr('data-anims');
+    data[i].stop();
+    data[i].play();
+
+    // data[id - 1].play();
+  }, function () {});
+}
+
+// Отправка формы с помощью Ajax на чистом javascript
+function submitHandler(e) {
+  e.preventDefault();
+  // var form = this.querySelector('button');
+  var form = document.querySelector('#quiz');
+  var result = '<div class="quiz-item current quiz-item-success" data-quiz="8g"><div class="quiz__title">Сообщение отправлено</div>';
+  result += '<div class="quiz-img"></div><div class="quiz__text">Спасибо! Мы свяжемся с вами в ближайшее время</div>';
+  result += '<div class="quiz__okey popup__close">ОК</div></div><div class="quiz__close popup__close popup-close"></div>';
+
+  var request = new XMLHttpRequest();
+  // var th = document.querySelector('.contact__form-thanks');
+
+  request.onreadystatechange = function () {
+    // console.log("readyState=", this.readyState, "statis=", this.status);
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+
+      form.innerHTML = result;
+      $('.popup__close').on('click', function () {
+        $('.quiz').removeClass('active');
+        overlay.classList.remove('overlay_active');
+      });
+      // Выполнится когда форма успешно отправлена
+      // success, show this.responseText here
+      // console.log("SUCCESS", this);
+      // th.classList.add('contact__form-thanks_active');
+      // form.setAttribute('disabled', 'disabled');
+    }
+  };
+
+  request.open(this.method, this.action, true);
+  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  var data = new FormData(this);
+  var dataPost;
+  // Формируем массив данных для отправки 
+  data.forEach(function (value, key) {
+    dataPost += '&' + key + '=' + value;
+  });
+  // console.log(data);
+
+  request.send(dataPost);
+}
+
+function submitHandler2(e) {
+  e.preventDefault();
+  // var form = this.querySelector('button');
+  // var form = document.querySelector('')
+  var result = '<div class="quiz-item current quiz-item-success" data-quiz="8g"><div class="quiz__title">Сообщение отправлено</div>';
+  result += '<div class="quiz-img"></div><div class="quiz__text">Спасибо! Мы свяжемся с вами в ближайшее время</div>';
+  result += '<div class="quiz__okey popup__close">ОК</div></div><div class="quiz__close popup__close popup-close"></div>';
+
+  var request = new XMLHttpRequest();
+  // var th = document.querySelector('.contact__form-thanks');
+
+  request.onreadystatechange = function () {
+    // console.log("readyState=", this.readyState, "statis=", this.status);
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      document.querySelector('.main-modal').innerHTML = result;
+      $('.popup__close').on('click', function () {
+        $('.popup').removeClass('active');
+        overlay.classList.remove('overlay_active');
+      });
+      // Выполнится когда форма успешно отправлена
+      // success, show this.responseText here
+      // console.log("SUCCESS", this);
+      // th.classList.add('contact__form-thanks_active');
+      // form.setAttribute('disabled', 'disabled');
+    }
+  };
+
+  request.open(this.method, this.action, true);
+  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  var data = new FormData(this);
+  var dataPost;
+  // Формируем массив данных для отправки 
+  data.forEach(function (value, key) {
+    dataPost += '&' + key + '=' + value;
+  });
+  // console.log(data);
+
+  request.send(dataPost);
+}
+
+function submitHandler3(e) {
+  e.preventDefault();
+  // var form = this.querySelector('button');
+  // var form = document.querySelector('')
+  var result = '<div class="mainform__thanks">Спасибо за заявку!</div>';
+  var form = this;
+
+  var request = new XMLHttpRequest();
+  // var th = document.querySelector('.contact__form-thanks');
+
+  request.onreadystatechange = function () {
+    // console.log("readyState=", this.readyState, "statis=", this.status);
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      console.log(form);
+      form.innerHTML = result;
+    }
+  };
+
+  request.open(this.method, this.action, true);
+  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  var data = new FormData(this);
+  var dataPost;
+  // Формируем массив данных для отправки 
+  data.forEach(function (value, key) {
+    dataPost += '&' + key + '=' + value;
+  });
+  // console.log(data);
+
+  request.send(dataPost);
+}

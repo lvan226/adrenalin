@@ -202,6 +202,20 @@
       @media(max-width: $md){min-height: 580px;padding: 30px;}
       @media(max-width: $xs){min-height: 400px;padding: 15px 10px;}
     }
+    .video {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -70%;
+      z-index: 10;
+      @media (max-width: $lg){bottom: -14px;top: auto;right: -30%;}
+      @media (max-width: $md) {right: -10%;bottom: -16px;}
+      @media (max-width: $sm) {right: 10%;}
+      @media (max-width: $xs){display: none;}
+      &__btn {
+        color: #fff;
+      }
+    }
     &::after {
       content: "";
       position: absolute;

@@ -160,13 +160,23 @@
       width: 100%;
       position: relative;
       z-index: 1;
+      &::after {
+        content:"";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: .4;
+      }
       @media (max-width: $lg){width: 92%;}
       @media (max-width: $md){height: 320px;width: 100%;max-width:100%}
       @media (max-width: $sm){height: 280px;}
       @media (max-width: $xs){height: 260px;}
       .video {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         left: 50%;
         top: 50%;
         transform: translate(-18%, -50%);

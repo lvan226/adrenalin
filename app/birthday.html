@@ -50,7 +50,7 @@
     <div class="quiz__cost">
       <div class="quiz__cost-text">Ваша скидка</div>
       <div class="quiz__cost-number"><input form="quizForm" class="quiz-discount" name="Размер скидки:" type="text"
-          value="300">₽</div>
+          value="200" readonly>₽</div>
     </div>
     <div class="quiz__close popup__close popup-close"></div>
     <form class="quiz__content form-send" method="post" action="mailer.php" id="quizForm">
@@ -445,13 +445,13 @@
           <button class="blockinfo__btn btn btn-12 popup-btn" data-popup="main-modal"><span>Заказать игру</span></button>
         </div>
         <!-- /.blockinfo__info -->
-        <div class="blockinfo__video ibg" style="background-image: url(img/birthday/lazertag.jpg);">
-          <div class="video">
+        <div class="blockinfo__video ibg" style="background-image: url(img/birthday/paintball/7.jpg);">
+          <a href="https://youtu.be/U-1WOclIHNc" target="_blank" class="video">
             <div class="video__click">
               <div class="video__click-body"></div>
             </div>
             <button class="video__btn">Смотреть видео</button>
-          </div>
+          </a>
         </div>
         <!-- /.blockinfo__video -->
       </div>
@@ -539,9 +539,9 @@
     <div class="container">
       <h2 class="cost__title title title_r">Стоимость</h2>
       <div class="cost__list">
-        <div class="cost__item popup-btn quiz-play" data-popup="quiz">
-          <div class="cost__item-img">
-            <img src="img/cost/1.svg" alt="">
+        <div class="cost__item cost-item-anim popup-btn quiz-play" data-popup="quiz">
+          <div class="cost__item-img anim" id="anim3" data-anims="2">
+            <!-- <img src="img/cost/1.svg" alt=""> -->
           </div>
           <h3 class="cost__item-heading">0 рублей</h3>
           <p class="cost__item-text">
@@ -551,9 +551,9 @@
           <div class="cost__item-btn">Поиграть бесплатно →</div>
         </div>
         <!-- /.cost__item -->
-        <div class="cost__item popup-btn quiz-play" data-popup="quiz">
-          <div class="cost__item-img">
-            <img src="img/cost/2.svg" alt="">
+        <div class="cost__item cost-item-anim popup-btn quiz-play" data-popup="quiz">
+          <div class="cost__item-img anim" id="anim1" data-anims="0">
+            <!-- <img src="img/cost/2.svg" alt=""> -->
           </div>
           <h3 class="cost__item-heading">от 300 ₽/час</h3>
           <p class="cost__item-text">
@@ -563,9 +563,9 @@
           <div class="cost__item-btn">Рассчитать стоимость →</div>
         </div>
         <!-- /.cost__item -->
-        <div class="cost__item popup-btn quiz-play" data-popup="quiz">
-          <div class="cost__item-img">
-            <img src="img/cost/3.svg" alt="">
+        <div class="cost__item cost-item-anim popup-btn quiz-play" data-popup="quiz">
+          <div class="cost__item-img anim" id="anim2" data-anims="1">
+            <!-- <img src="img/cost/3.svg" alt=""> -->
           </div>
           <h3 class="cost__item-heading">от 500 ₽/час</h3>
           <p class="cost__item-text">
@@ -575,9 +575,9 @@
           <div class="cost__item-btn">Рассчитать стоимость →</div>
         </div>
         <!-- /.cost__item -->
-        <div class="cost__item popup-btn quiz-play" data-popup="quiz">
-          <div class="cost__item-img">
-            <img src="img/cost/4.svg" alt="">
+        <div class="cost__item cost-item-anim popup-btn quiz-play" data-popup="quiz">
+          <div class="cost__item-img anim" id="anim4" data-anims="3">
+            <!-- <img src="img/cost/4.svg" alt=""> -->
           </div>
           <h3 class="cost__item-heading">от 400 ₽</h3>
           <p class="cost__item-text">
@@ -794,7 +794,7 @@
             <li class="footer__list-item"><a href="game.html">Игра классов</a></li>
             <li class="footer__list-item"><a href="company.html">Корпоратив</a></li>
             <li class="footer__list-item"><a href="release.html">Выпускной</a></li>
-            <li class="footer__list-item"><a href="#">Квесты</a></li>
+            <li class="footer__list-item"><a href="quest.html">Квесты</a></li>
           </ul>
         </div>
         <!-- /.footer__column -->
@@ -810,6 +810,7 @@
           <h5 class="footer__title">Контакты</h5>
           <ul class="footer__list">
             <li class="footer__list-item"><a href="tel:+541316">54-13-16</a></li>
+            <li class="footer__list-item"><a href="tel:+79217231316">+7 (921) 723-13-16</a></li>
             <li class="footer__list-item"><a href="mailto:info@adrenalin35.ru">info@adrenalin35.ru</a></li>
           </ul>
           <div class="footer__list-social">
@@ -840,7 +841,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/libs.min.js"></script>
-  <script src="js/main-min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
