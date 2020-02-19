@@ -181,6 +181,7 @@ function ready() {
   $('.cost__list').slick({
     slidesToShow: 4,
     variableWidth: true,
+    infinite: false,
     responsive: [{
         breakpoint: 1290,
         settings: {
@@ -192,6 +193,12 @@ function ready() {
         settings: {
           slidesToShow: 2,
           variableWidth: true
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
         },
       },
       {

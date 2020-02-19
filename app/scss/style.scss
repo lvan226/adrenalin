@@ -17,12 +17,13 @@
 }
 .mainblock {
   padding: 200px 0px 0px;
-  min-height: 1024px;
   display: flex;
   flex-direction: column;
   color: #fff;
+  min-height: 894px;
   @media (max-width: 1300px) {
-    min-height: 100vh;
+    // min-height: 100vh;
+    min-height: auto
   }
   @media (max-width: $sm){padding-top: 150px;}
   @media (max-width: $xs){padding-top: 100px;min-height: auto;}
@@ -137,7 +138,7 @@
     &__fact-list {
       display: flex;
       justify-content: space-between;
-      padding-top: 90px;
+      // padding-top: 90px;
       padding-bottom: 100px;
       @media (max-width: 1300px) {
         // padding-bottom: 100px;
