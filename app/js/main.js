@@ -1,7 +1,18 @@
+
+
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
 
+  if ('NodeList' in window && !NodeList.prototype.forEach) {
+    console.info('polyfill for IE11');
+    NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
+    };
+  }
 
   // Слайдер фотографий
   $('.slider-main').slick({
@@ -428,8 +439,41 @@ function ready() {
 			// data[id - 1].play();
 		},
 		function () {
-		});
+    });
+    
+    let reachMetrika = '2';
+    // console.log(reachMetrika);
+    // resetMetrika(reachMetrika);
+    let metButtons = document.querySelectorAll('.met-btn');
+    // let closeMetrik = document.querySelectorAll('.met-close');
+
+    // for (let i = 0; i < closeMetrik.length; i++) {
+    //   closeMetrik[i].addEventListener('click', function () {
+    //     // reachMetrika = '1';
+    //     resetMetrika();
+    //     console.log(reachMetrika);
+    //   });
+    // }
+
+    for (let i = 0; i < metButtons.length; i++) {
+      metButtons[i].addEventListener('click', function () {
+        let attr = this.getAttribute('data-m-target');
+        metrikaAttr = attr;
+        // console.log(reachMetrika);
+        // console.log(metrikaAttr);
+        // metrikaReach(metrikaAttr);
+      });
+    }
+
 }
+
+let metrikaCounter = 57870985;
+function metrikaReach(attr) {
+  ym(metrikaCounter, 'reachGoal', attr.toString());
+};
+
+let metrikaAttr = '';
+
 
 // Отправка формы с помощью Ajax на чистом javascript
 function submitHandler(e) {
@@ -448,12 +492,14 @@ function submitHandler(e) {
   request.onreadystatechange = function () {
     // console.log("readyState=", this.readyState, "statis=", this.status);
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-
+      // yaCounter58760059.reachGoal('quizGoal');
+      // ym(58760059, 'reachGoal', 'quizGoal');
       form.innerHTML = result;
       $('.popup__close').on('click', function () {
         $('.quiz').removeClass('active');
         overlay.classList.remove('overlay_active');
       });
+      metrikaReach(metrikaAttr);
       // Выполнится когда форма успешно отправлена
       // success, show this.responseText here
       // console.log("SUCCESS", this);
@@ -491,11 +537,14 @@ function submitHandler2(e) {
   request.onreadystatechange = function () {
     // console.log("readyState=", this.readyState, "statis=", this.status);
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+
+      // ym(58760059, 'reachGoal', 'formSendPopGoal');
       document.querySelector('.main-modal').innerHTML = result;
       $('.popup__close').on('click', function () {
         $('.popup').removeClass('active');
         overlay.classList.remove('overlay_active');
       });
+      metrikaReach(metrikaAttr);
       // Выполнится когда форма успешно отправлена
       // success, show this.responseText here
       // console.log("SUCCESS", this);
@@ -524,6 +573,7 @@ function submitHandler3(e) {
   // var form = document.querySelector('')
   var result = '<div class="mainform__thanks">Спасибо за заявку!</div>';
   var form = this;
+  // console.log(form);
 
   var request = new XMLHttpRequest();
   // var th = document.querySelector('.contact__form-thanks');
@@ -531,8 +581,10 @@ function submitHandler3(e) {
   request.onreadystatechange = function () {
     // console.log("readyState=", this.readyState, "statis=", this.status);
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-      console.log(form);
+      // console.log(form);
+      // ym(58760059, 'reachGoal', 'formPageGoal');
       form.innerHTML = result;
+      metrikaReach('Zakaz_zvonka_podval');
     }
   }
 

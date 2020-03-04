@@ -224,3 +224,10 @@
 @-webkit-keyframes slideme { 0% { left: -30px; margin-left: 0px; }
 30% { left: 110%; margin-left: 80px; }
 100% { left: 110%; margin-left: 80px; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+  .blick-btn .blick-btn__after,
+  .blick-btn .blick-btn__before {
+    display: none;
+  }
+}

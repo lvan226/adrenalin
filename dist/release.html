@@ -36,7 +36,7 @@
     </div>
   </div>
   
-  <div class="calc-btn blick-btn popup-btn quiz-play" data-popup="quiz">
+  <div class="calc-btn blick-btn popup-btn quiz-play met-btn" data-m-target="Jarlik-sprava" data-popup="quiz">
     <img src="img/calc-btn.png" alt="" class="calc-btn__img">
     <span>
       Рассчитать
@@ -328,7 +328,7 @@
             <a href="tel:+541316">54-13-16</a>
             <a href="tel:+79217231316">+7 (921) 723-13-16</a>
           </div>
-          <button class="header__btn btn btn-11 popup-btn" data-popup="main-modal"><span>Заказать звонок</span></button>
+          <button class="header__btn btn btn-11 popup-btn met-btn" data-m-target="Zakaz_zvonka_shapka" data-popup="main-modal"><span>Заказать звонок</span></button>
         </div>
         <div class="header-burger">
           <span></span>
@@ -353,7 +353,7 @@
           <li>Комплексные предложения по низким ценам</li>
           <li>Скидки на пиццу и комнаты отдыха после игры</li>
         </ul>
-        <button class="gamemain__btn btn blick-btn popup-btn quiz-play" data-popup="quiz">
+        <button class="gamemain__btn btn blick-btn popup-btn quiz-play met-btn" data-m-target="vipusk_glavnaya"  data-popup="quiz">
           <span>Рассчитать стоимость</span>
           <span class="blick-btn__before"></span>
           <span class="blick-btn__after"></span>
@@ -383,7 +383,7 @@
               боевых действий не дадут отдохнуть ни секунды. Эмоциональная и запоминающаяся игра с классом
               обеспечена!</p>
           </div>
-          <button class="game-about__row-btn btn btn-12 popup-btn" data-popup="main-modal"><span>Заказать игру</span></button>
+          <button class="game-about__row-btn btn btn-12 popup-btn met-btn" data-m-target="vipusk_lazertag"  data-popup="main-modal"><span>Заказать игру</span></button>
         </div>
         <!-- /.game-about__row-inner -->
       </div>
@@ -401,7 +401,7 @@
               с детьми работает профессиональный квест-менеджер, который вовлекает детей в игру, подстраивает задания
               под уровень детей прямо в процессе игры, погружает детей в атмосферу квеста.</p>
           </div>
-          <button class="game-about__row-btn btn btn-12 popup-btn" data-popup="main-modal"><span>Заказать игру</span></button>
+          <button class="game-about__row-btn btn btn-12 popup-btn met-btn" data-m-target="vipusk_quest"  data-popup="main-modal"><span>Заказать игру</span></button>
         </div>
         <!-- /.game-about__row-inner -->
       </div>
@@ -422,7 +422,7 @@
               и взрослых. Хлёсткое попадание шарика никого не оставит равнодушным. Море краски и град шаров во время штурма врага заставляют мыслить по-другому. Это совершенно новый мир — мир в котором нужно выжить и не покраситься.</p>
             <p> Все что тебе нужно — это взять с собой обувь, а хорошее настроение и экипировку получишь у нас! Торопись занять удобное время!</p>
           </div>
-          <button class="game-about__row-btn btn btn-12 popup-btn" data-popup="main-modal"><span>Заказать игру</span></button>
+          <button class="game-about__row-btn btn btn-12 popup-btn met-btn" data-m-target="vipusk_paintball"  data-popup="main-modal"><span>Заказать игру</span></button>
         </div>
         <!-- /.game-about__row-inner -->
       </div>
@@ -677,7 +677,7 @@
     <div class="container">
       <h2 class="game-slider__title title">Стоимость</h2>
       <div class="game-slider__inner">
-        <div class="game-slider__item slider-game popup-btn quiz-play" data-popup="quiz">
+        <div class="game-slider__item slider-game popup-btn quiz-play met-btn" data-m-target="vipusk_stoimost"  data-popup="quiz">
           <div class="game-slider__item-inner">
             <div class="slider-game__price">от 600 рублей</div>
             <ul class="slider-game__list">
@@ -693,7 +693,7 @@
           <!-- /.game-slider__item-inner -->
         </div>
         <!-- /.game-slider__item slider-game -->
-        <div class="game-slider__item slider-game active popup-btn quiz-play" data-popup="quiz">
+        <div class="game-slider__item slider-game active popup-btn quiz-play met-btn" data-m-target="vipusk_stoimost" data-popup="quiz">
           <div class="game-slider__item-inner">
             <div class="slider-game__price">1500 рублей</div>
             <ul class="slider-game__list">
@@ -711,7 +711,7 @@
           <!-- /.game-slider__item-inner -->
         </div>
         <!-- /.game-slider__item slider-game -->
-        <div class="game-slider__item slider-game popup-btn quiz-play" data-popup="quiz">
+        <div class="game-slider__item slider-game popup-btn quiz-play met-btn" data-m-target="vipusk_stoimost" data-popup="quiz">
           <div class="game-slider__item-inner">
             <div class="slider-game__price">1200 рублей</div>
             <ul class="slider-game__list">
@@ -823,6 +823,40 @@
   <script src="js/custom.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main-min.js"></script>
+  
+    <!-- Yandex.Metrika counter -->
+  
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+          (m[i].a = m[i].a || []).push(arguments)
+        };
+  
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+          a)
+      })
+  
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+      ym(57870985, "init", {
+  
+        clickmap: true,
+  
+        trackLinks: true,
+  
+        accurateTrackBounce: true,
+  
+        webvisor: true
+  
+      });
+    </script>
+  
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/57870985" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+  
+    <!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

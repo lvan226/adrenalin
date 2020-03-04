@@ -36,7 +36,7 @@
     </div>
   </div>
   
-  <div class="calc-btn blick-btn popup-btn quiz-play" data-popup="quiz">
+  <div class="calc-btn blick-btn popup-btn quiz-play met-btn" data-m-target="Jarlik-sprava" data-popup="quiz">
     <img src="img/calc-btn.png" alt="" class="calc-btn__img">
     <span>
       Рассчитать
@@ -326,7 +326,7 @@
               <a href="tel:+541316">54-13-16</a>
               <a href="tel:+79217231316">+7 (921) 723-13-16</a>
             </div>
-            <button class="header__btn btn btn-11 popup-btn" data-popup="main-modal"><span>Заказать звонок</span></button>
+            <button class="header__btn btn btn-11 popup-btn met-btn" data-m-target="Zakaz_zvonka_shapka" data-popup="main-modal"><span>Заказать звонок</span></button>
           </div>
           <div class="header-burger">
             <span></span>
@@ -344,8 +344,8 @@
     <section class="mainblock">
       <div class="container">
         <div class="mainblock__inner">
-          <h2 class="mainblock__title title">Все популярные развлечения
-            Череповца в клубе Адреналин</h2>
+          <h2 class="mainblock__title title">Все популярные развлечения Череповца
+            в&nbsp;клубе Адреналин: пейнтбол, лазертаг, квесты</h2>
           <ul class="mainblock__list">
             <li class="mainblock__list-item">
               <img src="img/main/1.svg" alt="">
@@ -361,11 +361,13 @@
             </li>
           </ul>
           <div class="mainblock__row">
-            <button class="mainblock__btn btn popup-btn quiz-play blick-btn" data-popup="quiz">
-              Рассчитать стоимость
-              <span class="blick-btn__before"></span>
-              <span class="blick-btn__after"></span>
-            </button>
+            <!-- <form action="" method="get" onsubmit="ym(57870985, 'reachGoal', 'Glavnaya_raschet'); return true;"> -->
+              <button data-m-target="Glavnaya_raschet" class="mainblock__btn btn popup-btn quiz-play blick-btn met-btn" data-popup="quiz">
+                Рассчитать стоимость
+                <span class="blick-btn__before"></span>
+                <span class="blick-btn__after"></span>
+              </button>
+            <!-- </form> -->
             <!-- <div class="video">
               <div class="video__click">
                 <div class="video__click-body"></div>
@@ -459,7 +461,8 @@
             <h3 class="about-row__info-title title3"><strong>Площадки</strong> рядом с&nbsp;вами</h3>
             <p>
               Две больших крытых площадки за ТЦ «Рассвет» по&nbsp;адресу ул. Гоголя 56 площадью 1000 м² и 2000 м²
-              для&nbsp;игры в&nbsp;лазертаг и пейнтбол.<a href="https://youtu.be/1ooM6f_Du_Q" target="_blank">Схема проезда.</a>
+              для&nbsp;игры в&nbsp;лазертаг и пейнтбол.<a href="https://youtu.be/1ooM6f_Du_Q" target="_blank">Схема
+                проезда.</a>
             </p>
             <p>
               Одна площадка на лыжном cтадионе в Зашекснинском районе.
@@ -586,10 +589,11 @@
     <div class="container-big">
       <div class="photo__slider slider-main">
         <div class="photo__item ibg" style="background-image: url(img/photo/1.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/photo/4.jpg);"></div>
         <div class="photo__item ibg" style="background-image: url(img/photo/2.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/photo/5.jpg);"></div>
         <div class="photo__item ibg" style="background-image: url(img/photo/3.jpg);"></div>
-        <div class="photo__item ibg" style="background-image: url(img/photo/2.jpg);"></div>
-        <div class="photo__item ibg" style="background-image: url(img/photo/3.jpg);"></div>
+        <div class="photo__item ibg" style="background-image: url(img/photo/6.jpg);"></div>
       </div>
       <!-- /.photo__slider -->
     </div>
@@ -695,7 +699,8 @@
     <div class="container">
       <h2 class="cost__title title title_r">Стоимость</h2>
       <div class="cost__list">
-        <div class="cost__item cost-item-anim popup-btn quiz-play" data-popup="quiz">
+        <div class="cost__item cost-item-anim popup-btn quiz-play met-btn" data-m-target="glavnaya_stoimost" data-popup="main-modal">
+          <div class="cost__item-title">Именинник</div>
           <div class="cost__item-img anim" id="anim3" data-anims="2">
             <!-- <img src="img/cost/1.svg" alt=""> -->
           </div>
@@ -707,7 +712,8 @@
           <div class="cost__item-btn">Поиграть бесплатно →</div>
         </div>
         <!-- /.cost__item -->
-        <div class="cost__item cost-item-anim popup-btn quiz-play" data-popup="quiz">
+        <div class="cost__item cost-item-anim popup-btn quiz-play met-btn" data-m-target="glavnaya_stoimost"  data-popup="quiz">
+          <div class="cost__item-title">Лазертаг</div>
           <div class="cost__item-img anim" id="anim1" data-anims="0">
             <!-- <img src="img/cost/2.svg" alt=""> -->
           </div>
@@ -719,7 +725,8 @@
           <div class="cost__item-btn">Рассчитать стоимость →</div>
         </div>
         <!-- /.cost__item -->
-        <div class="cost__item cost-item-anim popup-btn quiz-play" data-popup="quiz">
+        <div class="cost__item cost-item-anim popup-btn quiz-play met-btn" data-m-target="glavnaya_stoimost"  data-popup="quiz">
+          <div class="cost__item-title">Пейнтбол</div>
           <div class="cost__item-img anim" id="anim2" data-anims="1">
             <!-- <img src="img/cost/3.svg" alt=""> -->
           </div>
@@ -731,7 +738,8 @@
           <div class="cost__item-btn">Рассчитать стоимость →</div>
         </div>
         <!-- /.cost__item -->
-        <div class="cost__item cost-item-anim popup-btn quiz-play" data-popup="quiz">
+        <div class="cost__item cost-item-anim popup-btn quiz-play met-btn" data-m-target="glavnaya_stoimost"  data-popup="quiz">
+          <div class="cost__item-title">Квест</div>
           <div class="cost__item-img anim" id="anim4" data-anims="3">
             <!-- <img src="img/cost/4.svg" alt=""> -->
           </div>
@@ -999,6 +1007,40 @@
   <script src="js/custom.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main-min.js"></script>
+  
+    <!-- Yandex.Metrika counter -->
+  
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+          (m[i].a = m[i].a || []).push(arguments)
+        };
+  
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+          a)
+      })
+  
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+      ym(57870985, "init", {
+  
+        clickmap: true,
+  
+        trackLinks: true,
+  
+        accurateTrackBounce: true,
+  
+        webvisor: true
+  
+      });
+    </script>
+  
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/57870985" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+  
+    <!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

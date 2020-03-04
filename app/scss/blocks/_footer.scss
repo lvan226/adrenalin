@@ -106,9 +106,13 @@
   }
   }
   .development-link {
-    width: 50%;
+    width: 62%;
     font-size: 14px;
     transition: .3s;
+    @media (max-width: 1300px) {width: 58%;}
+    @media (max-width: 1260px) {width: 54%;}
+    @media (max-width: $lg) {width: 51%;}
+    @media (max-width: $md) {width: 57%;}
     @media (max-width: $xs) {width: 100%;}
     &:hover {
       color: $blue;
